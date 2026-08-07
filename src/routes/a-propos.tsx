@@ -75,8 +75,8 @@ function AboutPage() {
 
   return (
     <>
-      <Section tone="blush">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+      <Section tone="blush" className="!py-0">
+        <div className="grid items-center gap-10 py-12 lg:min-h-[calc(100svh-4.5rem)] lg:grid-cols-2">
           <div>
             <SectionHeading
               as="h1"
