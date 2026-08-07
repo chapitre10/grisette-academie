@@ -22,14 +22,26 @@ export function CoulissesGallery() {
         aria-label="Galerie des coulisses, défilement horizontal"
       >
         {coulisses.map((item) => (
-          <li key={item.alt} className="w-64 shrink-0 snap-start sm:w-72">
-            <ImagePlaceholder
-              src={item.src}
-              alt={item.alt}
-              hint={item.hint}
-              className="aspect-[4/5]"
-            />
-            <p className="mt-2 text-sm text-brand/80">{item.caption}</p>
+          <li key={item.id} className="w-64 shrink-0 snap-start sm:w-72">
+            <figure>
+              <ImagePlaceholder
+                src={item.src}
+                alt={item.alt}
+                hint={item.hint}
+                className="aspect-[4/5]"
+              />
+              <figcaption className="mt-3">
+                <span className="block font-display text-lg text-brand">{item.caption}</span>
+                <span className="mt-1 block text-sm leading-relaxed text-brand/80">
+                  {item.description}
+                </span>
+                {item.src === null ? (
+                  <span className="mt-2 block rounded-md border border-dashed border-raspberry/40 bg-blush/20 px-2 py-1 text-xs text-brand/80">
+                    Texte alternatif prévu : « {item.alt} »
+                  </span>
+                ) : null}
+              </figcaption>
+            </figure>
           </li>
         ))}
       </ul>
