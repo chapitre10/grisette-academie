@@ -14,6 +14,7 @@ import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as CgvRouteImport } from './routes/cgv'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
+import { Route as DemandeEnvoyeeRouteImport } from './routes/demande-envoyee'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
@@ -49,6 +50,11 @@ const ContactRoute = ContactRouteImport.update({
 const CoursPresentielRoute = CoursPresentielRouteImport.update({
   id: '/cours-presentiel',
   path: '/cours-presentiel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemandeEnvoyeeRoute = DemandeEnvoyeeRouteImport.update({
+  id: '/demande-envoyee',
+  path: '/demande-envoyee',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -114,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/demande-envoyee': typeof DemandeEnvoyeeRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/demande-envoyee': typeof DemandeEnvoyeeRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/demande-envoyee': typeof DemandeEnvoyeeRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/demande-envoyee'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -189,6 +199,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/demande-envoyee'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/demande-envoyee'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -226,6 +238,7 @@ export interface RootRouteChildren {
   CgvRoute: typeof CgvRoute
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
+  DemandeEnvoyeeRoute: typeof DemandeEnvoyeeRoute
   FaqRoute: typeof FaqRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
@@ -274,6 +287,13 @@ declare module '@tanstack/react-router' {
       path: '/cours-presentiel'
       fullPath: '/cours-presentiel'
       preLoaderRoute: typeof CoursPresentielRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demande-envoyee': {
+      id: '/demande-envoyee'
+      path: '/demande-envoyee'
+      fullPath: '/demande-envoyee'
+      preLoaderRoute: typeof DemandeEnvoyeeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -362,6 +382,7 @@ const rootRouteChildren: RootRouteChildren = {
   CgvRoute: CgvRoute,
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
+  DemandeEnvoyeeRoute: DemandeEnvoyeeRoute,
   FaqRoute: FaqRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,

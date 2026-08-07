@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { site } from "@/data/site";
+import { saveContactSubmission } from "@/lib/contactSubmission";
 
 const title = "Contacter Grisette Académie — cours, templates, formations";
 const description =
@@ -50,6 +51,7 @@ interface FormState {
 
 function ContactPage() {
   const { sujet } = Route.useSearch();
+  const navigate = useNavigate();
   const [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -61,7 +63,6 @@ function ContactPage() {
     honeypot: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [sent, setSent] = useState(false);
 
   const update = (key: keyof FormState, value: string | boolean) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -87,7 +88,16 @@ function ContactPage() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
     // Aucun envoi réel : brancher un service e-mail ou une base de données plus tard.
-    setSent(true);
+    saveContactSubmission({
+      firstName: form.firstName.trim(),
+      lastName: form.lastName.trim(),
+      email: form.email.trim(),
+      subject: form.subject.trim(),
+      requestType: form.requestType,
+      message: form.message.trim(),
+      submittedAt: new Date().toISOString(),
+    });
+    navigate({ to: "/demande-envoyee" });
   };
 
   const fieldClass = (key: keyof FormState) =>
@@ -109,31 +119,7 @@ function ContactPage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            {sent ? (
-              <div
-                role="status"
-                className="rounded-lg border border-raspberry/40 bg-peach/50 p-6"
-              >
-                <h2 className="text-xl text-brand">Merci, ta demande est bien préparée.</h2>
-                <p className="mt-2 text-sm leading-relaxed text-brand/85">
-                  Le formulaire fonctionne, mais l'envoi réel n'est pas encore activé : aucun
-                  service e-mail n'est connecté pour le moment. En attendant, tu peux écrire
-                  directement à{" "}
-                  <a href={`mailto:${site.email}`} className="font-semibold underline">
-                    {site.email}
-                  </a>
-                  .
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setSent(false)}
-                  className={`${buttonStyles.secondary} mt-5`}
-                >
-                  Écrire un autre message
-                </button>
-              </div>
-            ) : (
-              <form noValidate onSubmit={onSubmit} className="space-y-5">
+            <form noValidate onSubmit={onSubmit} className="space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-brand">
@@ -274,8 +260,7 @@ function ContactPage() {
                 <button type="submit" className={buttonStyles.primary}>
                   Envoyer ma demande
                 </button>
-              </form>
-            )}
+            </form>
           </div>
 
           <aside className="space-y-6">
