@@ -10,7 +10,7 @@ const description =
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>) => ({
-    sujet: typeof search.sujet === "string" ? search.sujet : "",
+    sujet: typeof search['sujet'] === "string" ? (search['sujet'] as string) : "",
   }),
   head: () => ({
     meta: [
@@ -36,6 +36,8 @@ const requestTypes = [
   "Autre",
 ];
 
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
 interface FormState {
   firstName: string;
   lastName: string;
@@ -59,14 +61,14 @@ function ContactPage() {
     consent: false,
     honeypot: "",
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [sent, setSent] = useState(false);
 
   const update = (key: keyof FormState, value: string | boolean) =>
     setForm((prev) => ({ ...prev, [key]: value }));
 
   const validate = () => {
-    const next: Record<string, string> = {};
+    const next: FormErrors = {};
     if (form.firstName.trim().length < 2) next.firstName = "Merci d'indiquer ton prénom.";
     if (form.lastName.trim().length < 2) next.lastName = "Merci d'indiquer ton nom.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim()))
@@ -89,7 +91,7 @@ function ContactPage() {
     setSent(true);
   };
 
-  const fieldClass = (key: string) =>
+  const fieldClass = (key: keyof FormState) =>
     `w-full rounded-md border bg-card px-4 py-2.5 text-sm text-brand placeholder:text-brand/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
       errors[key] ? "border-destructive" : "border-input"
     }`;
