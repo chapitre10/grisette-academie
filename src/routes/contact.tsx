@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { site } from "@/data/site";
+import { saveContactSubmission } from "@/lib/contactSubmission";
 
 const title = "Contacter Grisette Académie — cours, templates, formations";
 const description =
@@ -50,6 +51,7 @@ interface FormState {
 
 function ContactPage() {
   const { sujet } = Route.useSearch();
+  const navigate = useNavigate();
   const [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -61,7 +63,6 @@ function ContactPage() {
     honeypot: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [sent, setSent] = useState(false);
 
   const update = (key: keyof FormState, value: string | boolean) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -87,7 +88,16 @@ function ContactPage() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
     // Aucun envoi réel : brancher un service e-mail ou une base de données plus tard.
-    setSent(true);
+    saveContactSubmission({
+      firstName: form.firstName.trim(),
+      lastName: form.lastName.trim(),
+      email: form.email.trim(),
+      subject: form.subject.trim(),
+      requestType: form.requestType,
+      message: form.message.trim(),
+      submittedAt: new Date().toISOString(),
+    });
+    navigate({ to: "/demande-envoyee" });
   };
 
   const fieldClass = (key: keyof FormState) =>
