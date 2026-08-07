@@ -190,7 +190,6 @@ function AboutPage() {
 
       <Section tone="mist">
         <SectionHeading
-          eyebrow="Les coulisses"
           title="Les coulisses"
           intro="Un aperçu de l'atelier, des matières et des projets en cours. Les emplacements ci-dessous attendent tes vraies photos."
         />
