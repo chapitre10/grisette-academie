@@ -154,6 +154,7 @@ function ContactPage() {
                     </label>
                     <input
                       id="firstName"
+                      autoComplete="given-name"
                       value={form.firstName}
                       onChange={(e) => update("firstName", e.target.value)}
                       aria-invalid={Boolean(errors.firstName)}
@@ -170,6 +171,7 @@ function ContactPage() {
                     </label>
                     <input
                       id="lastName"
+                      autoComplete="family-name"
                       value={form.lastName}
                       onChange={(e) => update("lastName", e.target.value)}
                       aria-invalid={Boolean(errors.lastName)}
@@ -189,6 +191,7 @@ function ContactPage() {
                   <input
                     id="email"
                     type="email"
+                    autoComplete="email"
                     value={form.email}
                     onChange={(e) => update("email", e.target.value)}
                     aria-invalid={Boolean(errors.email)}
