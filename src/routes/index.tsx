@@ -176,7 +176,7 @@ function Index() {
                         <Link
                           to="/blog/$slug"
                           params={{ slug: article.slug }}
-                          className="hover:text-fuchsia-accent"
+                          className="hover:text-fuchsia-ink"
                         >
                           {article.title}
                         </Link>
@@ -212,7 +212,7 @@ function Index() {
                         <Link
                           to="/micro-formations/$slug"
                           params={{ slug: formation.slug }}
-                          className="hover:text-fuchsia-accent"
+                          className="hover:text-fuchsia-ink"
                         >
                           {formation.title}
                         </Link>
@@ -249,7 +249,7 @@ function Index() {
             href={site.pinterestUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex items-center justify-center rounded-md bg-flame px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-fuchsia-accent md:justify-self-end"
+            className="inline-flex items-center justify-center rounded-md bg-flame-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-fuchsia-ink md:justify-self-end"
           >
             Suivre sur Pinterest
           </a>

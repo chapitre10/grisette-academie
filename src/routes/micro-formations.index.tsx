@@ -57,7 +57,7 @@ function FormationsPage() {
                   <Link
                     to="/micro-formations/$slug"
                     params={{ slug: formation.slug }}
-                    className="hover:text-fuchsia-accent"
+                    className="hover:text-fuchsia-ink"
                   >
                     {formation.title}
                   </Link>

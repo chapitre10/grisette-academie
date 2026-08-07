@@ -29,6 +29,8 @@
   --color-blush: var(--blush);
   --color-raspberry: var(--raspberry);
   --color-fuchsia-accent: var(--fuchsia-accent);
+  --color-fuchsia-ink: var(--fuchsia-ink);
+  --color-flame-ink: var(--flame-ink);
   --color-gold: var(--gold);
   --color-peach: var(--peach);
   --color-flame: var(--flame);
@@ -84,11 +86,13 @@
   --mist: oklch(0.936 0.006 255.5); /* #e7eaee */
   --steel: oklch(0.933 0.0067 253.9); /* #e7eaee */
   --blush: oklch(0.841 0.138 75.1); /* #ffbd59 */
-  --raspberry: oklch(0.634 0.093 1.8); /* #b97286 */
-  --fuchsia-accent: oklch(0.656 0.272 352.3); /* #ff00a1 */
+  --raspberry: oklch(0.556 0.099 4.4); /* #a3596c — variante lisible du framboise (AA sur ivoire) */
+  --fuchsia-accent: oklch(0.656 0.272 352.3); /* #ff00a1 (décoratif) */
+  --fuchsia-ink: oklch(0.534 0.221 352.1); /* #c2007a — fuchsia lisible pour texte/boutons */
   --gold: oklch(0.841 0.138 75.1); /* #ffbd59 */
   --peach: oklch(0.886 0.066 48); /* #ffcdb4 */
-  --flame: oklch(0.675 0.218 38.6); /* #ff5400 */
+  --flame: oklch(0.675 0.218 38.6); /* #ff5400 (décoratif) */
+  --flame-ink: oklch(0.551 0.177 38.9); /* #c23f00 — orange lisible pour texte/boutons */
 
   --background: var(--ivory);
   --foreground: var(--brand);
@@ -108,7 +112,7 @@
   --destructive-foreground: var(--ivory);
   --border: oklch(0.87 0.02 355);
   --input: oklch(0.87 0.02 355);
-  --ring: var(--raspberry);
+  --ring: var(--fuchsia-ink);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -162,6 +166,11 @@
 @layer base {
   * {
     border-color: var(--color-border);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--fuchsia-ink);
+    outline-offset: 2px;
   }
 
   body {

@@ -17,7 +17,7 @@ export function SiteHeader() {
       <div className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4">
         <Link
           to="/"
-          className="min-w-0 font-display text-xl leading-none text-brand transition-colors hover:text-fuchsia-accent md:text-2xl"
+          className="min-w-0 font-display text-xl leading-none text-brand transition-colors hover:text-fuchsia-ink md:text-2xl"
         >
           <span className="block truncate">{site.name}</span>
           <span className="mt-1 block text-[0.6rem] font-sans uppercase tracking-[0.28em] text-raspberry">
@@ -38,8 +38,8 @@ export function SiteHeader() {
                   to={path(link.to)}
                   aria-expanded={openGroup === link.label}
                   onClick={() => setOpenGroup(null)}
-                  activeProps={{ className: "text-fuchsia-accent" }}
-                  className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
+                  activeProps={{ className: "text-fuchsia-ink" }}
+                  className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-ink"
                 >
                   {link.label}
                 </Link>
@@ -50,8 +50,8 @@ export function SiteHeader() {
                         key={child.to}
                         to={path(child.to)}
                         onClick={() => setOpenGroup(null)}
-                        activeProps={{ className: "text-fuchsia-accent" }}
-                        className="block rounded px-3 py-2 text-sm font-medium text-brand transition-colors hover:bg-muted hover:text-fuchsia-accent"
+                        activeProps={{ className: "text-fuchsia-ink" }}
+                        className="block rounded px-3 py-2 text-sm font-medium text-brand transition-colors hover:bg-muted hover:text-fuchsia-ink"
                       >
                         {child.label}
                       </Link>
@@ -64,8 +64,8 @@ export function SiteHeader() {
                 key={link.to}
                 to={path(link.to)}
                 activeOptions={{ exact: link.to === "/" }}
-                activeProps={{ className: "text-fuchsia-accent" }}
-                className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
+                activeProps={{ className: "text-fuchsia-ink" }}
+                className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-ink"
               >
                 {link.label}
               </Link>
@@ -97,7 +97,7 @@ export function SiteHeader() {
                   <Link
                     to={path(link.to)}
                     onClick={() => setOpen(false)}
-                    activeProps={{ className: "text-fuchsia-accent" }}
+                    activeProps={{ className: "text-fuchsia-ink" }}
                     className="block text-base font-medium text-brand"
                   >
                     {link.label}
@@ -110,8 +110,8 @@ export function SiteHeader() {
                         key={child.to}
                         to={path(child.to)}
                         onClick={() => setOpen(false)}
-                        activeProps={{ className: "text-fuchsia-accent" }}
-                        className="py-2 pl-4 text-sm font-medium text-raspberry transition-colors hover:text-fuchsia-accent"
+                        activeProps={{ className: "text-fuchsia-ink" }}
+                        className="py-2 pl-4 text-sm font-medium text-raspberry transition-colors hover:text-fuchsia-ink"
                       >
                         {child.label}
                       </Link>
@@ -124,7 +124,7 @@ export function SiteHeader() {
                   to={path(link.to)}
                   onClick={() => setOpen(false)}
                   activeOptions={{ exact: link.to === "/" }}
-                  activeProps={{ className: "text-fuchsia-accent" }}
+                  activeProps={{ className: "text-fuchsia-ink" }}
                   className="border-b border-border py-3 text-base font-medium text-brand last:border-0"
                 >
                   {link.label}

@@ -88,7 +88,7 @@ export function NewsletterPopup({
                   role={form.status === "error" ? "alert" : "status"}
                   className={
                     form.status === "error"
-                      ? "text-sm font-semibold text-flame"
+                      ? "text-sm font-semibold text-flame-ink"
                       : "text-sm text-brand/70"
                   }
                 >
@@ -98,7 +98,7 @@ export function NewsletterPopup({
                 <button
                   type="submit"
                   disabled={form.status === "submitting"}
-                  className="w-full rounded-full bg-fuchsia-accent px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
+                  className="w-full rounded-full bg-fuchsia-ink px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   {form.status === "submitting" ? "Envoi…" : "Je m'inscris"}
                 </button>
@@ -110,7 +110,7 @@ export function NewsletterPopup({
                   <Link
                     to="/politique-confidentialite"
                     onClick={() => onOpenChange(false)}
-                    className="text-sm text-raspberry underline hover:text-fuchsia-accent"
+                    className="text-sm text-raspberry underline hover:text-fuchsia-ink"
                   >
                     Politique de confidentialité
                   </Link>

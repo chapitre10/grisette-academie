@@ -50,13 +50,13 @@ function FormationPage() {
         <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link to="/" className="hover:text-fuchsia-accent">
+              <Link to="/" className="hover:text-fuchsia-ink">
                 Accueil
               </Link>
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link to="/micro-formations" className="hover:text-fuchsia-accent">
+              <Link to="/micro-formations" className="hover:text-fuchsia-ink">
                 Formations courtes
               </Link>
             </li>

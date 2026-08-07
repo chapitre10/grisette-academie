@@ -22,7 +22,7 @@ export function BackToTopButton() {
       type="button"
       onClick={scrollToTop}
       aria-label="Retour en haut de la page"
-      className={`fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/15 bg-brand text-ivory shadow-lg transition-all duration-300 hover:bg-fuchsia-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+      className={`fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand/15 bg-brand text-ivory shadow-lg transition-all duration-300 hover:bg-fuchsia-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >

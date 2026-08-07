@@ -50,7 +50,7 @@ export function SiteFooter() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-peach transition-colors hover:text-fuchsia-accent"
+                    className="text-sm text-peach transition-colors hover:text-fuchsia-ink"
                   >
                     {link.label}
                   </Link>
@@ -61,7 +61,7 @@ export function SiteFooter() {
                   <button
                     type="button"
                     onClick={openNewsletter}
-                    className="text-sm text-peach underline-offset-2 transition-colors hover:text-fuchsia-accent hover:underline"
+                    className="text-sm text-peach underline-offset-2 transition-colors hover:text-fuchsia-ink hover:underline"
                   >
                     Newsletter
                   </button>
@@ -84,7 +84,7 @@ export function SiteFooter() {
           href={site.pinterestUrl}
           target="_blank"
           rel="noreferrer noopener"
-          className="text-sm text-peach transition-colors hover:text-fuchsia-accent"
+          className="text-sm text-peach transition-colors hover:text-fuchsia-ink"
         >
           Suivre Grisette Académie sur Pinterest
         </a>

@@ -62,13 +62,13 @@ function ArticlePage() {
         <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link to="/" className="hover:text-fuchsia-accent">
+              <Link to="/" className="hover:text-fuchsia-ink">
                 Accueil
               </Link>
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link to="/blog" className="hover:text-fuchsia-accent">
+              <Link to="/blog" className="hover:text-fuchsia-ink">
                 Ressources gratuites
               </Link>
             </li>
@@ -149,7 +149,7 @@ function ArticlePage() {
                 href={site.pinterestUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="mt-4 inline-flex items-center justify-center rounded-md bg-flame px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="mt-4 inline-flex items-center justify-center rounded-md bg-flame-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 Partager sur Pinterest
               </a>
