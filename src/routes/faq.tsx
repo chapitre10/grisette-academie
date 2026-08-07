@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { ButtonLink, Faq, Section, SectionHeading } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { allFaqItems, faqGroups } from "@/data/faq";
 
 const title = "FAQ couture — templates, guides et cours — Grisette Académie";
@@ -69,6 +70,8 @@ function FaqPage() {
           </div>
         </Section>
       ))}
+
+      <ZigzagDivider />
 
       <Section tone="ivory">
         <div className="text-center">
