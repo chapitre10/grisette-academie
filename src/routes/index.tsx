@@ -43,10 +43,10 @@ export const Route = createFileRoute("/")({
 const pillars = [
   {
     icon: ScissorsLineDashed,
-    title: "Boutique de templates",
+    title: "Guides de couture",
     text: "Des fiches, plannings et guides imprimables pour organiser tes projets et gagner en précision.",
-    to: "/boutique",
-    cta: "Voir la boutique",
+    to: "/guides",
+    cta: "Voir les guides",
   },
   {
     icon: BookOpen,
@@ -92,7 +92,7 @@ function Index() {
               les tutoriels.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/boutique">Explorer la boutique</ButtonLink>
+              <ButtonLink to="/guides">Explorer les guides</ButtonLink>
               <ButtonLink to="/blog" variant="secondary">
                 Ressources gratuites
               </ButtonLink>
@@ -135,11 +135,11 @@ function Index() {
       <Section tone="mist">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <SectionHeading
-            eyebrow="Boutique"
+            eyebrow="Guides"
             title="Templates et guides à découvrir"
             intro="Contenus d'exemple à remplacer par tes vrais produits."
           />
-          <ButtonLink to="/boutique" variant="secondary">
+          <ButtonLink to="/guides" variant="secondary">
             Tout voir
           </ButtonLink>
         </div>
@@ -163,7 +163,7 @@ function Index() {
                 </p>
                 <div className="mt-4">
                   <ButtonLink
-                    to="/boutique/$slug"
+                    to="/guides/$slug"
                     params={{ slug: product.slug }}
                     variant="secondary"
                   >

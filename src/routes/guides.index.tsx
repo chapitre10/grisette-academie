@@ -18,7 +18,7 @@ const title = "Templates et guides couture à télécharger — Grisette Académ
 const description =
   "Des templates et guides couture numériques pour organiser ses projets, préparer ses créations et progresser sereinement en couture.";
 
-export const Route = createFileRoute("/boutique/")({
+export const Route = createFileRoute("/guides/")({
   head: () => ({
     meta: [
       { title },
@@ -26,15 +26,15 @@ export const Route = createFileRoute("/boutique/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/boutique" },
+      { property: "og:url", content: "/guides" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/boutique" }],
+    links: [{ rel: "canonical", href: "/guides" }],
   }),
-  component: BoutiquePage,
+  component: GuidesPage,
 });
 
-function BoutiquePage() {
+function GuidesPage() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Toutes");
 
@@ -56,7 +56,7 @@ function BoutiquePage() {
       <Section tone="blush">
         <SectionHeading
           as="h1"
-          eyebrow="Boutique"
+          eyebrow="Guides"
           title="Templates et guides couture à télécharger"
           intro="Retrouve des ressources numériques conçues pour t'aider à organiser tes projets, préparer tes créations et progresser plus sereinement en couture."
         />
@@ -132,7 +132,7 @@ function BoutiquePage() {
                     </div>
                     <h2 className="mt-3 text-xl text-brand">
                       <Link
-                        to="/boutique/$slug"
+                        to="/guides/$slug"
                         params={{ slug: product.slug }}
                         className="hover:text-fuchsia-accent"
                       >
@@ -157,7 +157,7 @@ function BoutiquePage() {
                     </p>
                     <div className="mt-5 pt-1">
                       <ButtonLink
-                        to="/boutique/$slug"
+                        to="/guides/$slug"
                         params={{ slug: product.slug }}
                         variant="secondary"
                       >
@@ -173,7 +173,7 @@ function BoutiquePage() {
       </Section>
 
       <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="La boutique en pratique" />
+        <SectionHeading eyebrow="Questions fréquentes" title="Les guides en pratique" />
         <div className="mt-8">
           <Faq items={shopFaq} />
         </div>

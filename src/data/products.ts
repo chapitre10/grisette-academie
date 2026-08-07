@@ -44,7 +44,7 @@ const commonFaq = [
   {
     question: "Que vais-je recevoir après mon achat ?",
     answer:
-      "Le paiement n'est pas encore activé. Une fois la boutique ouverte, tu recevras un fichier numérique à télécharger immédiatement après ta commande.",
+      "Le paiement n'est pas encore activé. Une fois les guides en vente, tu recevras un fichier numérique à télécharger immédiatement après ta commande.",
   },
   {
     question: "Les templates sont-ils imprimables ?",

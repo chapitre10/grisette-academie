@@ -50,7 +50,7 @@ export const Route = createFileRoute("/cgv")({
       <LegalBlock title="Commande et paiement">
         <p>
           Le processus de commande et le prestataire de paiement seront précisés lors de l'ouverture
-          de la boutique : <Pending label="moyens de paiement" />. Les prix sont indiqués en euros.
+          des guides : <Pending label="moyens de paiement" />. Les prix sont indiqués en euros.
         </p>
       </LegalBlock>
 

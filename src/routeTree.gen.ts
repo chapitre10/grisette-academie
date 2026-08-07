@@ -19,8 +19,8 @@ import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
-import { Route as BoutiqueSlugRouteImport } from './routes/boutique.$slug'
+import { Route as GuidesIndexRouteImport } from './routes/guides.index'
+import { Route as GuidesSlugRouteImport } from './routes/guides.$slug'
 import { Route as MicroFormationsIndexRouteImport } from './routes/micro-formations.index'
 import { Route as MicroFormationsSlugRouteImport } from './routes/micro-formations.$slug'
 
@@ -75,14 +75,14 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BoutiqueIndexRoute = BoutiqueIndexRouteImport.update({
-  id: '/boutique/',
-  path: '/boutique/',
+const GuidesIndexRoute = GuidesIndexRouteImport.update({
+  id: '/guides/',
+  path: '/guides/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BoutiqueSlugRoute = BoutiqueSlugRouteImport.update({
-  id: '/boutique/$slug',
-  path: '/boutique/$slug',
+const GuidesSlugRoute = GuidesSlugRouteImport.update({
+  id: '/guides/$slug',
+  path: '/guides/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MicroFormationsIndexRoute = MicroFormationsIndexRouteImport.update({
@@ -106,10 +106,10 @@ export interface FileRoutesByFullPath {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
   '/blog/': typeof BlogIndexRoute
-  '/boutique/': typeof BoutiqueIndexRoute
+  '/guides/': typeof GuidesIndexRoute
   '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -122,10 +122,10 @@ export interface FileRoutesByTo {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
   '/blog': typeof BlogIndexRoute
-  '/boutique': typeof BoutiqueIndexRoute
+  '/guides': typeof GuidesIndexRoute
   '/micro-formations': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesById {
@@ -139,10 +139,10 @@ export interface FileRoutesById {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
   '/blog/': typeof BlogIndexRoute
-  '/boutique/': typeof BoutiqueIndexRoute
+  '/guides/': typeof GuidesIndexRoute
   '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRouteTypes {
@@ -157,10 +157,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/sitemap.xml'
     | '/blog/$slug'
-    | '/boutique/$slug'
+    | '/guides/$slug'
     | '/micro-formations/$slug'
     | '/blog/'
-    | '/boutique/'
+    | '/guides/'
     | '/micro-formations/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -173,10 +173,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/sitemap.xml'
     | '/blog/$slug'
-    | '/boutique/$slug'
+    | '/guides/$slug'
     | '/micro-formations/$slug'
     | '/blog'
-    | '/boutique'
+    | '/guides'
     | '/micro-formations'
   id:
     | '__root__'
@@ -189,10 +189,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/sitemap.xml'
     | '/blog/$slug'
-    | '/boutique/$slug'
+    | '/guides/$slug'
     | '/micro-formations/$slug'
     | '/blog/'
-    | '/boutique/'
+    | '/guides/'
     | '/micro-formations/'
   fileRoutesById: FileRoutesById
 }
@@ -206,10 +206,10 @@ export interface RootRouteChildren {
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
-  BoutiqueSlugRoute: typeof BoutiqueSlugRoute
+  GuidesSlugRoute: typeof GuidesSlugRoute
   MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
-  BoutiqueIndexRoute: typeof BoutiqueIndexRoute
+  GuidesIndexRoute: typeof GuidesIndexRoute
   MicroFormationsIndexRoute: typeof MicroFormationsIndexRoute
 }
 
@@ -285,18 +285,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/boutique/': {
-      id: '/boutique/'
-      path: '/boutique'
-      fullPath: '/boutique/'
-      preLoaderRoute: typeof BoutiqueIndexRouteImport
+    '/guides/': {
+      id: '/guides/'
+      path: '/guides'
+      fullPath: '/guides/'
+      preLoaderRoute: typeof GuidesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/boutique/$slug': {
-      id: '/boutique/$slug'
-      path: '/boutique/$slug'
-      fullPath: '/boutique/$slug'
-      preLoaderRoute: typeof BoutiqueSlugRouteImport
+    '/guides/$slug': {
+      id: '/guides/$slug'
+      path: '/guides/$slug'
+      fullPath: '/guides/$slug'
+      preLoaderRoute: typeof GuidesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/micro-formations/': {
@@ -326,22 +326,12 @@ const rootRouteChildren: RootRouteChildren = {
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
-  BoutiqueSlugRoute: BoutiqueSlugRoute,
+  GuidesSlugRoute: GuidesSlugRoute,
   MicroFormationsSlugRoute: MicroFormationsSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
-  BoutiqueIndexRoute: BoutiqueIndexRoute,
+  GuidesIndexRoute: GuidesIndexRoute,
   MicroFormationsIndexRoute: MicroFormationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
