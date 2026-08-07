@@ -82,7 +82,7 @@
   --brand-deep: oklch(0.333 0.046 2.6);
   --ivory: oklch(0.988 0.0067 53.4); /* #fffaf7 */
   --mist: oklch(0.936 0.006 255.5); /* #e7eaee */
-  --steel: oklch(0.87 0.016 253.9); /* #cdd5df */
+  --steel: oklch(0.933 0.0067 253.9); /* #e7eaee */
   --blush: oklch(0.841 0.138 75.1); /* #ffbd59 */
   --raspberry: oklch(0.634 0.093 1.8); /* #b97286 */
   --fuchsia-accent: oklch(0.656 0.272 352.3); /* #ff00a1 */
