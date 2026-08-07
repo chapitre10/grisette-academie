@@ -64,7 +64,7 @@ function FaqPage() {
       {faqGroups.map((group, index) => (
         <Section key={group.id} id={group.id} tone={index % 2 === 0 ? "ivory" : "mist"}>
           <SectionHeading title={group.title} intro={group.intro} />
-          <div className="mt-5 max-w-3xl">
+          <div className="mt-3 max-w-2xl">
             <Faq items={group.items} />
           </div>
         </Section>

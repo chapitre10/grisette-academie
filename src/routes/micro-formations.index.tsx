@@ -90,7 +90,7 @@ function FormationsPage() {
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les formations courtes en pratique" />
-        <div className="mt-5 max-w-3xl">
+        <div className="mt-3 max-w-2xl">
           <Faq items={formationFaq} />
         </div>
       </Section>
