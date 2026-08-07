@@ -107,11 +107,11 @@ export function ButtonLink({
   className = "",
 }: {
   to: string;
-  params?: Record<string, string>;
-  search?: Record<string, string>;
+  params?: Record<string, string> | undefined;
+  search?: Record<string, string> | undefined;
   variant?: keyof typeof buttonStyles;
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
