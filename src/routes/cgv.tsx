@@ -24,7 +24,7 @@ export const Route = createFileRoute("/cgv")({
     <LegalPage
       eyebrow="Conditions de vente"
       title="Conditions générales de vente"
-      intro="Conditions applicables aux templates, guides numériques, cours en présentiel et micro-formations."
+      intro="Conditions applicables aux templates, guides numériques, cours en présentiel et formations courtes."
     >
       <LegalBlock title="Vendeur">
         <p>
