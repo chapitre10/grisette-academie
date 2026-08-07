@@ -14,7 +14,7 @@ import {
 } from "@/components/Ui";
 import { productCategories, products, shopFaq } from "@/data/products";
 
-const title = "Templates et guides couture à télécharger — Grisette Academy";
+const title = "Templates et guides couture à télécharger — Grisette Académie";
 const description =
   "Des templates et guides couture numériques pour organiser ses projets, préparer ses créations et progresser sereinement en couture.";
 

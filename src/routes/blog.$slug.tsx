@@ -15,7 +15,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Article indisponible — Grisette Academy" },
+          { title: "Article indisponible — Grisette Académie" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/blog/$slug")({
             description: article.seo.description,
             datePublished: article.date,
             articleSection: article.category,
-            author: { "@type": "Organization", name: "Grisette Academy" },
+            author: { "@type": "Organization", name: "Grisette Académie" },
           }),
         },
       ],

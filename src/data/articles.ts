@@ -88,7 +88,7 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Fournitures de couture posées sur une table d'atelier",
     seo: {
-      title: "Fournitures indispensables pour débuter la couture — Grisette Academy",
+      title: "Fournitures indispensables pour débuter la couture — Grisette Académie",
       description:
         "Quel matériel de couture acheter quand on débute ? La liste des fournitures réellement utiles pour bien commencer.",
       pinterestTitle: "Le matériel indispensable pour débuter la couture",
@@ -148,7 +148,7 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Carnet de couture ouvert avec échantillons de tissu",
     seo: {
-      title: "Organiser un projet couture de A à Z — Grisette Academy",
+      title: "Organiser un projet couture de A à Z — Grisette Académie",
       description:
         "Une méthode en quatre étapes pour organiser un projet couture : intention, mesures, fournitures et planification des séances.",
       pinterestTitle: "Organiser un projet couture en 4 étapes",
@@ -201,7 +201,7 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Coupons de tissus empilés dans un atelier de couture",
     seo: {
-      title: "Choisir son tissu pour un premier vêtement — Grisette Academy",
+      title: "Choisir son tissu pour un premier vêtement — Grisette Académie",
       description:
         "Quels tissus choisir pour coudre son premier vêtement ? Stabilité, recommandations du patron, tombé et entretien.",
       pinterestTitle: "Quel tissu choisir pour son premier vêtement cousu ?",
@@ -254,7 +254,7 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Mètre ruban et patron de couture posés sur une table",
     seo: {
-      title: "Prendre ses mesures avant de choisir un patron — Grisette Academy",
+      title: "Prendre ses mesures avant de choisir un patron — Grisette Académie",
       description:
         "Pourquoi et comment prendre ses mesures avant de choisir la taille de son patron de couture.",
       pinterestTitle: "Prendre ses mesures avant de choisir un patron",
@@ -308,7 +308,7 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Détail d'une couture en cours sur une machine à coudre",
     seo: {
-      title: "7 erreurs fréquentes quand on débute la couture — Grisette Academy",
+      title: "7 erreurs fréquentes quand on débute la couture — Grisette Académie",
       description:
         "Préparation, droit-fil, repassage, choix du projet : les erreurs les plus courantes des débutantes en couture et comment les éviter.",
       pinterestTitle: "7 erreurs fréquentes quand on débute la couture",

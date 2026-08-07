@@ -94,7 +94,7 @@ export const products: Product[] = [
       { src: null, alt: "Aperçu du plan des étapes de réalisation" },
     ],
     seo: {
-      title: "Template d'organisation de projet couture (PDF) — Grisette Academy",
+      title: "Template d'organisation de projet couture (PDF) — Grisette Académie",
       description:
         "Un template PDF imprimable pour organiser un projet couture : inspiration, mesures, tissus, fournitures et étapes réunis au même endroit.",
       pinterestTitle: "Organiser un projet couture : le template à imprimer",
@@ -135,7 +135,7 @@ export const products: Product[] = [
       { src: null, alt: "Aperçu des points de contrôle avant la coupe" },
     ],
     seo: {
-      title: "Checklist couture débutante à imprimer — Grisette Academy",
+      title: "Checklist couture débutante à imprimer — Grisette Académie",
       description:
         "Une checklist PDF pour préparer son matériel et ses fournitures avant de commencer un projet couture quand on débute.",
       pinterestTitle: "La checklist à imprimer avant de commencer à coudre",
@@ -176,7 +176,7 @@ export const products: Product[] = [
       { src: null, alt: "Aperçu du tableau de relevé des mesures" },
     ],
     seo: {
-      title: "Fiche de mesures couture à imprimer — Grisette Academy",
+      title: "Fiche de mesures couture à imprimer — Grisette Académie",
       description:
         "Une fiche PDF pour relever, noter et conserver ses mesures couture avant de choisir la taille de son patron.",
       pinterestTitle: "La fiche de mesures à garder avant de choisir un patron",
@@ -206,7 +206,7 @@ export const shopFaq = [
       "Oui, l'usage est personnel. La revente et la rediffusion du fichier ne sont pas autorisées.",
   },
   {
-    question: "Comment contacter Grisette Academy en cas de question ?",
+    question: "Comment contacter Grisette Académie en cas de question ?",
     answer:
       "Via la page Contact : le formulaire permet de choisir le type de demande pour une réponse plus rapide.",
   },

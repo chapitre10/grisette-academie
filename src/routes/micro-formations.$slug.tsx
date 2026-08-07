@@ -16,7 +16,7 @@ export const Route = createFileRoute("/micro-formations/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Micro-formation indisponible — Grisette Academy" },
+          { title: "Micro-formation indisponible — Grisette Académie" },
           { name: "robots", content: "noindex" },
         ],
       };

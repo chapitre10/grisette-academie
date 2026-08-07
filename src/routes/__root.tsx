@@ -79,14 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Grisette Academy — apprendre la couture pas à pas" },
+      { title: "Grisette Académie — apprendre la couture pas à pas" },
       {
         name: "description",
         content:
-          "Grisette Academy : cours de couture, templates, guides et micro-formations pour apprendre la couture avec méthode.",
+          "Grisette Académie : cours de couture, templates, guides et micro-formations pour apprendre la couture avec méthode.",
       },
-      { name: "author", content: "Grisette Academy" },
-      { property: "og:site_name", content: "Grisette Academy" },
+      { name: "author", content: "Grisette Académie" },
+      { property: "og:site_name", content: "Grisette Académie" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
