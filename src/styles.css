@@ -80,7 +80,7 @@
   /* Grisette Académie palette */
   --brand: oklch(0.391 0.053 1.8); /* #5d3943 bordeaux profond */
   --brand-deep: oklch(0.333 0.046 2.6);
-  --ivory: oklch(0.976 0.007 97.4); /* #f8f7f2 */
+  --ivory: oklch(0.988 0.0067 53.4); /* #fffaf7 */
   --mist: oklch(0.936 0.006 255.5); /* #e7eaee */
   --steel: oklch(0.87 0.016 253.9); /* #cdd5df */
   --blush: oklch(0.819 0.042 359); /* #dcb9c3 */
