@@ -1,6 +1,6 @@
 /**
- * Produits numériques (templates & guides).
- * Contenu d'EXEMPLE : remplacer par les vrais produits, prix et images.
+ * Guides numériques (templates & guides téléchargeables).
+ * Les titres sont définitifs ; les contenus, prix et images restent à compléter.
  */
 export type ProductStatus = "exemple" | "bientot" | "disponible";
 
@@ -29,15 +29,17 @@ export interface Product {
     pinterestImage: string | null; // image verticale 1000x1500
   };
   related: string[];
+  /** Ressource gratuite associée (slug d'article du blog). */
+  freeResource?: string;
 }
 
 export const productCategories = [
-  "Organisation couture",
+  "Références et lectures",
+  "Fournisseurs et achats",
+  "Tissus et matières",
+  "Machines et outils",
+  "Vocabulaire couture",
   "Couture débutante",
-  "Prise de mesures",
-  "Techniques de couture",
-  "Inspiration et création",
-  "Guides pratiques",
 ];
 
 const commonFaq = [
@@ -47,144 +49,368 @@ const commonFaq = [
       "Le paiement n'est pas encore activé. Une fois les guides en vente, tu recevras un fichier numérique à télécharger immédiatement après ta commande.",
   },
   {
-    question: "Les templates sont-ils imprimables ?",
-    answer: "Oui, ils sont pensés pour être imprimés au format A4 ou utilisés à l'écran.",
+    question: "Les guides sont-ils imprimables ?",
+    answer: "Oui, ils sont pensés pour être imprimés au format A4 ou consultés à l'écran.",
   },
   {
-    question: "Puis-je utiliser le template pour mon organisation personnelle ?",
+    question: "Puis-je utiliser le guide pour mon organisation personnelle ?",
     answer:
       "Oui, l'usage est personnel. La revente et la rediffusion du fichier ne sont pas autorisées.",
   },
 ];
 
+const baseUsage = [
+  "Usage personnel uniquement",
+  "Impression libre pour tes propres projets",
+  "Revente et partage du fichier interdits",
+];
+
 export const products: Product[] = [
   {
-    slug: "template-organiser-projet-couture",
-    title: "Template pour organiser un projet couture",
+    slug: "les-livres-essentiels",
+    title: "Les livres essentiels",
     shortDescription:
-      "Un support pratique pour réunir inspiration, mesures, tissus, fournitures, étapes et notes au même endroit.",
-    category: "Organisation couture",
-    format: "PDF imprimable",
-    level: "Débutante à intermédiaire",
+      "Une sélection commentée d'ouvrages de couture et de modélisme à garder près de sa machine.",
+    category: "Références et lectures",
+    format: "PDF",
+    level: "Tous niveaux",
     price: null,
-    status: "exemple",
+    status: "bientot",
     benefits: [
-      "Rassembler toutes les informations d'un projet sur un seul document",
-      "Préparer ses fournitures avant de commencer",
-      "Suivre l'avancement étape par étape",
+      "Savoir quels ouvrages acheter en priorité selon son niveau",
+      "Éviter les livres redondants ou trop théoriques",
+      "Se constituer une bibliothèque couture utile au quotidien",
     ],
     content: [
-      "Page d'inspiration et croquis",
-      "Fiche tissus et fournitures",
-      "Rappel des mesures utiles",
-      "Plan des étapes de réalisation",
-      "Espace de notes et d'ajustements",
+      "Livres pour démarrer la couture",
+      "Ouvrages de technique et de finitions",
+      "Références de modélisme et de patronage",
+      "Livres d'histoire du vêtement et d'inspiration",
+      "Fiche de suivi de ses lectures",
     ],
-    material: ["Une imprimante (facultatif)", "Un stylo ou un crayon", "Un mètre ruban"],
-    usage: [
-      "Usage personnel uniquement",
-      "Impression libre pour tes propres projets",
-      "Revente et partage du fichier interdits",
-    ],
+    material: ["Aucun matériel particulier"],
+    usage: baseUsage,
     image: null,
-    imageAlt: "Aperçu du template d'organisation de projet couture",
+    imageAlt: "Aperçu du guide des livres essentiels de couture",
     gallery: [
-      { src: null, alt: "Aperçu de la page inspiration du template couture" },
-      { src: null, alt: "Aperçu de la fiche tissus et fournitures" },
-      { src: null, alt: "Aperçu du plan des étapes de réalisation" },
+      { src: null, alt: "Aperçu de la sélection de livres pour débuter" },
+      { src: null, alt: "Aperçu des références de modélisme" },
     ],
     seo: {
-      title: "Template d'organisation de projet couture (PDF) — Grisette Académie",
+      title: "Les livres essentiels de couture (guide PDF) — Grisette Académie",
       description:
-        "Un template PDF imprimable pour organiser un projet couture : inspiration, mesures, tissus, fournitures et étapes réunis au même endroit.",
-      pinterestTitle: "Organiser un projet couture : le template à imprimer",
+        "Une sélection commentée des livres de couture et de modélisme vraiment utiles, classée par niveau et par usage.",
+      pinterestTitle: "Les livres de couture à avoir chez soi",
       pinterestDescription:
-        "Un support simple pour préparer un projet couture de A à Z : inspiration, tissus, fournitures, mesures et étapes.",
+        "Technique, modélisme, inspiration : les ouvrages de couture à garder près de sa machine.",
       pinterestImage: null,
     },
-    related: ["checklist-couture-debutante", "fiche-mesures-couture"],
+    related: ["lexique-de-la-couturiere", "guide-debutant"],
+    freeResource: "bien-choisir-ses-livres-de-couture",
     faq: commonFaq,
   },
   {
-    slug: "checklist-couture-debutante",
-    title: "Checklist couture pour débutante",
+    slug: "liste-des-fournisseurs",
+    title: "Liste des fournisseurs",
     shortDescription:
-      "Une checklist simple pour préparer son matériel et éviter les oublis avant de commencer un projet.",
+      "Un carnet d'adresses de merceries, tissuthèques et fournisseurs, avec des critères pour comparer.",
+    category: "Fournisseurs et achats",
+    format: "PDF",
+    level: "Tous niveaux",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Trouver rapidement où acheter tissus et fournitures",
+      "Comparer les fournisseurs selon des critères clairs",
+      "Garder ses bonnes adresses au même endroit",
+    ],
+    content: [
+      "Merceries et tissuthèques physiques",
+      "Boutiques en ligne et fournisseurs spécialisés",
+      "Fournisseurs de mercerie technique et de matériel",
+      "Critères de comparaison : qualité, délais, échantillons, prix",
+      "Fiche vierge pour ajouter tes propres adresses",
+    ],
+    material: ["Aucun matériel particulier"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu de la liste des fournisseurs couture",
+    gallery: [
+      { src: null, alt: "Aperçu du carnet d'adresses de merceries" },
+      { src: null, alt: "Aperçu de la grille de comparaison des fournisseurs" },
+    ],
+    seo: {
+      title: "Liste des fournisseurs couture (guide PDF) — Grisette Académie",
+      description:
+        "Merceries, tissuthèques et fournisseurs de matériel : un carnet d'adresses couture avec des critères pour comparer.",
+      pinterestTitle: "Où acheter ses tissus et fournitures de couture",
+      pinterestDescription:
+        "Un carnet d'adresses de merceries, tissuthèques et fournisseurs pour la couture.",
+      pinterestImage: null,
+    },
+    related: ["tissutheque", "difference-entre-tissus-et-tissage"],
+    freeResource: "ou-acheter-ses-tissus-et-fournitures",
+    faq: commonFaq,
+  },
+  {
+    slug: "difference-entre-tissus-et-tissage",
+    title: "La différence entre tissus et tissage",
+    shortDescription:
+      "Comprendre ce qui distingue une matière d'une construction textile, pour mieux choisir ses tissus.",
+    category: "Tissus et matières",
+    format: "PDF",
+    level: "Débutante à intermédiaire",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Distinguer fibre, matière, tissage et maille",
+      "Anticiper le comportement d'un tissu avant l'achat",
+      "Lire correctement une étiquette de tissu",
+    ],
+    content: [
+      "Fibres naturelles, artificielles et synthétiques",
+      "Les grandes familles de tissage : toile, sergé, satin",
+      "Tissés et tricotés : ce qui change à la couture",
+      "Armure, grammage, tombé et élasticité",
+      "Tableau récapitulatif matière / tissage / usage",
+    ],
+    material: ["Quelques chutes de tissu pour observer les armures"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu du guide sur la différence entre tissus et tissage",
+    gallery: [
+      { src: null, alt: "Aperçu des schémas d'armures de tissage" },
+      { src: null, alt: "Aperçu du tableau matière, tissage et usage" },
+    ],
+    seo: {
+      title: "Tissu ou tissage : comprendre la différence — Grisette Académie",
+      description:
+        "Fibre, matière, armure, maille : un guide PDF pour comprendre la différence entre tissus et tissage et mieux choisir ses coupons.",
+      pinterestTitle: "Tissu ou tissage : quelle différence ?",
+      pinterestDescription:
+        "Fibres, armures, tissés et tricotés : comprendre les tissus avant de les coudre.",
+      pinterestImage: null,
+    },
+    related: ["tissutheque", "lexique-de-la-couturiere"],
+    freeResource: "comprendre-fibres-et-armures-de-tissage",
+    faq: commonFaq,
+  },
+  {
+    slug: "tissutheque",
+    title: "Tissuthèque",
+    shortDescription:
+      "Un support pour constituer sa propre tissuthèque : échantillons, caractéristiques et projets possibles.",
+    category: "Tissus et matières",
+    format: "PDF imprimable",
+    level: "Tous niveaux",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Garder une trace de chaque tissu acheté",
+      "Retrouver la référence exacte d'un coupon apprécié",
+      "Choisir un tissu adapté sans se déplacer",
+    ],
+    content: [
+      "Fiche échantillon à remplir (matière, laize, grammage, prix)",
+      "Emplacement pour coller un morceau de tissu",
+      "Notes d'entretien et de prélavage",
+      "Projets réalisés ou envisagés avec ce tissu",
+      "Index de classement par famille de tissu",
+    ],
+    material: ["Une imprimante", "Des chutes de tissu", "De la colle ou de l'adhésif textile"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu des fiches de tissuthèque à imprimer",
+    gallery: [
+      { src: null, alt: "Aperçu d'une fiche échantillon de tissuthèque" },
+      { src: null, alt: "Aperçu de l'index de classement des tissus" },
+    ],
+    seo: {
+      title: "Tissuthèque à imprimer : fiches échantillons — Grisette Académie",
+      description:
+        "Des fiches PDF pour créer ta tissuthèque : échantillons, matière, laize, grammage, entretien et projets associés.",
+      pinterestTitle: "Créer sa tissuthèque : les fiches à imprimer",
+      pinterestDescription:
+        "Classe tes échantillons de tissu avec leurs caractéristiques et leurs projets possibles.",
+      pinterestImage: null,
+    },
+    related: ["difference-entre-tissus-et-tissage", "liste-des-fournisseurs"],
+    freeResource: "creer-sa-tissutheque-methode-simple",
+    faq: commonFaq,
+  },
+  {
+    slug: "machines-apprendre-et-comprendre",
+    title: "Machines : apprendre et comprendre",
+    shortDescription:
+      "Comprendre le fonctionnement de sa machine à coudre et de sa surjeteuse, du réglage au dépannage.",
+    category: "Machines et outils",
+    format: "PDF",
+    level: "Débutante à intermédiaire",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Comprendre le rôle de chaque réglage",
+      "Diagnostiquer seule un point irrégulier",
+      "Entretenir sa machine pour la garder fiable",
+    ],
+    content: [
+      "Anatomie de la machine à coudre",
+      "Tension, longueur de point et pression du pied",
+      "Choisir aiguille et fil selon le tissu",
+      "Surjeteuse : principes et enfilage",
+      "Tableau de dépannage des problèmes courants",
+      "Routine d'entretien et de nettoyage",
+    ],
+    material: ["Ta machine à coudre", "Des chutes de tissu pour les essais"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu du guide sur les machines à coudre",
+    gallery: [
+      { src: null, alt: "Aperçu du schéma d'anatomie de la machine à coudre" },
+      { src: null, alt: "Aperçu du tableau de dépannage des points irréguliers" },
+    ],
+    seo: {
+      title: "Machines à coudre : apprendre et comprendre — Grisette Académie",
+      description:
+        "Un guide PDF pour comprendre sa machine à coudre et sa surjeteuse : réglages, aiguilles, tensions, entretien et dépannage.",
+      pinterestTitle: "Comprendre sa machine à coudre",
+      pinterestDescription:
+        "Réglages, tension, aiguilles et entretien : tout comprendre au fonctionnement de sa machine.",
+      pinterestImage: null,
+    },
+    related: ["guide-debutant", "lexique-de-la-couturiere"],
+    freeResource: "reglages-machine-a-coudre-les-bases",
+    faq: commonFaq,
+  },
+  {
+    slug: "lexique-de-la-couturiere",
+    title: "Lexique de la couturière",
+    shortDescription:
+      "Le vocabulaire de la couture expliqué simplement, des termes de patron aux gestes techniques.",
+    category: "Vocabulaire couture",
+    format: "PDF",
+    level: "Tous niveaux",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Comprendre les instructions d'un patron sans blocage",
+      "Mettre un mot juste sur chaque geste",
+      "Progresser plus vite en cours et en tutoriel",
+    ],
+    content: [
+      "Termes de patron et de coupe",
+      "Vocabulaire des coutures et des finitions",
+      "Mots liés aux tissus et aux fournitures",
+      "Termes de repassage et de mise en forme",
+      "Index alphabétique",
+    ],
+    material: ["Aucun matériel particulier"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu du lexique de la couturière",
+    gallery: [
+      { src: null, alt: "Aperçu des définitions de termes de couture" },
+      { src: null, alt: "Aperçu de l'index alphabétique du lexique" },
+    ],
+    seo: {
+      title: "Lexique de la couturière : le vocabulaire couture — Grisette Académie",
+      description:
+        "Un lexique PDF des termes de couture : patron, coupe, coutures, finitions, tissus et repassage, expliqués simplement.",
+      pinterestTitle: "Le lexique de la couturière",
+      pinterestDescription:
+        "Tous les termes de couture expliqués simplement pour lire un patron sans hésiter.",
+      pinterestImage: null,
+    },
+    related: ["lexique-de-la-modeliste", "guide-debutant"],
+    freeResource: "20-mots-de-couture-a-connaitre",
+    faq: commonFaq,
+  },
+  {
+    slug: "lexique-de-la-modeliste",
+    title: "Lexique de la modéliste",
+    shortDescription:
+      "Le vocabulaire du patronage et du modélisme, pour aborder la construction du vêtement.",
+    category: "Vocabulaire couture",
+    format: "PDF",
+    level: "Intermédiaire à avancée",
+    price: null,
+    status: "bientot",
+    benefits: [
+      "Comprendre le vocabulaire du patronage",
+      "Suivre un cours de modélisme plus sereinement",
+      "Nommer précisément les transformations de patron",
+    ],
+    content: [
+      "Termes de base du patronage",
+      "Pinces, aisance et lignes de construction",
+      "Transformations et évolutions de patron",
+      "Vocabulaire du moulage et du prototype",
+      "Index alphabétique",
+    ],
+    material: ["Aucun matériel particulier"],
+    usage: baseUsage,
+    image: null,
+    imageAlt: "Aperçu du lexique de la modéliste",
+    gallery: [
+      { src: null, alt: "Aperçu des termes de patronage" },
+      { src: null, alt: "Aperçu des schémas de lignes de construction" },
+    ],
+    seo: {
+      title: "Lexique de la modéliste : vocabulaire du patronage — Grisette Académie",
+      description:
+        "Un lexique PDF des termes de modélisme et de patronage : pinces, aisance, lignes de construction, moulage et prototype.",
+      pinterestTitle: "Le lexique de la modéliste",
+      pinterestDescription:
+        "Patronage, pinces, aisance, moulage : le vocabulaire du modélisme expliqué.",
+      pinterestImage: null,
+    },
+    related: ["lexique-de-la-couturiere", "les-livres-essentiels"],
+    freeResource: "vocabulaire-du-patronage-premiers-reperes",
+    faq: commonFaq,
+  },
+  {
+    slug: "guide-debutant",
+    title: "Guide débutant",
+    shortDescription:
+      "Le guide complet pour démarrer la couture : matériel, premiers gestes, premier projet et organisation.",
     category: "Couture débutante",
     format: "PDF imprimable",
     level: "Débutante",
     price: null,
-    status: "exemple",
+    status: "bientot",
     benefits: [
-      "Savoir exactement quoi préparer avant de coudre",
-      "Éviter les allers-retours en mercerie",
-      "Démarrer un projet plus sereinement",
+      "Savoir par où commencer sans se disperser",
+      "Réaliser un premier projet jusqu'au bout",
+      "Prendre de bonnes habitudes dès le départ",
     ],
     content: [
-      "Liste du matériel de base",
-      "Fournitures spécifiques au projet",
-      "Vérifications avant la coupe",
-      "Points de contrôle avant l'assemblage",
+      "Le matériel vraiment nécessaire pour commencer",
+      "Prendre ses mesures et choisir sa taille",
+      "Lire un patron et préparer son tissu",
+      "Les points et coutures de base",
+      "Un premier projet guidé étape par étape",
+      "Checklist et fiche de suivi de projet",
     ],
-    material: ["Une imprimante (facultatif)", "Ton matériel de couture habituel"],
-    usage: ["Usage personnel uniquement", "Revente et partage du fichier interdits"],
+    material: ["Une machine à coudre", "Un mètre ruban", "Du tissu simple pour s'entraîner"],
+    usage: baseUsage,
     image: null,
-    imageAlt: "Aperçu de la checklist couture pour débutante",
+    imageAlt: "Aperçu du guide débutant en couture",
     gallery: [
-      { src: null, alt: "Aperçu de la liste du matériel de base" },
-      { src: null, alt: "Aperçu des points de contrôle avant la coupe" },
+      { src: null, alt: "Aperçu de la liste de matériel du guide débutant" },
+      { src: null, alt: "Aperçu du premier projet guidé" },
+      { src: null, alt: "Aperçu de la checklist de suivi de projet" },
     ],
     seo: {
-      title: "Checklist couture débutante à imprimer — Grisette Académie",
+      title: "Guide débutant couture (PDF) — Grisette Académie",
       description:
-        "Une checklist PDF pour préparer son matériel et ses fournitures avant de commencer un projet couture quand on débute.",
-      pinterestTitle: "La checklist à imprimer avant de commencer à coudre",
+        "Un guide PDF pour débuter la couture : matériel, mesures, lecture de patron, points de base et premier projet guidé.",
+      pinterestTitle: "Le guide pour débuter la couture",
       pinterestDescription:
-        "Matériel, fournitures et vérifications : la checklist des débutantes en couture.",
+        "Matériel, mesures, patron et premier projet : tout pour commencer la couture sereinement.",
       pinterestImage: null,
     },
-    related: ["template-organiser-projet-couture", "fiche-mesures-couture"],
-    faq: commonFaq,
-  },
-  {
-    slug: "fiche-mesures-couture",
-    title: "Fiche de mesures couture",
-    shortDescription:
-      "Une fiche claire pour noter et conserver ses mesures importantes avant de choisir un patron.",
-    category: "Prise de mesures",
-    format: "PDF",
-    level: "Tous niveaux",
-    price: null,
-    status: "exemple",
-    benefits: [
-      "Conserver ses mesures au même endroit",
-      "Comparer ses mesures aux tableaux des patrons",
-      "Suivre l'évolution de ses mesures dans le temps",
-    ],
-    content: [
-      "Schéma des points de mesure",
-      "Tableau de relevé des mesures",
-      "Colonne de comparaison avec le patron",
-      "Espace de notes d'ajustement",
-    ],
-    material: ["Un mètre ruban", "Un stylo"],
-    usage: ["Usage personnel uniquement", "Revente et partage du fichier interdits"],
-    image: null,
-    imageAlt: "Aperçu de la fiche de mesures couture",
-    gallery: [
-      { src: null, alt: "Aperçu du schéma des points de mesure" },
-      { src: null, alt: "Aperçu du tableau de relevé des mesures" },
-    ],
-    seo: {
-      title: "Fiche de mesures couture à imprimer — Grisette Académie",
-      description:
-        "Une fiche PDF pour relever, noter et conserver ses mesures couture avant de choisir la taille de son patron.",
-      pinterestTitle: "La fiche de mesures à garder avant de choisir un patron",
-      pinterestDescription:
-        "Note et conserve tes mesures couture pour choisir la bonne taille de patron.",
-      pinterestImage: null,
-    },
-    related: ["template-organiser-projet-couture", "checklist-couture-debutante"],
+    related: ["machines-apprendre-et-comprendre", "lexique-de-la-couturiere"],
+    freeResource: "premiers-pas-en-couture-plan-en-5-etapes",
     faq: commonFaq,
   },
 ];
@@ -193,17 +419,18 @@ export const shopFaq = [
   ...commonFaq.slice(0, 2),
   {
     question: "Quel format est utilisé ?",
-    answer: "Les ressources sont proposées en PDF, prévues pour une impression A4 ou un usage à l'écran.",
+    answer:
+      "Les ressources sont proposées en PDF, prévues pour une impression A4 ou un usage à l'écran.",
   },
   {
-    question: "Les produits sont-ils adaptés aux débutantes ?",
+    question: "Les guides sont-ils adaptés aux débutantes ?",
     answer:
-      "Oui. Chaque ressource indique le niveau conseillé, et plusieurs sont pensées spécifiquement pour les débutantes.",
+      "Oui. Chaque guide indique le niveau conseillé, et plusieurs sont pensés spécifiquement pour les débutantes.",
   },
   {
-    question: "Puis-je utiliser les templates pour mon organisation personnelle ?",
+    question: "Existe-t-il une version gratuite ?",
     answer:
-      "Oui, l'usage est personnel. La revente et la rediffusion du fichier ne sont pas autorisées.",
+      "Chaque guide est accompagné d'une ressource gratuite sur le blog, qui en reprend les bases.",
   },
   {
     question: "Comment contacter Grisette Académie en cas de question ?",

@@ -6,6 +6,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { getProduct, products, type Product } from "@/data/products";
+import { getArticle } from "@/data/articles";
 
 export const Route = createFileRoute("/guides/$slug")({
   loader: ({ params }) => {
@@ -54,6 +55,7 @@ function ProductPage() {
   const related = product.related
     .map((slug) => products.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const freeArticle = product.freeResource ? getArticle(product.freeResource) : undefined;
 
   return (
     <>
@@ -135,6 +137,22 @@ function ProductPage() {
               Le paiement n'est pas encore connecté. Pour être informée de l'ouverture, utilise la
               page contact.
             </p>
+
+            {freeArticle ? (
+              <div className="mt-6 rounded-lg border border-border bg-mist p-5">
+                <h2 className="text-lg text-brand">Ressource gratuite associée</h2>
+                <p className="mt-2 text-sm text-brand/80">{freeArticle.excerpt}</p>
+                <div className="mt-4">
+                  <ButtonLink
+                    to="/blog/$slug"
+                    params={{ slug: freeArticle.slug }}
+                    variant="secondary"
+                  >
+                    Lire « {freeArticle.title} »
+                  </ButtonLink>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </Section>

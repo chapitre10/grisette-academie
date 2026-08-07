@@ -12,11 +12,11 @@ const map: Record<string, RelatedSearch[]> = {
   // Articles
   "fournitures-indispensables-debuter-couture": [
     { label: "matériel de couture pour débutante", to: "/blog/$slug", params: { slug: "erreurs-frequentes-quand-on-debute-la-couture" } },
-    { label: "checklist couture débutante", to: "/guides/$slug", params: { slug: "checklist-couture-debutante" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
     { label: "choisir son tissu quand on débute", to: "/blog/$slug", params: { slug: "choisir-son-tissu-premier-vetement" } },
   ],
   "organiser-projet-couture-de-a-a-z": [
-    { label: "organiser un projet couture", to: "/guides/$slug", params: { slug: "template-organiser-projet-couture" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
     { label: "préparer son tissu avant de couper", to: "/micro-formations/$slug", params: { slug: "preparer-son-projet-avant-de-couper" } },
     { label: "erreurs de débutante en couture", to: "/blog/$slug", params: { slug: "erreurs-frequentes-quand-on-debute-la-couture" } },
   ],
@@ -27,7 +27,7 @@ const map: Record<string, RelatedSearch[]> = {
   ],
   "prendre-ses-mesures-avant-de-choisir-un-patron": [
     { label: "prendre ses mesures couture", to: "/micro-formations/$slug", params: { slug: "prendre-correctement-ses-mesures" } },
-    { label: "fiche de mesures à imprimer", to: "/guides/$slug", params: { slug: "fiche-mesures-couture" } },
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
     { label: "choisir la bonne taille de patron", to: "/blog/$slug", params: { slug: "organiser-projet-couture-de-a-a-z" } },
   ],
   "erreurs-frequentes-quand-on-debute-la-couture": [
@@ -37,21 +37,6 @@ const map: Record<string, RelatedSearch[]> = {
   ],
 
   // Guides
-  "template-organiser-projet-couture": [
-    { label: "organiser un projet couture de A à Z", to: "/blog/$slug", params: { slug: "organiser-projet-couture-de-a-a-z" } },
-    { label: "checklist couture débutante", to: "/guides/$slug", params: { slug: "checklist-couture-debutante" } },
-    { label: "préparer son projet avant de couper", to: "/micro-formations/$slug", params: { slug: "preparer-son-projet-avant-de-couper" } },
-  ],
-  "checklist-couture-debutante": [
-    { label: "fournitures indispensables couture", to: "/blog/$slug", params: { slug: "fournitures-indispensables-debuter-couture" } },
-    { label: "erreurs fréquentes en couture", to: "/blog/$slug", params: { slug: "erreurs-frequentes-quand-on-debute-la-couture" } },
-    { label: "template d'organisation couture", to: "/guides/$slug", params: { slug: "template-organiser-projet-couture" } },
-  ],
-  "fiche-mesures-couture": [
-    { label: "prendre ses mesures correctement", to: "/micro-formations/$slug", params: { slug: "prendre-correctement-ses-mesures" } },
-    { label: "mesures et choix du patron", to: "/blog/$slug", params: { slug: "prendre-ses-mesures-avant-de-choisir-un-patron" } },
-    { label: "checklist couture débutante", to: "/guides/$slug", params: { slug: "checklist-couture-debutante" } },
-  ],
 
   // Formations courtes
   "comprendre-le-droit-fil": [
@@ -61,7 +46,7 @@ const map: Record<string, RelatedSearch[]> = {
   ],
   "prendre-correctement-ses-mesures": [
     { label: "tableau de tailles patron", to: "/blog/$slug", params: { slug: "prendre-ses-mesures-avant-de-choisir-un-patron" } },
-    { label: "fiche de mesures couture", to: "/guides/$slug", params: { slug: "fiche-mesures-couture" } },
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
     { label: "préparer son projet couture", to: "/micro-formations/$slug", params: { slug: "preparer-son-projet-avant-de-couper" } },
   ],
   "choisir-un-tissu-adapte": [
@@ -72,12 +57,94 @@ const map: Record<string, RelatedSearch[]> = {
   "preparer-son-projet-avant-de-couper": [
     { label: "plan de coupe couture", to: "/blog/$slug", params: { slug: "organiser-projet-couture-de-a-a-z" } },
     { label: "marges de couture patron", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
-    { label: "template d'organisation de projet", to: "/guides/$slug", params: { slug: "template-organiser-projet-couture" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
   ],
   "ameliorer-la-qualite-de-ses-finitions": [
     { label: "ourlet régulier couture", to: "/blog/$slug", params: { slug: "erreurs-frequentes-quand-on-debute-la-couture" } },
     { label: "surpiqûres et repassage", to: "/micro-formations/$slug", params: { slug: "preparer-son-projet-avant-de-couper" } },
     { label: "cours de couture accompagnés", to: "/cours-presentiel" },
+  ],
+
+  // Guides et ressources gratuites associées
+  "les-livres-essentiels": [
+    { label: "choisir un livre de couture", to: "/blog/$slug", params: { slug: "bien-choisir-ses-livres-de-couture" } },
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
+  ],
+  "liste-des-fournisseurs": [
+    { label: "où acheter ses tissus", to: "/blog/$slug", params: { slug: "ou-acheter-ses-tissus-et-fournitures" } },
+    { label: "créer sa tissuthèque", to: "/guides/$slug", params: { slug: "tissutheque" } },
+    { label: "comprendre les tissages", to: "/guides/$slug", params: { slug: "difference-entre-tissus-et-tissage" } },
+  ],
+  "difference-entre-tissus-et-tissage": [
+    { label: "fibres et armures de tissage", to: "/blog/$slug", params: { slug: "comprendre-fibres-et-armures-de-tissage" } },
+    { label: "choisir un tissu adapté", to: "/micro-formations/$slug", params: { slug: "choisir-un-tissu-adapte" } },
+    { label: "tissuthèque à imprimer", to: "/guides/$slug", params: { slug: "tissutheque" } },
+  ],
+  "tissutheque": [
+    { label: "créer sa tissuthèque", to: "/blog/$slug", params: { slug: "creer-sa-tissutheque-methode-simple" } },
+    { label: "liste des fournisseurs couture", to: "/guides/$slug", params: { slug: "liste-des-fournisseurs" } },
+    { label: "tissu ou tissage", to: "/guides/$slug", params: { slug: "difference-entre-tissus-et-tissage" } },
+  ],
+  "machines-apprendre-et-comprendre": [
+    { label: "réglages de machine à coudre", to: "/blog/$slug", params: { slug: "reglages-machine-a-coudre-les-bases" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
+    { label: "améliorer ses finitions", to: "/micro-formations/$slug", params: { slug: "ameliorer-la-qualite-de-ses-finitions" } },
+  ],
+  "lexique-de-la-couturiere": [
+    { label: "20 mots de couture", to: "/blog/$slug", params: { slug: "20-mots-de-couture-a-connaitre" } },
+    { label: "lexique de la modéliste", to: "/guides/$slug", params: { slug: "lexique-de-la-modeliste" } },
+    { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
+  ],
+  "lexique-de-la-modeliste": [
+    { label: "vocabulaire du patronage", to: "/blog/$slug", params: { slug: "vocabulaire-du-patronage-premiers-reperes" } },
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
+    { label: "livres de modélisme", to: "/guides/$slug", params: { slug: "les-livres-essentiels" } },
+  ],
+  "guide-debutant": [
+    { label: "débuter la couture en 5 étapes", to: "/blog/$slug", params: { slug: "premiers-pas-en-couture-plan-en-5-etapes" } },
+    { label: "fournitures indispensables", to: "/blog/$slug", params: { slug: "fournitures-indispensables-debuter-couture" } },
+    { label: "comprendre sa machine", to: "/guides/$slug", params: { slug: "machines-apprendre-et-comprendre" } },
+  ],
+  "bien-choisir-ses-livres-de-couture": [
+    { label: "livres essentiels de couture", to: "/guides/$slug", params: { slug: "les-livres-essentiels" } },
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
+    { label: "cours de couture en présentiel", to: "/cours-presentiel" },
+  ],
+  "ou-acheter-ses-tissus-et-fournitures": [
+    { label: "liste des fournisseurs", to: "/guides/$slug", params: { slug: "liste-des-fournisseurs" } },
+    { label: "créer sa tissuthèque", to: "/guides/$slug", params: { slug: "tissutheque" } },
+    { label: "choisir un tissu adapté", to: "/micro-formations/$slug", params: { slug: "choisir-un-tissu-adapte" } },
+  ],
+  "comprendre-fibres-et-armures-de-tissage": [
+    { label: "tissu ou tissage", to: "/guides/$slug", params: { slug: "difference-entre-tissus-et-tissage" } },
+    { label: "choisir son tissu", to: "/blog/$slug", params: { slug: "choisir-son-tissu-premier-vetement" } },
+    { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
+  ],
+  "creer-sa-tissutheque-methode-simple": [
+    { label: "fiches de tissuthèque", to: "/guides/$slug", params: { slug: "tissutheque" } },
+    { label: "où acheter ses tissus", to: "/blog/$slug", params: { slug: "ou-acheter-ses-tissus-et-fournitures" } },
+    { label: "organiser un projet couture", to: "/blog/$slug", params: { slug: "organiser-projet-couture-de-a-a-z" } },
+  ],
+  "reglages-machine-a-coudre-les-bases": [
+    { label: "comprendre sa machine", to: "/guides/$slug", params: { slug: "machines-apprendre-et-comprendre" } },
+    { label: "améliorer ses finitions", to: "/micro-formations/$slug", params: { slug: "ameliorer-la-qualite-de-ses-finitions" } },
+    { label: "erreurs fréquentes en couture", to: "/blog/$slug", params: { slug: "erreurs-frequentes-quand-on-debute-la-couture" } },
+  ],
+  "20-mots-de-couture-a-connaitre": [
+    { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
+    { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
+  ],
+  "vocabulaire-du-patronage-premiers-reperes": [
+    { label: "lexique de la modéliste", to: "/guides/$slug", params: { slug: "lexique-de-la-modeliste" } },
+    { label: "prendre ses mesures", to: "/micro-formations/$slug", params: { slug: "prendre-correctement-ses-mesures" } },
+    { label: "livres essentiels de couture", to: "/guides/$slug", params: { slug: "les-livres-essentiels" } },
+  ],
+  "premiers-pas-en-couture-plan-en-5-etapes": [
+    { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
+    { label: "fournitures indispensables", to: "/blog/$slug", params: { slug: "fournitures-indispensables-debuter-couture" } },
+    { label: "cours de couture en présentiel", to: "/cours-presentiel" },
   ],
 };
 
