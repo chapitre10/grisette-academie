@@ -218,7 +218,7 @@ function ProductPage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <ButtonLink to="/contact">Poser une question</ButtonLink>
           <ButtonLink to="/guides" variant="secondary">
-            Retour à la boutique
+            Retour aux guides
           </ButtonLink>
         </div>
       </Section>
