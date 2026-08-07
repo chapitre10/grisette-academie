@@ -134,8 +134,8 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
   return (
     <div className="divide-y divide-border rounded-lg border border-border bg-card">
       {items.map((item) => (
-        <details key={item.question} className="group px-4 py-3">
-          <summary className="flex min-h-9 cursor-pointer list-none items-center text-sm font-semibold text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <details key={item.question} className="group px-3 py-2">
+          <summary className="flex min-h-7 cursor-pointer list-none items-center text-[13px] font-semibold text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
             <span className="flex w-full items-start justify-between gap-3">
               {item.question}
               <span aria-hidden className="text-raspberry transition-transform group-open:rotate-45">
@@ -143,7 +143,7 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
               </span>
             </span>
           </summary>
-          <p className="mt-2 text-[13px] leading-relaxed text-brand/80">{item.answer}</p>
+          <p className="mt-1.5 text-xs leading-snug text-brand/80">{item.answer}</p>
         </details>
       ))}
     </div>
