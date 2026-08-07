@@ -126,12 +126,12 @@ function SeFormerPage() {
         </div>
       </Section>
 
-      <Section tone="brand">
+      <Section tone="peach" className="bg-peach/40">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl text-ivory md:text-4xl">
+          <h2 className="font-display text-3xl text-brand md:text-4xl">
             Tu hésites entre les deux ?
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-ivory/85">
+          <p className="mt-4 text-base leading-relaxed text-brand/85">
             Dis-moi où tu en es dans ton apprentissage : je t'orienterai vers le format le plus
             adapté.
           </p>
