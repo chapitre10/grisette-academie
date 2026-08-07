@@ -93,7 +93,7 @@ function SeFormerPage() {
         </div>
       </Section>
 
-      <Section tone="peach" className="bg-peach/40">
+      <Section tone="ivory">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <ImagePlaceholder
             src={null}
