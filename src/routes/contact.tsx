@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { site } from "@/data/site";
@@ -63,6 +63,8 @@ function ContactPage() {
     honeypot: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
+  const errorSummaryRef = useRef<HTMLDivElement>(null);
+  const errorList = Object.entries(errors).filter(([, value]) => Boolean(value));
 
   const update = (key: keyof FormState, value: string | boolean) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -86,7 +88,15 @@ function ContactPage() {
     if (form.honeypot) return; // protection anti-spam basique
     const next = validate();
     setErrors(next);
-    if (Object.keys(next).length > 0) return;
+    if (Object.keys(next).length > 0) {
+      // Annonce lecteur d'écran + focus sur le premier champ en erreur
+      window.setTimeout(() => {
+        errorSummaryRef.current?.focus();
+        const first = Object.keys(next)[0];
+        if (first) document.getElementById(first)?.focus();
+      }, 0);
+      return;
+    }
     // Aucun envoi réel : brancher un service e-mail ou une base de données plus tard.
     saveContactSubmission({
       firstName: form.firstName.trim(),
@@ -120,6 +130,23 @@ function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <form noValidate onSubmit={onSubmit} className="space-y-5">
+                <p className="text-sm text-brand/80">
+                  Les champs suivis d'un astérisque (*) sont obligatoires.
+                </p>
+                <div ref={errorSummaryRef} tabIndex={-1} role="alert" aria-live="assertive">
+                  {errorList.length > 0 ? (
+                    <div className="rounded-md border border-destructive bg-card p-4">
+                      <p className="text-sm font-semibold text-destructive">
+                        Le formulaire n'a pas pu être envoyé : {errorList.length} champ(s) à corriger.
+                      </p>
+                      <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-brand">
+                        {errorList.map(([key, value]) => (
+                          <li key={key}>{value}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-brand">
@@ -130,10 +157,11 @@ function ContactPage() {
                       value={form.firstName}
                       onChange={(e) => update("firstName", e.target.value)}
                       aria-invalid={Boolean(errors.firstName)}
+                    aria-describedby={errors.firstName ? "firstName-error" : undefined}
                       className={fieldClass("firstName")}
                     />
                     {errors.firstName ? (
-                      <p className="mt-1 text-xs text-destructive">{errors.firstName}</p>
+                      <p id="firstName-error" className="mt-1 text-sm font-medium text-destructive">{errors.firstName}</p>
                     ) : null}
                   </div>
                   <div>
@@ -145,10 +173,11 @@ function ContactPage() {
                       value={form.lastName}
                       onChange={(e) => update("lastName", e.target.value)}
                       aria-invalid={Boolean(errors.lastName)}
+                    aria-describedby={errors.lastName ? "lastName-error" : undefined}
                       className={fieldClass("lastName")}
                     />
                     {errors.lastName ? (
-                      <p className="mt-1 text-xs text-destructive">{errors.lastName}</p>
+                      <p id="lastName-error" className="mt-1 text-sm font-medium text-destructive">{errors.lastName}</p>
                     ) : null}
                   </div>
                 </div>
@@ -163,10 +192,11 @@ function ContactPage() {
                     value={form.email}
                     onChange={(e) => update("email", e.target.value)}
                     aria-invalid={Boolean(errors.email)}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                     className={fieldClass("email")}
                   />
                   {errors.email ? (
-                    <p className="mt-1 text-xs text-destructive">{errors.email}</p>
+                    <p id="email-error" className="mt-1 text-sm font-medium text-destructive">{errors.email}</p>
                   ) : null}
                 </div>
 
@@ -179,10 +209,11 @@ function ContactPage() {
                     value={form.subject}
                     onChange={(e) => update("subject", e.target.value)}
                     aria-invalid={Boolean(errors.subject)}
+                    aria-describedby={errors.subject ? "subject-error" : undefined}
                     className={fieldClass("subject")}
                   />
                   {errors.subject ? (
-                    <p className="mt-1 text-xs text-destructive">{errors.subject}</p>
+                    <p id="subject-error" className="mt-1 text-sm font-medium text-destructive">{errors.subject}</p>
                   ) : null}
                 </div>
 
@@ -195,6 +226,7 @@ function ContactPage() {
                     value={form.requestType}
                     onChange={(e) => update("requestType", e.target.value)}
                     aria-invalid={Boolean(errors.requestType)}
+                    aria-describedby={errors.requestType ? "requestType-error" : undefined}
                     className={fieldClass("requestType")}
                   >
                     <option value="">Choisir…</option>
@@ -205,7 +237,7 @@ function ContactPage() {
                     ))}
                   </select>
                   {errors.requestType ? (
-                    <p className="mt-1 text-xs text-destructive">{errors.requestType}</p>
+                    <p id="requestType-error" className="mt-1 text-sm font-medium text-destructive">{errors.requestType}</p>
                   ) : null}
                 </div>
 
@@ -219,10 +251,11 @@ function ContactPage() {
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     aria-invalid={Boolean(errors.message)}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                     className={fieldClass("message")}
                   />
                   {errors.message ? (
-                    <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+                    <p id="message-error" className="mt-1 text-sm font-medium text-destructive">{errors.message}</p>
                   ) : null}
                 </div>
 
@@ -245,6 +278,7 @@ function ContactPage() {
                     checked={form.consent}
                     onChange={(e) => update("consent", e.target.checked)}
                     aria-invalid={Boolean(errors.consent)}
+                    aria-describedby={errors.consent ? "consent-error" : undefined}
                     className="mt-1 size-4 accent-[oklch(0.656_0.272_352.3)]"
                   />
                   <div>
@@ -252,7 +286,7 @@ function ContactPage() {
                       J'accepte que mes données soient utilisées pour traiter ma demande. *
                     </label>
                     {errors.consent ? (
-                      <p className="mt-1 text-xs text-destructive">{errors.consent}</p>
+                      <p id="consent-error" className="mt-1 text-sm font-medium text-destructive">{errors.consent}</p>
                     ) : null}
                   </div>
                 </div>
