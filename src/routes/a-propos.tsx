@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { storyBlocks } from "@/data/about";
 import { site } from "@/data/site";
 
@@ -111,6 +112,8 @@ function AboutPage() {
           intitulés exacts des diplômes).
         </p>
       </Section>
+
+      <ZigzagDivider />
 
       <Section tone="blush">
         <SectionHeading eyebrow="Valeurs" title="Ce qui guide chaque contenu" />

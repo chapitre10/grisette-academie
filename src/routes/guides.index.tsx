@@ -12,6 +12,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { productCategories, products, shopFaq } from "@/data/products";
 
 const title = "Templates et guides couture à télécharger — Grisette Académie";
@@ -171,6 +172,8 @@ function GuidesPage() {
           )}
         </div>
       </Section>
+
+      <ZigzagDivider />
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les guides en pratique" />

@@ -16,6 +16,7 @@ import {
   coursesFaq,
   visibleStudentProjects,
   visibleTestimonials,
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 } from "@/data/cours";
 import { infoOrPending } from "@/data/site";
 
@@ -240,6 +241,8 @@ function CoursPage() {
           )}
         </div>
       </Section>
+
+      <ZigzagDivider />
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les cours en pratique" />
