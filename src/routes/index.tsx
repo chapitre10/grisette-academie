@@ -82,7 +82,7 @@ const pillarColumns = [
 ];
 
 function Index() {
-  const featuredArticles = articles.slice(0, 3);
+  const featuredArticles = articles.slice(0, 2);
   const nextFormations = formations.slice(0, 2);
 
   return (
