@@ -192,7 +192,7 @@ function CoursPage() {
         </div>
       </Section>
 
-      <Section tone="mist">
+      <Section tone="ivory">
         <SectionHeading eyebrow="Retours d'expérience" title="Elles parlent de leur expérience" />
         <div className="mt-8">
           {testimonials.length === 0 ? (
