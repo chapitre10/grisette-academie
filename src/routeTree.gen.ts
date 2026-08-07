@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
 import { Route as BoutiqueSlugRouteImport } from './routes/boutique.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoutiqueIndexRoute = BoutiqueIndexRouteImport.update({
@@ -32,30 +38,34 @@ const BoutiqueSlugRoute = BoutiqueSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/boutique/': typeof BoutiqueIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/boutique': typeof BoutiqueIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/boutique/': typeof BoutiqueIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/boutique/$slug' | '/boutique/'
+  fullPaths: '/' | '/boutique/$slug' | '/blog/' | '/boutique/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/boutique/$slug' | '/boutique'
-  id: '__root__' | '/' | '/boutique/$slug' | '/boutique/'
+  to: '/' | '/boutique/$slug' | '/blog' | '/boutique'
+  id: '__root__' | '/' | '/boutique/$slug' | '/blog/' | '/boutique/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   BoutiqueIndexRoute: typeof BoutiqueIndexRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/boutique/': {
@@ -88,18 +105,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BoutiqueSlugRoute: BoutiqueSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
   BoutiqueIndexRoute: BoutiqueIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
