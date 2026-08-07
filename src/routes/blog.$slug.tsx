@@ -1,5 +1,6 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedSearches } from "@/components/RelatedSearches";
@@ -59,27 +60,13 @@ function ArticlePage() {
   return (
     <>
       <ReadingProgress />
-      <div className="border-b border-border bg-mist">
-        <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
-          <ol className="flex flex-wrap items-center gap-2">
-            <li>
-              <Link to="/" className="hover:text-fuchsia-ink">
-                Accueil
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li>
-              <Link to="/blog" className="hover:text-fuchsia-ink">
-                Ressources gratuites
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li aria-current="page" className="font-medium text-brand">
-              {article.title}
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <Breadcrumbs
+        items={[
+          { label: "Accueil", to: "/" },
+          { label: "Ressources gratuites", to: "/blog" },
+          { label: article.title },
+        ]}
+      />
 
       <Section>
         <article className="mx-auto max-w-3xl">

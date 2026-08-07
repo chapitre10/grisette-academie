@@ -1,6 +1,7 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Card, Faq, InfoRow, Section, SectionHeading } from "@/components/Ui";
@@ -47,27 +48,14 @@ function FormationPage() {
 
   return (
     <>
-      <div className="border-b border-border bg-mist">
-        <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
-          <ol className="flex flex-wrap items-center gap-2">
-            <li>
-              <Link to="/" className="hover:text-fuchsia-ink">
-                Accueil
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li>
-              <Link to="/micro-formations" className="hover:text-fuchsia-ink">
-                Formations courtes
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li aria-current="page" className="font-medium text-brand">
-              {formation.title}
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <Breadcrumbs
+        items={[
+          { label: "Accueil", to: "/" },
+          { label: "Se former", to: "/se-former" },
+          { label: "Formations courtes", to: "/micro-formations" },
+          { label: formation.title },
+        ]}
+      />
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-2">
