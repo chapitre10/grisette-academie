@@ -132,18 +132,23 @@ export function ButtonLink({
 
 export function Faq({ items }: { items: { question: string; answer: string }[] }) {
   return (
-    <div className="divide-y divide-border rounded-lg border border-border bg-card">
+    <div className="divide-y divide-border/60 rounded-lg border border-border bg-card">
       {items.map((item) => (
-        <details key={item.question} className="group px-3 py-2">
-          <summary className="flex min-h-7 cursor-pointer list-none items-center text-[13px] font-semibold text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <span className="flex w-full items-start justify-between gap-3">
-              {item.question}
-              <span aria-hidden className="text-raspberry transition-transform group-open:rotate-45">
+        <details key={item.question} className="group px-2.5 py-1.5 sm:px-3 sm:py-2">
+          <summary className="flex min-h-6 cursor-pointer list-none items-center text-xs font-semibold leading-snug text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-7 sm:text-[13px]">
+            <span className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
+              <span className="min-w-0">{item.question}</span>
+              <span
+                aria-hidden
+                className="shrink-0 text-raspberry transition-transform group-open:rotate-45"
+              >
                 +
               </span>
             </span>
           </summary>
-          <p className="mt-1.5 text-xs leading-snug text-brand/80">{item.answer}</p>
+          <p className="mt-1 text-[11px] leading-snug text-brand/80 sm:mt-1.5 sm:text-xs">
+            {item.answer}
+          </p>
         </details>
       ))}
     </div>
