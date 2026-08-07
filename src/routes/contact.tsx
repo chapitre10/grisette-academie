@@ -28,7 +28,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 const requestTypes = [
-  "Question sur un template",
   "Question sur un guide",
   "Cours en présentiel",
   "Formation courte",
