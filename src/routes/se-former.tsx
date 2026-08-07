@@ -126,16 +126,16 @@ function SeFormerPage() {
         </div>
       </Section>
 
-      <Section tone="peach" className="bg-peach/40">
+      <Section tone="peach" className="bg-peach/40 !py-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl text-brand md:text-4xl">
+          <h2 className="font-display text-2xl text-brand md:text-3xl">
             Tu hésites entre les deux ?
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-brand/85">
+          <p className="mt-2 text-sm leading-relaxed text-brand/85 md:text-base">
             Dis-moi où tu en es dans ton apprentissage : je t'orienterai vers le format le plus
             adapté.
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-5 flex justify-center">
             <ButtonLink to="/contact" variant="flame">
               Me poser une question
             </ButtonLink>
