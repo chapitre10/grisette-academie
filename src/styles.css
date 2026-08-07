@@ -216,68 +216,33 @@
 
 /* ── Newsletter pop-up : déroulé de rouleau de tissu ───────────────── */
 @keyframes fabric-unroll {
-  0% {
-    clip-path: inset(0 0 100% 0);
-    transform: translate(-50%, -50%) scaleY(0.04);
-  }
-  55% {
-    clip-path: inset(0 0 0 0);
-    transform: translate(-50%, -50%) scaleY(1.04);
-  }
-  75% {
-    transform: translate(-50%, -50%) scaleY(0.985);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-    transform: translate(-50%, -50%) scaleY(1);
-  }
+  0% { clip-path: inset(0 0 100% 0); }
+  100% { clip-path: inset(0 0 0 0); }
 }
 
 @keyframes fabric-rollup {
-  0% {
-    clip-path: inset(0 0 0 0);
-    transform: translate(-50%, -50%) scaleY(1);
-  }
-  100% {
-    clip-path: inset(0 0 100% 0);
-    transform: translate(-50%, -50%) scaleY(0.04);
-  }
+  0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 100% 0); }
 }
 
 @keyframes fabric-bar-drop {
-  0% {
-    transform: translateY(-0.9rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  0% { transform: translateY(-0.9rem); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fabric-content-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-0.6rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: scaleY(0.9) translateY(-0.75rem); }
+  60% { opacity: 1; transform: scaleY(1.02) translateY(0); }
+  100% { opacity: 1; transform: scaleY(1) translateY(0); }
 }
 
 @keyframes fabric-weave-drift {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 -12px;
-  }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -14px; }
 }
 
 .fabric-roll-panel {
-  transform-origin: top center;
-  animation: fabric-unroll 0.85s cubic-bezier(0.22, 1, 0.32, 1) both !important;
+  animation: fabric-unroll 0.8s cubic-bezier(0.22, 1, 0.32, 1) both !important;
 }
 
 .fabric-roll-panel[data-state="closed"] {
@@ -289,7 +254,8 @@
 }
 
 .fabric-roll-content {
-  animation: fabric-content-in 0.5s ease-out 0.4s both;
+  transform-origin: top center;
+  animation: fabric-content-in 0.7s cubic-bezier(0.22, 1, 0.32, 1) 0.12s both;
 }
 
 .fabric-weave {
@@ -298,7 +264,7 @@
     color-mix(in oklab, var(--raspberry) 12%, transparent) 0 1px,
     transparent 1px 6px
   );
-  animation: fabric-weave-drift 0.85s linear both;
+  animation: fabric-weave-drift 0.8s linear both;
 }
 
 @media (prefers-reduced-motion: reduce) {
