@@ -56,6 +56,37 @@ const values = [
   },
 ];
 
+const story = [
+  {
+    title: "Mon parcours de couturière",
+    prompt:
+      "Raconte tes débuts, tes premières pièces et les techniques qui te passionnent aujourd'hui.",
+    items: [
+      "Premiers pas en couture — année, déclic",
+      "Spécialités / techniques de prédilection",
+      "Créations et projets marquants",
+    ],
+  },
+  {
+    title: "Mon expérience de professeure",
+    prompt: "Décris ton expérience d'enseignement : ateliers, publics accompagnés, années de pratique.",
+    items: [
+      "Nombre d'années d'enseignement",
+      "Structures / ateliers où tu as enseigné",
+      "Publics accompagnés (débutantes, ados, entreprises…)",
+    ],
+  },
+  {
+    title: "Mes diplômes et certifications",
+    prompt: "Liste tes formations, diplômes et certifications officielles avec les années obtenues.",
+    items: [
+      "Diplôme principal — école, année",
+      "Formations complémentaires",
+      "Certifications professionnelles",
+    ],
+  },
+];
+
 const method = [
   {
     step: "01",
@@ -108,42 +139,30 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h2 className="text-2xl text-brand">L'histoire</h2>
-            <div className="mt-4 space-y-4 text-base leading-relaxed text-brand/85">
-              <p>
-                Grisette Académie est née d'un constat simple : beaucoup de personnes achètent une
-                machine à coudre, puis la laissent dormir dans un placard. Non par manque d'envie,
-                mais par manque de repères clairs pour démarrer.
-              </p>
-              <p>
-                L'activité s'est construite autour de l'idée qu'un apprentissage bien structuré vaut
-                mieux qu'une accumulation de tutoriels. D'abord des cours en présentiel, puis des
-                ressources écrites, des templates et des formations courtes pour prolonger
-                l'accompagnement au-delà de l'atelier.
-              </p>
-              <p className="text-sm italic text-brand/70">
-                Cette section est un contenu de départ : elle pourra être remplacée par ton texte
-                définitif.
-              </p>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl text-brand">La mission</h2>
-            <div className="mt-4 space-y-4 text-base leading-relaxed text-brand/85">
-              <p>
-                Transmettre une couture comprise, pas seulement reproduite. Chaque ressource vise à
-                rendre autonome : savoir choisir un tissu, lire un patron, ajuster un vêtement et
-                finir proprement une pièce.
-              </p>
-              <p>
-                Grisette Académie s'adresse aux débutantes complètes comme aux couturières
-                intermédiaires qui souhaitent combler des lacunes techniques précises.
-              </p>
-            </div>
-          </div>
+        <SectionHeading
+          eyebrow="Mon parcours"
+          title="Mon histoire"
+          intro="Un espace à compléter avec ton propre récit : d'où tu viens, ce que tu couds, ce que tu enseignes."
+        />
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {story.map((block) => (
+            <Card key={block.title}>
+              <h3 className="text-xl text-brand">{block.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-brand/80">{block.prompt}</p>
+              <ul className="mt-4 space-y-2 text-sm text-brand/70">
+                {block.items.map((item) => (
+                  <li key={item} className="rounded-md border border-dashed border-raspberry/40 bg-blush/20 px-3 py-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          ))}
         </div>
+        <p className="mt-6 max-w-3xl text-sm italic text-brand/70">
+          Contenu de départ : remplace chaque ligne par tes informations réelles (dates, lieux,
+          intitulés exacts des diplômes).
+        </p>
       </Section>
 
       <Section tone="blush">
