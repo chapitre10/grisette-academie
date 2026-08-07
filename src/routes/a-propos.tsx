@@ -124,7 +124,7 @@ function AboutPage() {
         }`}
       >
         <div className="overflow-hidden">
-      <Section className={openTab ? undefined : "!py-0"}>
+      <Section className={openTab ? "" : "!py-0"}>
         {renderedTab === "parcours" ? (
           <div
             role="tabpanel"
