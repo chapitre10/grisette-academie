@@ -15,6 +15,7 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
 import { Route as BoutiqueSlugRouteImport } from './routes/boutique.$slug'
+import { Route as MicroFormationsIndexRouteImport } from './routes/micro-formations.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const BoutiqueSlugRoute = BoutiqueSlugRouteImport.update({
   path: '/boutique/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MicroFormationsIndexRoute = MicroFormationsIndexRouteImport.update({
+  id: '/micro-formations/',
+  path: '/micro-formations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/boutique/': typeof BoutiqueIndexRoute
+  '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog': typeof BlogIndexRoute
   '/boutique': typeof BoutiqueIndexRoute
+  '/micro-formations': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/boutique/': typeof BoutiqueIndexRoute
+  '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/boutique/$slug'
     | '/blog/'
     | '/boutique/'
+    | '/micro-formations/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/boutique/$slug'
     | '/blog'
     | '/boutique'
+    | '/micro-formations'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/boutique/$slug'
     | '/blog/'
     | '/boutique/'
+    | '/micro-formations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   BoutiqueIndexRoute: typeof BoutiqueIndexRoute
+  MicroFormationsIndexRoute: typeof MicroFormationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoutiqueSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/micro-formations/': {
+      id: '/micro-formations/'
+      path: '/micro-formations'
+      fullPath: '/micro-formations/'
+      preLoaderRoute: typeof MicroFormationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   BoutiqueSlugRoute: BoutiqueSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   BoutiqueIndexRoute: BoutiqueIndexRoute,
+  MicroFormationsIndexRoute: MicroFormationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
