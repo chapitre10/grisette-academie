@@ -76,15 +76,15 @@ export function SiteFooter() {
         <NewsletterFooterForm />
       </div>
 
-      <div className="container-page flex flex-col gap-2 border-t border-ivory/20 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs text-ivory/90">
+      <div className="container-page flex flex-col gap-1 border-t border-ivory/20 py-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-[11px] text-ivory/90">
           © {new Date().getFullYear()} {site.name}. Tous droits réservés.
         </p>
         <a
           href={site.pinterestUrl}
           target="_blank"
           rel="noreferrer noopener"
-          className="inline-flex min-h-9 items-center py-1 text-sm text-peach underline underline-offset-2 transition-colors hover:text-gold"
+          className="inline-flex items-center text-[11px] text-peach underline underline-offset-2 transition-colors hover:text-gold"
         >
           Suivre Grisette Académie sur Pinterest
         </a>
