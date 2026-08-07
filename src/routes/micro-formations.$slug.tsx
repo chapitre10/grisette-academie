@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Card, Faq, InfoRow, Section, SectionHeading } from "@/components/Ui";
 import { formationFaq, formations, getFormation, type Formation } from "@/data/formations";
 import { products } from "@/data/products";
@@ -194,6 +195,9 @@ function FormationPage() {
           <ButtonLink to="/micro-formations" variant="secondary">
             Toutes les formations courtes
           </ButtonLink>
+        </div>
+        <div className="mt-10">
+          <RelatedSearches slug={formation.slug} />
         </div>
       </Section>
     </>
