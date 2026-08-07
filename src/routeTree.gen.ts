@@ -10,33 +10,207 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as CgvRouteImport } from './routes/cgv'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
+import { Route as BoutiqueSlugRouteImport } from './routes/boutique.$slug'
+import { Route as MicroFormationsIndexRouteImport } from './routes/micro-formations.index'
+import { Route as MicroFormationsSlugRouteImport } from './routes/micro-formations.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CgvRoute = CgvRouteImport.update({
+  id: '/cgv',
+  path: '/cgv',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursPresentielRoute = CoursPresentielRouteImport.update({
+  id: '/cours-presentiel',
+  path: '/cours-presentiel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitiqueConfidentialiteRoute =
+  PolitiqueConfidentialiteRouteImport.update({
+    id: '/politique-confidentialite',
+    path: '/politique-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoutiqueIndexRoute = BoutiqueIndexRouteImport.update({
+  id: '/boutique/',
+  path: '/boutique/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoutiqueSlugRoute = BoutiqueSlugRouteImport.update({
+  id: '/boutique/$slug',
+  path: '/boutique/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MicroFormationsIndexRoute = MicroFormationsIndexRouteImport.update({
+  id: '/micro-formations/',
+  path: '/micro-formations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MicroFormationsSlugRoute = MicroFormationsSlugRouteImport.update({
+  id: '/micro-formations/$slug',
+  path: '/micro-formations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/cgv': typeof CgvRoute
+  '/contact': typeof ContactRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/boutique/': typeof BoutiqueIndexRoute
+  '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/cgv': typeof CgvRoute
+  '/contact': typeof ContactRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/boutique': typeof BoutiqueIndexRoute
+  '/micro-formations': typeof MicroFormationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/cgv': typeof CgvRoute
+  '/contact': typeof ContactRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/boutique/$slug': typeof BoutiqueSlugRoute
+  '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/boutique/': typeof BoutiqueIndexRoute
+  '/micro-formations/': typeof MicroFormationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/cgv'
+    | '/contact'
+    | '/cours-presentiel'
+    | '/mentions-legales'
+    | '/politique-confidentialite'
+    | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/boutique/$slug'
+    | '/micro-formations/$slug'
+    | '/blog/'
+    | '/boutique/'
+    | '/micro-formations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/cgv'
+    | '/contact'
+    | '/cours-presentiel'
+    | '/mentions-legales'
+    | '/politique-confidentialite'
+    | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/boutique/$slug'
+    | '/micro-formations/$slug'
+    | '/blog'
+    | '/boutique'
+    | '/micro-formations'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/cgv'
+    | '/contact'
+    | '/cours-presentiel'
+    | '/mentions-legales'
+    | '/politique-confidentialite'
+    | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/boutique/$slug'
+    | '/micro-formations/$slug'
+    | '/blog/'
+    | '/boutique/'
+    | '/micro-formations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  CgvRoute: typeof CgvRoute
+  ContactRoute: typeof ContactRoute
+  CoursPresentielRoute: typeof CoursPresentielRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BoutiqueSlugRoute: typeof BoutiqueSlugRoute
+  MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  BoutiqueIndexRoute: typeof BoutiqueIndexRoute
+  MicroFormationsIndexRoute: typeof MicroFormationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +222,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cgv': {
+      id: '/cgv'
+      path: '/cgv'
+      fullPath: '/cgv'
+      preLoaderRoute: typeof CgvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cours-presentiel': {
+      id: '/cours-presentiel'
+      path: '/cours-presentiel'
+      fullPath: '/cours-presentiel'
+      preLoaderRoute: typeof CoursPresentielRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-confidentialite': {
+      id: '/politique-confidentialite'
+      path: '/politique-confidentialite'
+      fullPath: '/politique-confidentialite'
+      preLoaderRoute: typeof PolitiqueConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/boutique/': {
+      id: '/boutique/'
+      path: '/boutique'
+      fullPath: '/boutique/'
+      preLoaderRoute: typeof BoutiqueIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/boutique/$slug': {
+      id: '/boutique/$slug'
+      path: '/boutique/$slug'
+      fullPath: '/boutique/$slug'
+      preLoaderRoute: typeof BoutiqueSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/micro-formations/': {
+      id: '/micro-formations/'
+      path: '/micro-formations'
+      fullPath: '/micro-formations/'
+      preLoaderRoute: typeof MicroFormationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/micro-formations/$slug': {
+      id: '/micro-formations/$slug'
+      path: '/micro-formations/$slug'
+      fullPath: '/micro-formations/$slug'
+      preLoaderRoute: typeof MicroFormationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  CgvRoute: CgvRoute,
+  ContactRoute: ContactRoute,
+  CoursPresentielRoute: CoursPresentielRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BoutiqueSlugRoute: BoutiqueSlugRoute,
+  MicroFormationsSlugRoute: MicroFormationsSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  BoutiqueIndexRoute: BoutiqueIndexRoute,
+  MicroFormationsIndexRoute: MicroFormationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
