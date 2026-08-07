@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { getProduct, products, type Product } from "@/data/products";
 
@@ -220,6 +221,9 @@ function ProductPage() {
           <ButtonLink to="/guides" variant="secondary">
             Retour aux guides
           </ButtonLink>
+        </div>
+        <div className="mt-10">
+          <RelatedSearches slug={product.slug} />
         </div>
       </Section>
     </>

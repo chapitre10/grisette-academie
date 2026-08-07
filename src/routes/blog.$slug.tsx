@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Section } from "@/components/Ui";
 import { formatDateFr, getArticle, type Article } from "@/data/articles";
 import { site } from "@/data/site";
@@ -160,6 +161,10 @@ function ArticlePage() {
               hint="Image verticale Pinterest 1000 × 1500 px"
               className="aspect-[2/3]"
             />
+          </div>
+
+          <div className="mt-10">
+            <RelatedSearches slug={article.slug} />
           </div>
 
           <ul className="mt-8 flex flex-wrap gap-2">
