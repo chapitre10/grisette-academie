@@ -97,7 +97,7 @@ function ContactConfirmationPage() {
                     type="button"
                     onClick={() => {
                       clearContactSubmission();
-                      navigate({ to: "/contact" });
+                      navigate({ to: "/contact", search: {} });
                     }}
                     className={buttonStyles.secondary}
                   >
