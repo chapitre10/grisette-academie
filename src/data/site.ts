@@ -18,12 +18,23 @@ export type InfoValue = string | null;
 /** Affiche « Informations à venir » tant que la donnée n'est pas renseignée. */
 export const infoOrPending = (value: InfoValue) => value ?? "Informations à venir";
 
-export const navLinks = [
+export type NavLink = {
+  label: string;
+  to: string;
+  children?: { label: string; to: string }[];
+};
+
+export const navLinks: NavLink[] = [
   { label: "Accueil", to: "/" },
   { label: "Boutique", to: "/boutique" },
-  { label: "Ressources gratuites", to: "/blog" },
-  { label: "Cours en présentiel", to: "/cours-presentiel" },
-  { label: "Micro-formations", to: "/micro-formations" },
+  {
+    label: "Se former",
+    to: "/cours-presentiel",
+    children: [
+      { label: "Cours en présentiel", to: "/cours-presentiel" },
+      { label: "Micro-formations", to: "/micro-formations" },
+    ],
+  },
   { label: "À propos", to: "/a-propos" },
   { label: "Contact", to: "/contact" },
-] as const;
+];
