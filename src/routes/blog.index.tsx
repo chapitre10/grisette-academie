@@ -28,24 +28,21 @@ export const Route = createFileRoute("/blog/")({
 });
 
 const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date));
-const allTags = Array.from(new Set(articles.flatMap((a) => a.tags)));
 
 function BlogPage() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Toutes");
-  const [tag, setTag] = useState<string | null>(null);
   const featured = sorted[0];
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return sorted.filter((a) => {
       const matchCategory = category === "Toutes" || a.category === category;
-      const matchTag = !tag || a.tags.includes(tag);
       const matchQuery =
         !q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q);
       return matchCategory && matchTag && matchQuery;
     });
-  }, [query, category, tag]);
+  }, [query, category]);
 
   return (
     <>
@@ -141,28 +138,11 @@ function BlogPage() {
           ))}
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-2" aria-label="Filtrer par tag">
-          <span className="text-xs uppercase tracking-widest text-raspberry">Tags</span>
-          {allTags.map((t) => (
-            <button
-              key={t}
-              type="button"
-              onClick={() => setTag(tag === t ? null : t)}
-              aria-pressed={tag === t}
-              className={`rounded-md px-3 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                tag === t ? "bg-fuchsia-accent text-white" : "bg-mist text-brand hover:bg-steel"
-              }`}
-            >
-              #{t}
-            </button>
-          ))}
-        </div>
-
         <div className="mt-10">
           {filtered.length === 0 ? (
             <EmptyState
               title="Aucun article ne correspond à ta recherche"
-              description="Essaie un autre mot-clé, une autre catégorie ou retire le filtre par tag."
+              description="Essaie un autre mot-clé ou sélectionne la catégorie « Toutes »."
             />
           ) : (
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
