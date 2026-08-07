@@ -150,7 +150,7 @@ function Index() {
       <Section>
         <SectionHeading
           align="center"
-          eyebrow="Les nouveautés"
+          eyebrow="Ressources & micro-formations"
           title="Les nouveautés"
           intro="Les derniers articles publiés et les prochaines micro-formations, réunis au même endroit."
         />
