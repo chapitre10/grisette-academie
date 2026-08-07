@@ -4,6 +4,7 @@ import { BookOpen, GraduationCap, ScissorsLineDashed, Sparkles } from "lucide-re
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { articles, formatDateFr } from "@/data/articles";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { formations } from "@/data/formations";
 import { site } from "@/data/site";
 
@@ -151,6 +152,8 @@ function Index() {
           ))}
         </div>
       </Section>
+
+      <ZigzagDivider />
 
       <Section>
         <SectionHeading
