@@ -40,7 +40,7 @@ function BlogPage() {
       const matchCategory = category === "Toutes" || a.category === category;
       const matchQuery =
         !q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q);
-      return matchCategory && matchTag && matchQuery;
+      return matchCategory && matchQuery;
     });
   }, [query, category]);
 
