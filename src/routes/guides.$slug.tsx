@@ -5,7 +5,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { getProduct, products, type Product } from "@/data/products";
 
-export const Route = createFileRoute("/boutique/$slug")({
+export const Route = createFileRoute("/guides/$slug")({
   loader: ({ params }) => {
     const product = getProduct(params.slug);
     if (!product) throw notFound();
@@ -25,10 +25,10 @@ export const Route = createFileRoute("/boutique/$slug")({
         { property: "og:title", content: product.seo.title },
         { property: "og:description", content: product.seo.description },
         { property: "og:type", content: "product" },
-        { property: "og:url", content: `/boutique/${params.slug}` },
+        { property: "og:url", content: `/guides/${params.slug}` },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: `/boutique/${params.slug}` }],
+      links: [{ rel: "canonical", href: `/guides/${params.slug}` }],
       scripts: [
         {
           type: "application/ld+json",
@@ -65,7 +65,7 @@ function ProductPage() {
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link to="/boutique" className="hover:text-fuchsia-accent">
+              <Link to="/guides" className="hover:text-fuchsia-accent">
                 Boutique
               </Link>
             </li>
@@ -196,7 +196,7 @@ function ProductPage() {
                   <p className="mt-2 text-sm text-brand/80">{item.shortDescription}</p>
                   <div className="mt-5">
                     <ButtonLink
-                      to="/boutique/$slug"
+                      to="/guides/$slug"
                       params={{ slug: item.slug }}
                       variant="secondary"
                     >
@@ -217,7 +217,7 @@ function ProductPage() {
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
           <ButtonLink to="/contact">Poser une question</ButtonLink>
-          <ButtonLink to="/boutique" variant="secondary">
+          <ButtonLink to="/guides" variant="secondary">
             Retour à la boutique
           </ButtonLink>
         </div>

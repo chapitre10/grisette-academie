@@ -18,7 +18,7 @@ const title = "Templates et guides couture à télécharger — Grisette Académ
 const description =
   "Des templates et guides couture numériques pour organiser ses projets, préparer ses créations et progresser sereinement en couture.";
 
-export const Route = createFileRoute("/boutique/")({
+export const Route = createFileRoute("/guides/")({
   head: () => ({
     meta: [
       { title },
@@ -26,10 +26,10 @@ export const Route = createFileRoute("/boutique/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/boutique" },
+      { property: "og:url", content: "/guides" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/boutique" }],
+    links: [{ rel: "canonical", href: "/guides" }],
   }),
   component: BoutiquePage,
 });
@@ -132,7 +132,7 @@ function BoutiquePage() {
                     </div>
                     <h2 className="mt-3 text-xl text-brand">
                       <Link
-                        to="/boutique/$slug"
+                        to="/guides/$slug"
                         params={{ slug: product.slug }}
                         className="hover:text-fuchsia-accent"
                       >
@@ -157,7 +157,7 @@ function BoutiquePage() {
                     </p>
                     <div className="mt-5 pt-1">
                       <ButtonLink
-                        to="/boutique/$slug"
+                        to="/guides/$slug"
                         params={{ slug: product.slug }}
                         variant="secondary"
                       >

@@ -174,7 +174,7 @@ function FormationPage() {
                 <h3 className="mt-3 text-xl text-brand">{item.title}</h3>
                 <p className="mt-2 text-sm text-brand/80">{item.shortDescription}</p>
                 <div className="mt-5">
-                  <ButtonLink to="/boutique/$slug" params={{ slug: item.slug }} variant="secondary">
+                  <ButtonLink to="/guides/$slug" params={{ slug: item.slug }} variant="secondary">
                     Découvrir
                   </ButtonLink>
                 </div>

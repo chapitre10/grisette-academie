@@ -45,7 +45,7 @@ const pillars = [
     icon: ScissorsLineDashed,
     title: "Boutique de templates",
     text: "Des fiches, plannings et guides imprimables pour organiser tes projets et gagner en précision.",
-    to: "/boutique",
+    to: "/guides",
     cta: "Voir la boutique",
   },
   {
@@ -92,7 +92,7 @@ function Index() {
               les tutoriels.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/boutique">Explorer la boutique</ButtonLink>
+              <ButtonLink to="/guides">Explorer la boutique</ButtonLink>
               <ButtonLink to="/blog" variant="secondary">
                 Ressources gratuites
               </ButtonLink>
@@ -139,7 +139,7 @@ function Index() {
             title="Templates et guides à découvrir"
             intro="Contenus d'exemple à remplacer par tes vrais produits."
           />
-          <ButtonLink to="/boutique" variant="secondary">
+          <ButtonLink to="/guides" variant="secondary">
             Tout voir
           </ButtonLink>
         </div>
@@ -163,7 +163,7 @@ function Index() {
                 </p>
                 <div className="mt-4">
                   <ButtonLink
-                    to="/boutique/$slug"
+                    to="/guides/$slug"
                     params={{ slug: product.slug }}
                     variant="secondary"
                   >

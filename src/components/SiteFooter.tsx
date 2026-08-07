@@ -6,7 +6,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
   {
     title: "Découvrir",
     links: [
-      { label: "Boutique", to: "/boutique" },
+      { label: "Boutique", to: "/guides" },
       { label: "Ressources gratuites", to: "/blog" },
       { label: "Cours en présentiel", to: "/cours-presentiel" },
       { label: "Micro-formations", to: "/micro-formations" },

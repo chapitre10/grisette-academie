@@ -177,7 +177,7 @@ function ArticlePage() {
             <ButtonLink to="/blog" variant="secondary">
               Toutes les ressources
             </ButtonLink>
-            <ButtonLink to="/boutique">Voir la boutique</ButtonLink>
+            <ButtonLink to="/guides">Voir la boutique</ButtonLink>
           </div>
         </div>
       </Section>

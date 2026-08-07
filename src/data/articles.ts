@@ -81,7 +81,7 @@ export const articles: Article[] = [
     ],
     cta: {
       label: "Découvrir la checklist couture",
-      to: "/boutique/$slug",
+      to: "/guides/$slug",
       params: { slug: "checklist-couture-debutante" },
       text: "Pour ne rien oublier avant de commencer, une checklist imprimable peut t'aider à préparer ton matériel.",
     },
@@ -141,7 +141,7 @@ export const articles: Article[] = [
     ],
     cta: {
       label: "Voir le template d'organisation",
-      to: "/boutique/$slug",
+      to: "/guides/$slug",
       params: { slug: "template-organiser-projet-couture" },
       text: "Le template d'organisation reprend ces étapes sur un seul document à compléter.",
     },
@@ -247,7 +247,7 @@ export const articles: Article[] = [
     ],
     cta: {
       label: "Découvrir la fiche de mesures",
-      to: "/boutique/$slug",
+      to: "/guides/$slug",
       params: { slug: "fiche-mesures-couture" },
       text: "La fiche de mesures permet de tout consigner au même endroit.",
     },

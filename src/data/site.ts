@@ -26,7 +26,7 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { label: "Accueil", to: "/" },
-  { label: "Boutique", to: "/boutique" },
+  { label: "Boutique", to: "/guides" },
   {
     label: "Se former",
     to: "/cours-presentiel",
