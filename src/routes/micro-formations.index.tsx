@@ -27,7 +27,7 @@ export const Route = createFileRoute("/micro-formations/")({
 function FormationsPage() {
   return (
     <>
-      <Section tone="peach">
+      <Section tone="blush">
         <SectionHeading
           as="h1"
           eyebrow="Micro-formations"

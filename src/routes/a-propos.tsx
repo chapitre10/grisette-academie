@@ -82,7 +82,7 @@ const method = [
 function AboutPage() {
   return (
     <>
-      <Section tone="mist">
+      <Section tone="blush">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <SectionHeading
