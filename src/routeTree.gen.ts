@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -22,6 +23,11 @@ import { Route as MicroFormationsSlugRouteImport } from './routes/micro-formatio
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -67,6 +73,7 @@ const MicroFormationsSlugRoute = MicroFormationsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -90,6 +98,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -103,6 +112,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
     | '/blog/$slug'
@@ -114,6 +124,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
     | '/blog/$slug'
@@ -125,6 +136,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
     | '/blog/$slug'
@@ -137,6 +149,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -217,6 +237,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
   BlogSlugRoute: BlogSlugRoute,
