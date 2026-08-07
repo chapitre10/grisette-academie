@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { CoulissesGallery } from "@/components/CoulissesGallery";
@@ -61,6 +61,11 @@ const values = [
 
 function AboutPage() {
   const [openTab, setOpenTab] = useState<"parcours" | "valeurs" | null>(null);
+  const [renderedTab, setRenderedTab] = useState<"parcours" | "valeurs" | null>(null);
+
+  useEffect(() => {
+    if (openTab) setRenderedTab(openTab);
+  }, [openTab]);
 
   const tabs = [
     { id: "parcours" as const, label: "Mon parcours" },
@@ -112,10 +117,22 @@ function AboutPage() {
         </div>
       </Section>
 
-      {openTab ? (
-      <Section>
-        {openTab === "parcours" ? (
-          <div role="tabpanel" id="panel-parcours" aria-labelledby="tab-parcours">
+      <div
+        aria-hidden={!openTab}
+        className={`grid transition-[grid-template-rows,opacity] duration-500 ease-out motion-reduce:transition-none ${
+          openTab ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+      <Section className={openTab ? undefined : "!py-0"}>
+        {renderedTab === "parcours" ? (
+          <div
+            role="tabpanel"
+            id="panel-parcours"
+            aria-labelledby="tab-parcours"
+            className="transition-transform duration-500 ease-out motion-reduce:transition-none"
+            style={{ transform: openTab ? "translateY(0)" : "translateY(-0.5rem)" }}
+          >
             <SectionHeading
               eyebrow="Mon parcours"
               title="Mon histoire"
@@ -146,8 +163,14 @@ function AboutPage() {
           </div>
         ) : null}
 
-        {openTab === "valeurs" ? (
-          <div role="tabpanel" id="panel-valeurs" aria-labelledby="tab-valeurs">
+        {renderedTab === "valeurs" ? (
+          <div
+            role="tabpanel"
+            id="panel-valeurs"
+            aria-labelledby="tab-valeurs"
+            className="transition-transform duration-500 ease-out motion-reduce:transition-none"
+            style={{ transform: openTab ? "translateY(0)" : "translateY(-0.5rem)" }}
+          >
             <SectionHeading eyebrow="Valeurs" title="Ce qui guide chaque contenu" />
             <ul className="mt-8 grid gap-6 sm:grid-cols-2">
               {values.map((value) => (
@@ -162,7 +185,8 @@ function AboutPage() {
           </div>
         ) : null}
       </Section>
-      ) : null}
+        </div>
+      </div>
 
       <Section tone="mist">
         <SectionHeading
