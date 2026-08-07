@@ -149,7 +149,7 @@ function ArticlePage() {
                 href={site.pinterestUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="mt-4 inline-flex items-center justify-center rounded-md bg-flame-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="mt-4 inline-flex items-center justify-center rounded-md bg-flame px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 Partager sur Pinterest
               </a>

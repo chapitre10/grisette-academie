@@ -249,7 +249,7 @@ function Index() {
             href={site.pinterestUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex items-center justify-center rounded-md bg-flame-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-fuchsia-ink md:justify-self-end"
+            className="inline-flex items-center justify-center rounded-md bg-flame px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-fuchsia-accent md:justify-self-end"
           >
             Suivre sur Pinterest
           </a>
