@@ -119,31 +119,7 @@ function ContactPage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            {sent ? (
-              <div
-                role="status"
-                className="rounded-lg border border-raspberry/40 bg-peach/50 p-6"
-              >
-                <h2 className="text-xl text-brand">Merci, ta demande est bien préparée.</h2>
-                <p className="mt-2 text-sm leading-relaxed text-brand/85">
-                  Le formulaire fonctionne, mais l'envoi réel n'est pas encore activé : aucun
-                  service e-mail n'est connecté pour le moment. En attendant, tu peux écrire
-                  directement à{" "}
-                  <a href={`mailto:${site.email}`} className="font-semibold underline">
-                    {site.email}
-                  </a>
-                  .
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setSent(false)}
-                  className={`${buttonStyles.secondary} mt-5`}
-                >
-                  Écrire un autre message
-                </button>
-              </div>
-            ) : (
-              <form noValidate onSubmit={onSubmit} className="space-y-5">
+            <form noValidate onSubmit={onSubmit} className="space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-brand">
