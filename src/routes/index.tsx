@@ -4,7 +4,6 @@ import { BookOpen, GraduationCap, ScissorsLineDashed, Sparkles } from "lucide-re
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { articles, formatDateFr } from "@/data/articles";
-import { products } from "@/data/products";
 import { formations } from "@/data/formations";
 import { site } from "@/data/site";
 
@@ -72,7 +71,6 @@ const pillars = [
 ];
 
 function Index() {
-  const featuredProducts = products.slice(0, 3);
   const featuredArticles = articles.slice(0, 3);
   const nextFormations = formations.slice(0, 2);
 
