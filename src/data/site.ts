@@ -29,8 +29,9 @@ export const navLinks: NavLink[] = [
   { label: "Guides", to: "/guides" },
   {
     label: "Se former",
-    to: "/cours-presentiel",
+    to: "/se-former",
     children: [
+      { label: "Vue d'ensemble", to: "/se-former" },
       { label: "Cours en présentiel", to: "/cours-presentiel" },
       { label: "Micro-formations", to: "/micro-formations" },
     ],

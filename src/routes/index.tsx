@@ -101,7 +101,7 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <ButtonLink
-                to="/cours-presentiel"
+                to="/se-former"
                 className="px-8 py-4 text-base md:text-lg"
               >
                 Se former avec moi

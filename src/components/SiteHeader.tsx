@@ -34,14 +34,15 @@ export function SiteHeader() {
                 onMouseEnter={() => setOpenGroup(link.label)}
                 onMouseLeave={() => setOpenGroup(null)}
               >
-                <button
-                  type="button"
+                <Link
+                  to={path(link.to)}
                   aria-expanded={openGroup === link.label}
-                  onClick={() => setOpenGroup((v) => (v === link.label ? null : link.label))}
+                  onClick={() => setOpenGroup(null)}
+                  activeProps={{ className: "text-fuchsia-accent" }}
                   className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
                 >
                   {link.label}
-                </button>
+                </Link>
                 {openGroup === link.label ? (
                   <div className="absolute left-0 top-full z-50 min-w-56 rounded-md border border-border bg-background p-2 shadow-lg">
                     {link.children.map((child) => (
@@ -93,9 +94,18 @@ export function SiteHeader() {
             {navLinks.map((link) =>
               link.children ? (
                 <div key={link.label} className="border-b border-border py-3 last:border-0">
-                  <p className="text-base font-medium text-brand">{link.label}</p>
+                  <Link
+                    to={path(link.to)}
+                    onClick={() => setOpen(false)}
+                    activeProps={{ className: "text-fuchsia-accent" }}
+                    className="block text-base font-medium text-brand"
+                  >
+                    {link.label}
+                  </Link>
                   <div className="mt-1 flex flex-col">
-                    {link.children.map((child) => (
+                    {link.children
+                      .filter((child) => child.to !== link.to)
+                      .map((child) => (
                       <Link
                         key={child.to}
                         to={path(child.to)}
