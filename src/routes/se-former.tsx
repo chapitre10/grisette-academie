@@ -3,6 +3,7 @@ import { GraduationCap, Sparkles } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { courseFormats } from "@/data/cours";
 import { formations } from "@/data/formations";
 import { method } from "@/data/pedagogie";
@@ -57,6 +58,8 @@ function SeFormerPage() {
           ))}
         </ol>
       </Section>
+
+      <ZigzagDivider />
 
       <Section tone="ivory">
         <div className="grid items-center gap-10 lg:grid-cols-2">

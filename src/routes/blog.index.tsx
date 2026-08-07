@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, EmptyState, Section, SectionHeading } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { articleCategories, articles, formatDateFr } from "@/data/articles";
 
 const title = "Ressources gratuites pour apprendre la couture — Grisette Académie";
@@ -93,6 +94,8 @@ function BlogPage() {
           </article>
         </Section>
       ) : null}
+
+      <ZigzagDivider />
 
       <Section tone="ivory">
         <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
