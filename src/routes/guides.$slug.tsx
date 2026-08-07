@@ -203,12 +203,6 @@ function ProductPage() {
         <div className="mt-3 max-w-2xl">
           <Faq items={product.faq} />
         </div>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <ButtonLink to="/contact">Poser une question</ButtonLink>
-          <ButtonLink to="/guides" variant="secondary">
-            Retour aux guides
-          </ButtonLink>
-        </div>
         <div className="mt-10">
           <RelatedSearches slug={product.slug} />
         </div>
