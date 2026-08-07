@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { BackToTopButton } from "@/components/BackToTopButton";
 import { NewsletterProvider } from "@/components/newsletter/NewsletterProvider";
 
 function NotFoundComponent() {
@@ -144,6 +145,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
+        <BackToTopButton />
         </div>
       </NewsletterProvider>
     </QueryClientProvider>
