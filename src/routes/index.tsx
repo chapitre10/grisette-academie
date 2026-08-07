@@ -148,22 +148,25 @@ function Index() {
       </Section>
 
       <Section>
-        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <SectionHeading
-            eyebrow="Ressources gratuites"
-            title="Derniers articles du blog"
-            intro="Des conseils concrets pour choisir ton matériel, comprendre les tissus et soigner tes finitions."
-          />
+        <SectionHeading
+          align="center"
+          eyebrow="Les nouveautés"
+          title="Les nouveautés"
+          intro="Les derniers articles publiés et les prochaines micro-formations, réunis au même endroit."
+        />
+
+        <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
+          <h3 className="font-display text-2xl text-brand">Derniers articles du blog</h3>
           <ButtonLink to="/blog" variant="secondary">
             Tous les articles
           </ButtonLink>
         </div>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredArticles.map((article) => (
             <li key={article.slug}>
               <Card>
                 <Badge tone="neutral">{article.category}</Badge>
-                <h3 className="mt-3 text-xl text-brand">
+                <h4 className="mt-3 text-xl text-brand">
                   <Link
                     to="/blog/$slug"
                     params={{ slug: article.slug }}
@@ -171,7 +174,7 @@ function Index() {
                   >
                     {article.title}
                   </Link>
-                </h3>
+                </h4>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">
                   {article.excerpt}
                 </p>
@@ -180,20 +183,14 @@ function Index() {
             </li>
           ))}
         </ul>
-      </Section>
 
-      <Section tone="peach">
-        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <SectionHeading
-            eyebrow="Micro-formations"
-            title="Micro-formations à venir"
-            intro="Des modules courts et ciblés pour débloquer une technique précise, à ton rythme."
-          />
+        <div className="mt-14 flex flex-wrap items-end justify-between gap-4">
+          <h3 className="font-display text-2xl text-brand">Micro-formations à venir</h3>
           <ButtonLink to="/micro-formations" variant="secondary">
             Tout voir
           </ButtonLink>
         </div>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+        <ul className="mt-6 grid gap-6 sm:grid-cols-2">
               {nextFormations.map((formation) => (
                 <li key={formation.slug}>
                   <Card className="p-5">
