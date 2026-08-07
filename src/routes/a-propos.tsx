@@ -79,7 +79,6 @@ function AboutPage() {
           <div>
             <SectionHeading
               as="h1"
-              eyebrow="À propos"
               title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
