@@ -33,12 +33,14 @@ export function SectionHeading({
   intro,
   as = "h2",
   align = "left",
+  titleClassName,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   as?: "h1" | "h2";
   align?: "left" | "center";
+  titleClassName?: string;
 }) {
   const Tag = as;
   return (
@@ -48,7 +50,9 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <Tag className="text-3xl leading-tight text-brand md:text-4xl">{title}</Tag>
+      <Tag className={titleClassName ?? "text-3xl leading-tight text-brand md:text-4xl"}>
+        {title}
+      </Tag>
       <div className={`rule-thin mt-5 ${align === "center" ? "mx-auto" : ""}`} />
       {intro ? <p className="mt-5 text-base leading-relaxed text-brand/80">{intro}</p> : null}
     </header>
