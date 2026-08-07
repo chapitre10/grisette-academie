@@ -67,8 +67,6 @@ function ArticlePage() {
           { label: article.title },
         ]}
       />
-        </nav>
-      </div>
 
       <Section>
         <article className="mx-auto max-w-3xl">
