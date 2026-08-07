@@ -134,16 +134,16 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
   return (
     <div className="divide-y divide-border rounded-lg border border-border bg-card">
       {items.map((item) => (
-        <details key={item.question} className="group px-5 py-4">
-          <summary className="flex min-h-11 cursor-pointer list-none items-center text-base font-semibold text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <span className="flex w-full items-start justify-between gap-4">
+        <details key={item.question} className="group px-4 py-3">
+          <summary className="flex min-h-9 cursor-pointer list-none items-center text-sm font-semibold text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+            <span className="flex w-full items-start justify-between gap-3">
               {item.question}
               <span aria-hidden className="text-raspberry transition-transform group-open:rotate-45">
                 +
               </span>
             </span>
           </summary>
-          <p className="mt-3 text-sm leading-relaxed text-brand/80">{item.answer}</p>
+          <p className="mt-2 text-[13px] leading-relaxed text-brand/80">{item.answer}</p>
         </details>
       ))}
     </div>

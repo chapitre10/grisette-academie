@@ -243,7 +243,7 @@ function CoursPage() {
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les cours en pratique" />
-        <div className="mt-8">
+        <div className="mt-5 max-w-3xl">
           <Faq items={coursesFaq} />
         </div>
       </Section>
