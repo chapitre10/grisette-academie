@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
+import { storyBlocks } from "@/data/about";
 import { site } from "@/data/site";
 
 const title = "À propos de Grisette Académie — la couture apprise avec méthode";
@@ -53,37 +54,6 @@ const values = [
   {
     title: "Créativité",
     text: "La technique libère l'imagination : une fois les bases posées, chaque projet devient un terrain d'expression.",
-  },
-];
-
-const story = [
-  {
-    title: "Mon parcours de couturière",
-    prompt:
-      "Raconte tes débuts, tes premières pièces et les techniques qui te passionnent aujourd'hui.",
-    items: [
-      "Premiers pas en couture — année, déclic",
-      "Spécialités / techniques de prédilection",
-      "Créations et projets marquants",
-    ],
-  },
-  {
-    title: "Mon expérience de professeure",
-    prompt: "Décris ton expérience d'enseignement : ateliers, publics accompagnés, années de pratique.",
-    items: [
-      "Nombre d'années d'enseignement",
-      "Structures / ateliers où tu as enseigné",
-      "Publics accompagnés (débutantes, ados, entreprises…)",
-    ],
-  },
-  {
-    title: "Mes diplômes et certifications",
-    prompt: "Liste tes formations, diplômes et certifications officielles avec les années obtenues.",
-    items: [
-      "Diplôme principal — école, année",
-      "Formations complémentaires",
-      "Certifications professionnelles",
-    ],
   },
 ];
 
@@ -145,7 +115,7 @@ function AboutPage() {
           intro="Un espace à compléter avec ton propre récit : d'où tu viens, ce que tu couds, ce que tu enseignes."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {story.map((block) => (
+          {storyBlocks.map((block) => (
             <Card key={block.title}>
               <h3 className="text-xl text-brand">{block.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-brand/80">{block.prompt}</p>
