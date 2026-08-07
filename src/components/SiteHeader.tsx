@@ -25,7 +25,13 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Navigation principale" className="hidden items-center gap-5 lg:flex">
+        <nav
+          aria-label="Navigation principale"
+          className="hidden items-center gap-5 lg:flex"
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setOpenGroup(null);
+          }}
+        >
           {navLinks.map((link) =>
             link.children ? (
               <div
@@ -33,6 +39,10 @@ export function SiteHeader() {
                 className="relative"
                 onMouseEnter={() => setOpenGroup(link.label)}
                 onMouseLeave={() => setOpenGroup(null)}
+                onFocus={() => setOpenGroup(link.label)}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpenGroup(null);
+                }}
               >
                 <Link
                   to={path(link.to)}
