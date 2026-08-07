@@ -65,8 +65,11 @@ function FaqPage() {
       {faqGroups.map((group, index) => (
         <Section key={group.id} id={group.id} tone={index % 2 === 0 ? "ivory" : "mist"}>
           <SectionHeading title={group.title} intro={group.intro} />
-          <div className="mt-3 max-w-2xl">
-            <Faq items={group.items} />
+          <div className="mt-3 grid gap-x-8 md:grid-cols-2">
+            <Faq items={group.items.slice(0, Math.ceil(group.items.length / 2))} />
+            {group.items.length > 1 ? (
+              <Faq items={group.items.slice(Math.ceil(group.items.length / 2))} />
+            ) : null}
           </div>
         </Section>
       ))}
