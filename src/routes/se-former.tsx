@@ -61,18 +61,18 @@ function SeFormerPage() {
 
       <ZigzagDivider />
 
-      <Section tone="ivory">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+      <Section tone="ivory" className="!py-8 md:!py-10">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-8">
           <div>
             <Badge tone="gold">En ligne</Badge>
-            <h2 className="mt-4 font-display text-3xl text-brand md:text-4xl">Formations courtes</h2>
-            <div className="rule-thin mt-5" />
-            <p className="mt-5 text-base leading-relaxed text-brand/85">
+            <h2 className="mt-3 font-display text-2xl text-brand md:text-3xl">Formations courtes</h2>
+            <div className="rule-thin mt-3" />
+            <p className="mt-3 text-sm leading-relaxed text-brand/85 md:text-base">
               Des modules courts et ciblés pour débloquer une technique précise : droit-fil, prise de
               mesures, choix du tissu, préparation, finitions. On avance à son rythme, sans y passer
               des heures.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-brand/80">
+            <ul className="mt-4 space-y-1.5 text-sm text-brand/80">
               {formations.slice(0, 3).map((formation) => (
                 <li key={formation.slug} className="flex gap-2">
                   <Sparkles aria-hidden className="mt-0.5 size-4 shrink-0 text-raspberry" />
@@ -80,7 +80,7 @@ function SeFormerPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
+            <div className="mt-5">
               <ButtonLink to="/micro-formations">Voir les formations courtes</ButtonLink>
             </div>
           </div>
@@ -88,30 +88,30 @@ function SeFormerPage() {
             src={null}
             alt="Formations courtes couture en ligne"
             hint="Visuel formations courtes (à ajouter)"
-            className="aspect-[4/3]"
+            className="aspect-[16/9] lg:aspect-[3/2]"
           />
         </div>
       </Section>
 
-      <Section tone="ivory">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+      <Section tone="ivory" className="!pt-0 !pb-8 md:!pb-10">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-8">
           <ImagePlaceholder
             src={null}
             alt="Cours de couture en présentiel"
             hint="Visuel cours en présentiel (à ajouter)"
-            className="aspect-[4/3] lg:order-last"
+            className="aspect-[16/9] lg:order-last lg:aspect-[3/2]"
           />
           <div>
             <Badge tone="neutral">En présentiel</Badge>
-            <h2 className="mt-4 font-display text-3xl text-brand md:text-4xl">
+            <h2 className="mt-3 font-display text-2xl text-brand md:text-3xl">
               Cours en présentiel
             </h2>
-            <div className="rule-thin mt-5" />
-            <p className="mt-5 text-base leading-relaxed text-brand/85">
+            <div className="rule-thin mt-3" />
+            <p className="mt-3 text-sm leading-relaxed text-brand/85 md:text-base">
               Un accompagnement direct, en petit groupe ou en individuel : on corrige les gestes sur
               le moment, on adapte le rythme à ton niveau et on repart avec un projet abouti.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-brand/80">
+            <ul className="mt-4 space-y-1.5 text-sm text-brand/80">
               {courseFormats.slice(0, 3).map((format) => (
                 <li key={format.title} className="flex gap-2">
                   <GraduationCap aria-hidden className="mt-0.5 size-4 shrink-0 text-raspberry" />
@@ -119,7 +119,7 @@ function SeFormerPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
+            <div className="mt-5">
               <ButtonLink to="/cours-presentiel">Découvrir les cours</ButtonLink>
             </div>
           </div>
