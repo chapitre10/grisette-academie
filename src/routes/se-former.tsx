@@ -31,7 +31,7 @@ export const Route = createFileRoute("/se-former")({
 function SeFormerPage() {
   return (
     <>
-      <Section tone="blush">
+      <Section tone="blush" className="!py-8 md:!py-10">
         <SectionHeading
           as="h1"
           eyebrow="Se former"
@@ -40,19 +40,19 @@ function SeFormerPage() {
         />
       </Section>
 
-      <Section>
+      <Section className="!py-8 md:!py-10">
         <SectionHeading
           eyebrow="Pédagogie"
           title="Une méthode en quatre temps"
           intro="La même progression structure les cours en présentiel, les guides et les formations courtes."
         />
-        <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {method.map((item) => (
             <li key={item.step}>
-              <Card>
-                <span className="font-display text-3xl text-raspberry">{item.step}</span>
-                <h3 className="mt-3 text-lg text-brand">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand/80">{item.text}</p>
+              <Card className="p-4">
+                <span className="font-display text-2xl text-raspberry">{item.step}</span>
+                <h3 className="mt-1.5 text-base text-brand">{item.title}</h3>
+                <p className="mt-1.5 text-[13px] leading-snug text-brand/80">{item.text}</p>
               </Card>
             </li>
           ))}
