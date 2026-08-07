@@ -39,34 +39,44 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const pillars = [
+const pillarColumns = [
   {
-    icon: ScissorsLineDashed,
-    title: "Guides de couture",
-    text: "Des fiches, plannings et guides imprimables pour organiser tes projets et gagner en précision.",
-    to: "/guides",
-    cta: "Voir les guides",
+    label: "En théorie",
+    items: [
+      {
+        icon: BookOpen,
+        title: "Ressources gratuites",
+        text: "Des articles clairs sur le matériel, les tissus, les finitions et les erreurs à éviter.",
+        to: "/blog",
+        cta: "Lire les ressources",
+      },
+      {
+        icon: ScissorsLineDashed,
+        title: "Guides de couture",
+        text: "Des fiches, plannings et guides imprimables pour organiser tes projets et gagner en précision.",
+        to: "/guides",
+        cta: "Voir les guides",
+      },
+    ],
   },
   {
-    icon: BookOpen,
-    title: "Ressources gratuites",
-    text: "Des articles clairs sur le matériel, les tissus, les finitions et les erreurs à éviter.",
-    to: "/blog",
-    cta: "Lire les ressources",
-  },
-  {
-    icon: GraduationCap,
-    title: "Cours en présentiel",
-    text: "Un accompagnement direct, en petit groupe ou en individuel, adapté à ton niveau.",
-    to: "/cours-presentiel",
-    cta: "Découvrir les cours",
-  },
-  {
-    icon: Sparkles,
-    title: "Micro-formations",
-    text: "Des modules courts et ciblés pour débloquer une technique précise, à ton rythme.",
-    to: "/micro-formations",
-    cta: "Voir les modules",
+    label: "En pratique",
+    items: [
+      {
+        icon: Sparkles,
+        title: "Micro-formations",
+        text: "Des modules courts et ciblés pour débloquer une technique précise, à ton rythme.",
+        to: "/micro-formations",
+        cta: "Voir les modules",
+      },
+      {
+        icon: GraduationCap,
+        title: "Cours en présentiel",
+        text: "Un accompagnement direct, en petit groupe ou en individuel, adapté à ton niveau.",
+        to: "/cours-presentiel",
+        cta: "Découvrir les cours",
+      },
+    ],
   },
 ];
 
@@ -109,22 +119,32 @@ function Index() {
           title="Choisis le format qui te correspond"
           intro="Chaque univers suit la même pédagogie : comprendre, pratiquer, ajuster, créer."
         />
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((pillar) => (
-            <li key={pillar.title}>
-              <Card>
-                <pillar.icon aria-hidden className="size-7 text-raspberry" />
-                <h3 className="mt-4 text-xl text-brand">{pillar.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">{pillar.text}</p>
-                <div className="mt-5">
-                  <ButtonLink to={pillar.to} variant="ghost">
-                    {pillar.cta}
-                  </ButtonLink>
-                </div>
-              </Card>
-            </li>
+        <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-8 md:divide-x md:divide-border">
+          {pillarColumns.map((column) => (
+            <div key={column.label} className="md:px-6 md:first:pl-0 md:last:pr-0">
+              <h3 className="text-center font-display text-2xl text-brand">{column.label}</h3>
+              <div className="rule-thin mx-auto mt-4" />
+              <ul className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+                {column.items.map((pillar) => (
+                  <li key={pillar.title}>
+                    <Card>
+                      <pillar.icon aria-hidden className="size-7 text-raspberry" />
+                      <h4 className="mt-4 text-xl text-brand">{pillar.title}</h4>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">
+                        {pillar.text}
+                      </p>
+                      <div className="mt-5">
+                        <ButtonLink to={pillar.to} variant="ghost">
+                          {pillar.cta}
+                        </ButtonLink>
+                      </div>
+                    </Card>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </Section>
 
       <Section>
