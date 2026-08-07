@@ -83,8 +83,8 @@
   --brand: oklch(0.391 0.053 1.8); /* #5d3943 bordeaux profond */
   --brand-deep: oklch(0.333 0.046 2.6);
   --ivory: oklch(0.988 0.0067 53.4); /* #fffaf7 */
-  --mist: oklch(0.936 0.006 255.5); /* #e7eaee */
-  --steel: oklch(0.933 0.0067 253.9); /* #e7eaee */
+  --mist: oklch(0.927 0.0179 328.2); /* #eee3ed */
+  --steel: oklch(0.927 0.0179 328.2); /* #eee3ed */
   --blush: oklch(0.841 0.138 75.1); /* #ffbd59 */
   --raspberry: oklch(0.556 0.099 4.4); /* #a3596c — variante lisible du framboise (AA sur ivoire) */
   --fuchsia-accent: oklch(0.656 0.272 352.3); /* #ff00a1 (décoratif) */
