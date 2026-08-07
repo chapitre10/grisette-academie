@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { ReadingProgress } from "@/components/ReadingProgress";
 import { Badge, ButtonLink, Section } from "@/components/Ui";
 import { formatDateFr, getArticle, type Article } from "@/data/articles";
 import { site } from "@/data/site";
@@ -56,6 +57,7 @@ function ArticlePage() {
 
   return (
     <>
+      <ReadingProgress />
       <div className="border-b border-border bg-mist">
         <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
           <ol className="flex flex-wrap items-center gap-2">
