@@ -32,11 +32,11 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-brand text-ivory">
-      <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="container-page grid gap-6 py-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="font-display text-2xl text-ivory">{site.name}</p>
-          <span aria-hidden className="mt-3 block h-px w-12 bg-gold" />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-ivory/85">
+          <span aria-hidden className="mt-2 block h-px w-12 bg-gold" />
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-ivory/85">
             Ressources, cours et formations pour apprendre la couture avec méthode, créativité et
             confiance.
           </p>
@@ -45,12 +45,12 @@ export function SiteFooter() {
         {columns.map((col) => (
           <nav key={col.title} aria-label={col.title}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">{col.title}</p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-2 space-y-0.5">
               {col.links.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="inline-flex min-h-11 items-center py-2 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
+                    className="inline-flex min-h-9 items-center py-1 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -61,7 +61,7 @@ export function SiteFooter() {
                   <button
                     type="button"
                     onClick={openNewsletter}
-                    className="inline-flex min-h-11 items-center py-2 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
+                    className="inline-flex min-h-9 items-center py-1 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
                   >
                     Newsletter
                   </button>
@@ -72,11 +72,11 @@ export function SiteFooter() {
         ))}
       </div>
 
-      <div className="container-page border-t border-ivory/20 py-10">
+      <div className="container-page border-t border-ivory/20 py-6">
         <NewsletterFooterForm />
       </div>
 
-      <div className="container-page flex flex-col gap-3 border-t border-ivory/20 py-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="container-page flex flex-col gap-2 border-t border-ivory/20 py-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-ivory/90">
           © {new Date().getFullYear()} {site.name}. Tous droits réservés.
         </p>
@@ -84,7 +84,7 @@ export function SiteFooter() {
           href={site.pinterestUrl}
           target="_blank"
           rel="noreferrer noopener"
-          className="inline-flex min-h-11 items-center py-2 text-sm text-peach underline underline-offset-2 transition-colors hover:text-gold"
+          className="inline-flex min-h-9 items-center py-1 text-sm text-peach underline underline-offset-2 transition-colors hover:text-gold"
         >
           Suivre Grisette Académie sur Pinterest
         </a>
