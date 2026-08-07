@@ -11,12 +11,12 @@ import {
   Section,
   SectionHeading,
 } from "@/components/Ui";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import {
   courseFormats,
   coursesFaq,
   visibleStudentProjects,
   visibleTestimonials,
-import { ZigzagDivider } from "@/components/ZigzagDivider";
 } from "@/data/cours";
 import { infoOrPending } from "@/data/site";
 
