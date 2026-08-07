@@ -57,6 +57,7 @@ const values = [
 ];
 
 const method = [
+  // placeholder marker
   {
     step: "01",
     title: "Comprendre avant de coudre",
