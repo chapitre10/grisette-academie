@@ -81,7 +81,7 @@ export const formations: Formation[] = [
     seo: {
       title: "Formation courte : comprendre le droit-fil — Grisette Académie",
       description:
-        "Une formation courte courte pour repérer le droit-fil et placer correctement son patron sur le tissu.",
+        "Une formation courte pour repérer le droit-fil et placer correctement son patron sur le tissu.",
       pinterestTitle: "Comprendre le droit-fil en couture",
       pinterestDescription: "Repérer le droit-fil et bien placer son patron pour un vêtement qui tombe juste.",
       pinterestImage: null,
