@@ -70,12 +70,6 @@ function AboutPage() {
               title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/cours-presentiel">Découvrir les cours</ButtonLink>
-              <ButtonLink to="/blog" variant="secondary">
-                Ressources gratuites
-              </ButtonLink>
-            </div>
           </div>
           <ImagePlaceholder
             src={null}
