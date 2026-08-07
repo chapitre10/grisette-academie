@@ -260,8 +260,7 @@ function ContactPage() {
                 <button type="submit" className={buttonStyles.primary}>
                   Envoyer ma demande
                 </button>
-              </form>
-            )}
+            </form>
           </div>
 
           <aside className="space-y-6">
