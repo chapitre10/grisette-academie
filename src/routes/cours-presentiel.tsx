@@ -11,7 +11,6 @@ import {
   Section,
   SectionHeading,
 } from "@/components/Ui";
-import { ZigzagDivider } from "@/components/ZigzagDivider";
 import {
   courseFormats,
   coursesFaq,
@@ -241,8 +240,6 @@ function CoursPage() {
           )}
         </div>
       </Section>
-
-      <ZigzagDivider />
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les cours en pratique" />
