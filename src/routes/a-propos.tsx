@@ -77,7 +77,7 @@ function AboutPage() {
               title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
-          <div role="tablist" aria-label="En savoir plus" className="flex flex-wrap gap-3">
+          <div role="tablist" aria-label="En savoir plus" className="mt-8 flex flex-wrap gap-3">
             {tabs.map((tab) => {
               const active = openTab === tab.id;
               return (
@@ -111,9 +111,10 @@ function AboutPage() {
         </div>
       </Section>
 
+      {openTab ? (
       <Section>
         {openTab === "parcours" ? (
-          <div role="tabpanel" id="panel-parcours" aria-labelledby="tab-parcours" className="mt-10">
+          <div role="tabpanel" id="panel-parcours" aria-labelledby="tab-parcours">
             <SectionHeading
               eyebrow="Mon parcours"
               title="Mon histoire"
@@ -145,7 +146,7 @@ function AboutPage() {
         ) : null}
 
         {openTab === "valeurs" ? (
-          <div role="tabpanel" id="panel-valeurs" aria-labelledby="tab-valeurs" className="mt-10">
+          <div role="tabpanel" id="panel-valeurs" aria-labelledby="tab-valeurs">
             <SectionHeading eyebrow="Valeurs" title="Ce qui guide chaque contenu" />
             <ul className="mt-8 grid gap-6 sm:grid-cols-2">
               {values.map((value) => (
@@ -160,6 +161,7 @@ function AboutPage() {
           </div>
         ) : null}
       </Section>
+      ) : null}
 
       <Section tone="peach" className="bg-peach/40 !py-8 md:!py-10">
         <div className="max-w-2xl">
