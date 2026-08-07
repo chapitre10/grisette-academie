@@ -84,9 +84,6 @@ function SeFormerPage() {
               <ButtonLink to="/micro-formations" className="px-6 py-3 text-base shadow-sm">
                 Voir les formations courtes
               </ButtonLink>
-              <ButtonLink to="/blog" variant="secondary" className="px-6 py-3 text-base">
-                Lire les ressources
-              </ButtonLink>
             </div>
           </div>
           <ImagePlaceholder
