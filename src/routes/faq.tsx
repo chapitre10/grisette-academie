@@ -51,7 +51,7 @@ function FaqPage() {
               <li key={group.id}>
                 <a
                   href={`#${group.id}`}
-                  className="inline-block rounded-md border border-brand/25 bg-background px-4 py-2 text-sm text-brand transition hover:text-fuchsia-accent"
+                  className="inline-block rounded-md border border-brand/25 bg-background px-4 py-2 text-sm text-brand transition hover:text-fuchsia-ink"
                 >
                   {group.title}
                 </a>

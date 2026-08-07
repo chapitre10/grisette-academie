@@ -88,7 +88,7 @@ export function NewsletterPopup({
                   role={form.status === "error" ? "alert" : "status"}
                   className={
                     form.status === "error"
-                      ? "text-sm font-semibold text-flame"
+                      ? "text-sm font-semibold text-flame-ink"
                       : "text-sm text-brand/70"
                   }
                 >
@@ -98,19 +98,19 @@ export function NewsletterPopup({
                 <button
                   type="submit"
                   disabled={form.status === "submitting"}
-                  className="w-full rounded-full bg-fuchsia-accent px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
+                  className="w-full rounded-full bg-fuchsia-ink px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   {form.status === "submitting" ? "Envoi…" : "Je m'inscris"}
                 </button>
 
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
-                  <DialogClose className="rounded-full px-3 py-2 text-sm text-brand/70 underline transition-colors hover:text-brand">
+                  <DialogClose className="inline-flex min-h-11 items-center rounded-full px-3 py-2 text-sm text-brand/70 underline transition-colors hover:text-brand">
                     Plus tard
                   </DialogClose>
                   <Link
                     to="/politique-confidentialite"
                     onClick={() => onOpenChange(false)}
-                    className="text-sm text-raspberry underline hover:text-fuchsia-accent"
+                    className="inline-flex min-h-11 items-center text-sm text-raspberry underline hover:text-fuchsia-ink"
                   >
                     Politique de confidentialité
                   </Link>

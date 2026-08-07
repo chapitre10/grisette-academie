@@ -134,7 +134,7 @@ function GuidesPage() {
                       <Link
                         to="/guides/$slug"
                         params={{ slug: product.slug }}
-                        className="hover:text-fuchsia-accent"
+                        className="hover:text-fuchsia-ink"
                       >
                         {product.title}
                       </Link>

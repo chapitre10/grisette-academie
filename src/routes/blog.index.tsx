@@ -78,7 +78,7 @@ function BlogPage() {
                 <Link
                   to="/blog/$slug"
                   params={{ slug: featured.slug }}
-                  className="hover:text-fuchsia-accent"
+                  className="hover:text-fuchsia-ink"
                 >
                   {featured.title}
                 </Link>
@@ -147,7 +147,7 @@ function BlogPage() {
               onClick={() => setTag(tag === t ? null : t)}
               aria-pressed={tag === t}
               className={`rounded-md px-3 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                tag === t ? "bg-fuchsia-accent text-white" : "bg-mist text-brand hover:bg-steel"
+                tag === t ? "bg-fuchsia-ink text-white" : "bg-mist text-brand hover:bg-steel"
               }`}
             >
               #{t}
@@ -175,7 +175,7 @@ function BlogPage() {
                       <Link
                         to="/blog/$slug"
                         params={{ slug: article.slug }}
-                        className="hover:text-fuchsia-accent"
+                        className="hover:text-fuchsia-ink"
                       >
                         {article.title}
                       </Link>

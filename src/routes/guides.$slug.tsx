@@ -59,13 +59,13 @@ function ProductPage() {
         <nav aria-label="Fil d'Ariane" className="container-page py-4 text-sm text-brand/75">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link to="/" className="hover:text-fuchsia-accent">
+              <Link to="/" className="hover:text-fuchsia-ink">
                 Accueil
               </Link>
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link to="/guides" className="hover:text-fuchsia-accent">
+              <Link to="/guides" className="hover:text-fuchsia-ink">
                 Guides
               </Link>
             </li>
