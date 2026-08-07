@@ -23,7 +23,7 @@ export function NewsletterPopup({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="fabric-roll-panel max-w-md overflow-hidden rounded-2xl border-peach bg-ivory p-0 text-brand">
+      <DialogContent className="fabric-roll-panel max-h-[92svh] max-w-md overflow-y-auto rounded-2xl border-peach bg-ivory p-0 text-brand">
         <span
           aria-hidden
           className="fabric-roll-bar relative block h-3 w-full rounded-t-2xl bg-blush shadow-[0_2px_10px_rgba(93,57,67,0.25)] after:absolute after:inset-x-6 after:top-1/2 after:h-px after:-translate-y-1/2 after:bg-brand/20"
