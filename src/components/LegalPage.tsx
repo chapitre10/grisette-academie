@@ -15,7 +15,7 @@ export function LegalPage({
 }) {
   return (
     <>
-      <Section tone="mist">
+      <Section tone="mist" className="!py-8 md:!py-10">
         <SectionHeading as="h1" eyebrow={eyebrow} title={title} intro={intro} />
       </Section>
       <Section>

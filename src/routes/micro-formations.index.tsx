@@ -27,7 +27,7 @@ export const Route = createFileRoute("/micro-formations/")({
 function FormationsPage() {
   return (
     <>
-      <Section tone="blush">
+      <Section tone="blush" className="!py-8 md:!py-10">
         <SectionHeading
           as="h1"
           eyebrow="Formations courtes"
