@@ -15,7 +15,7 @@ export function Section({
   const tones: Record<string, string> = {
     ivory: "bg-background",
     mist: "bg-mist",
-    steel: "bg-steel/60",
+    steel: "bg-steel",
     blush: "bg-blush/45",
     peach: "bg-peach/45",
     brand: "bg-brand text-ivory",
