@@ -118,28 +118,28 @@ function Index() {
         </div>
       </section>
 
-      <Section>
+      <Section className="!py-10 md:!py-12">
         <SectionHeading
           align="center"
           eyebrow="Quatre façons d'apprendre"
           title="Choisis le format qui te correspond"
           intro="Chaque univers suit la même pédagogie : comprendre, pratiquer, ajuster, créer."
         />
-        <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-8 md:divide-x md:divide-border">
+        <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-6 md:divide-x md:divide-border">
           {pillarColumns.map((column) => (
             <div key={column.label} className="md:px-6 md:first:pl-0 md:last:pr-0">
-              <h3 className="text-center font-display text-2xl text-brand">{column.label}</h3>
-              <div className="rule-thin mx-auto mt-4" />
-              <ul className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+              <h3 className="text-center font-display text-xl text-brand">{column.label}</h3>
+              <div className="rule-thin mx-auto mt-3" />
+              <ul className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {column.items.map((pillar) => (
                   <li key={pillar.title}>
-                    <Card>
-                      <pillar.icon aria-hidden className="size-7 text-raspberry" />
-                      <h4 className="mt-4 text-xl text-brand">{pillar.title}</h4>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">
+                    <Card className="p-4">
+                      <pillar.icon aria-hidden className="size-6 text-raspberry" />
+                      <h4 className="mt-2 text-lg text-brand">{pillar.title}</h4>
+                      <p className="mt-1.5 flex-1 text-sm leading-snug text-brand/80">
                         {pillar.text}
                       </p>
-                      <div className="mt-5">
+                      <div className="mt-3">
                         <ButtonLink to={pillar.to} variant="ghost">
                           {pillar.cta}
                         </ButtonLink>
