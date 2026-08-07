@@ -44,7 +44,7 @@ export function NewsletterFooterForm() {
               name="consent"
               checked={form.consent}
               onChange={(e) => form.setConsent(e.target.checked)}
-              className="mt-0.5 h-5 w-5 shrink-0 rounded accent-fuchsia-accent"
+              className="mt-0.5 h-6 w-6 shrink-0 rounded accent-fuchsia-accent"
             />
             <span>{CONSENT_TEXT}</span>
           </label>

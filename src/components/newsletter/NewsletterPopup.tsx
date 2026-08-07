@@ -104,13 +104,13 @@ export function NewsletterPopup({
                 </button>
 
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
-                  <DialogClose className="rounded-full px-3 py-2 text-sm text-brand/70 underline transition-colors hover:text-brand">
+                  <DialogClose className="inline-flex min-h-11 items-center rounded-full px-3 py-2 text-sm text-brand/70 underline transition-colors hover:text-brand">
                     Plus tard
                   </DialogClose>
                   <Link
                     to="/politique-confidentialite"
                     onClick={() => onOpenChange(false)}
-                    className="text-sm text-raspberry underline hover:text-fuchsia-ink"
+                    className="inline-flex min-h-11 items-center text-sm text-raspberry underline hover:text-fuchsia-ink"
                   >
                     Politique de confidentialité
                   </Link>
