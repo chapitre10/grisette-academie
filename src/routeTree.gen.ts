@@ -14,6 +14,7 @@ import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as CgvRouteImport } from './routes/cgv'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
 import { Route as SeFormerRouteImport } from './routes/se-former'
@@ -48,6 +49,11 @@ const ContactRoute = ContactRouteImport.update({
 const CoursPresentielRoute = CoursPresentielRouteImport.update({
   id: '/cours-presentiel',
   path: '/cours-presentiel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/se-former': typeof SeFormerRoute
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/se-former': typeof SeFormerRoute
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/se-former': typeof SeFormerRoute
@@ -162,6 +171,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
     | '/se-former'
@@ -179,6 +189,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
     | '/se-former'
@@ -196,6 +207,7 @@ export interface FileRouteTypes {
     | '/cgv'
     | '/contact'
     | '/cours-presentiel'
+    | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
     | '/se-former'
@@ -214,6 +226,7 @@ export interface RootRouteChildren {
   CgvRoute: typeof CgvRoute
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
+  FaqRoute: typeof FaqRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   SeFormerRoute: typeof SeFormerRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/cours-presentiel'
       fullPath: '/cours-presentiel'
       preLoaderRoute: typeof CoursPresentielRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mentions-legales': {
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   CgvRoute: CgvRoute,
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
+  FaqRoute: FaqRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   SeFormerRoute: SeFormerRoute,
@@ -356,13 +377,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

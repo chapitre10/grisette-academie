@@ -36,5 +36,6 @@ export const navLinks: NavLink[] = [
     ],
   },
   { label: "À propos", to: "/a-propos" },
+  { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
 ];
