@@ -6,7 +6,7 @@ import { formationFaq, formations } from "@/data/formations";
 
 const title = "Formations courtes couture en ligne — Grisette Académie";
 const description =
-  "Des formations courtes couture courtes et ciblées pour apprendre une technique à la fois : droit-fil, mesures, choix du tissu, préparation et finitions.";
+  "Des formations courtes couture ciblées pour apprendre une technique à la fois : droit-fil, mesures, choix du tissu, préparation et finitions.";
 
 export const Route = createFileRoute("/micro-formations/")({
   head: () => ({
