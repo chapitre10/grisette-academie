@@ -193,10 +193,10 @@ export const articles: Article[] = [
       "Le tombé influence directement l'allure finale.",
     ],
     cta: {
-      label: "Voir la micro-formation",
+      label: "Voir la formation courte",
       to: "/micro-formations/$slug",
       params: { slug: "choisir-un-tissu-adapte" },
-      text: "Une micro-formation est prévue pour approfondir le choix des tissus selon le projet.",
+      text: "Une formation courte est prévue pour approfondir le choix des tissus selon le projet.",
     },
     image: null,
     imageAlt: "Coupons de tissus empilés dans un atelier de couture",
@@ -300,7 +300,7 @@ export const articles: Article[] = [
       "Un projet terminé apprend plus qu'un projet abandonné.",
     ],
     cta: {
-      label: "Voir la micro-formation droit-fil",
+      label: "Voir la formation courte droit-fil",
       to: "/micro-formations/$slug",
       params: { slug: "comprendre-le-droit-fil" },
       text: "Le droit-fil mérite un temps d'apprentissage à part entière.",

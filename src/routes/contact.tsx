@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 
 const title = "Contacter Grisette Académie — cours, templates, formations";
 const description =
-  "Une question sur les cours de couture, les templates ou les micro-formations Grisette Académie ? Écris-moi via le formulaire de contact.";
+  "Une question sur les cours de couture, les templates ou les formations courtes Grisette Académie ? Écris-moi via le formulaire de contact.";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -31,7 +31,7 @@ const requestTypes = [
   "Question sur un template",
   "Question sur un guide",
   "Cours en présentiel",
-  "Micro-formation",
+  "Formation courte",
   "Collaboration",
   "Autre",
 ];
@@ -103,7 +103,7 @@ function ContactPage() {
           as="h1"
           eyebrow="Contact"
           title="Contacte Grisette Académie"
-          intro="Une question sur les cours, les templates ou les micro-formations ? Écris-moi et je te répondrai dès que possible."
+          intro="Une question sur les cours, les templates ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
         />
       </Section>
 

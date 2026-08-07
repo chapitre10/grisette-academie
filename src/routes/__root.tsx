@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Grisette Académie : cours de couture, templates, guides et micro-formations pour apprendre la couture avec méthode.",
+          "Grisette Académie : cours de couture, templates, guides et formations courtes pour apprendre la couture avec méthode.",
       },
       { name: "author", content: "Grisette Académie" },
       { property: "og:site_name", content: "Grisette Académie" },

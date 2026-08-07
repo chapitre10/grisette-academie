@@ -11,7 +11,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
       { label: "Guides", to: "/guides" },
       { label: "Ressources gratuites", to: "/blog" },
       { label: "Cours en présentiel", to: "/cours-presentiel" },
-      { label: "Micro-formations", to: "/micro-formations" },
+      { label: "Formations courtes", to: "/micro-formations" },
     ],
   },
   {

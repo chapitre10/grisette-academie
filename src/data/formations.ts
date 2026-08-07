@@ -1,5 +1,5 @@
 /**
- * Micro-formations. Aucune n'est présentée comme disponible.
+ * Formations courtes. Aucune n'est présentée comme disponible.
  */
 export interface Formation {
   slug: string;
@@ -29,17 +29,17 @@ export interface Formation {
 
 export const formationFaq = [
   {
-    question: "Quand les micro-formations seront-elles disponibles ?",
+    question: "Quand les formations courtes seront-elles disponibles ?",
     answer:
       "Elles sont en préparation. Aucune date n'est annoncée pour le moment afin de ne rien promettre d'incertain.",
   },
   {
-    question: "Combien de temps dure une micro-formation ?",
+    question: "Combien de temps dure une formation courte ?",
     answer: "Le format est court et ciblé sur une technique. La durée exacte sera précisée à l'ouverture.",
   },
   {
     question: "Faut-il un niveau minimum ?",
-    answer: "Chaque micro-formation indique son niveau et ses prérequis sur sa page.",
+    answer: "Chaque formation courte indique son niveau et ses prérequis sur sa page.",
   },
   {
     question: "Puis-je poser des questions pendant la formation ?",
@@ -79,9 +79,9 @@ export const formations: Formation[] = [
     imageAlt: "Tissu plié avec un patron placé dans le sens du droit-fil",
     related: ["preparer-son-projet-avant-de-couper"],
     seo: {
-      title: "Micro-formation : comprendre le droit-fil — Grisette Académie",
+      title: "Formation courte : comprendre le droit-fil — Grisette Académie",
       description:
-        "Une micro-formation courte pour repérer le droit-fil et placer correctement son patron sur le tissu.",
+        "Une formation courte pour repérer le droit-fil et placer correctement son patron sur le tissu.",
       pinterestTitle: "Comprendre le droit-fil en couture",
       pinterestDescription: "Repérer le droit-fil et bien placer son patron pour un vêtement qui tombe juste.",
       pinterestImage: null,
@@ -107,7 +107,7 @@ export const formations: Formation[] = [
     imageAlt: "Mètre ruban utilisé pour relever un tour de taille",
     related: ["comprendre-le-droit-fil"],
     seo: {
-      title: "Micro-formation : prendre ses mesures — Grisette Académie",
+      title: "Formation courte : prendre ses mesures — Grisette Académie",
       description:
         "Apprendre à relever ses mesures couture avec précision pour choisir la bonne taille de patron.",
       pinterestTitle: "Prendre ses mesures en couture, correctement",
@@ -135,9 +135,9 @@ export const formations: Formation[] = [
     imageAlt: "Échantillons de tissus variés présentés côte à côte",
     related: ["preparer-son-projet-avant-de-couper"],
     seo: {
-      title: "Micro-formation : choisir son tissu — Grisette Académie",
+      title: "Formation courte : choisir son tissu — Grisette Académie",
       description:
-        "Une micro-formation pour choisir un tissu adapté à son projet couture : familles de matières, tombé et entretien.",
+        "Une formation courte pour choisir un tissu adapté à son projet couture : familles de matières, tombé et entretien.",
       pinterestTitle: "Choisir le bon tissu pour son projet couture",
       pinterestDescription: "Familles de tissus, tombé, métrage et entretien : bien choisir sa matière.",
       pinterestImage: null,
@@ -164,7 +164,7 @@ export const formations: Formation[] = [
     imageAlt: "Tissu préparé et patron épinglé avant la coupe",
     related: ["comprendre-le-droit-fil", "choisir-un-tissu-adapte"],
     seo: {
-      title: "Micro-formation : préparer son projet avant de couper — Grisette Académie",
+      title: "Formation courte : préparer son projet avant de couper — Grisette Académie",
       description:
         "Les vérifications à effectuer avant de couper son tissu : prélavage, patron, marges et plan de coupe.",
       pinterestTitle: "Avant de couper : la préparation d'un projet couture",
@@ -194,7 +194,7 @@ export const formations: Formation[] = [
     imageAlt: "Détail d'un ourlet et d'une surpiqûre soignée",
     related: ["preparer-son-projet-avant-de-couper"],
     seo: {
-      title: "Micro-formation : réussir ses finitions couture — Grisette Académie",
+      title: "Formation courte : réussir ses finitions couture — Grisette Académie",
       description:
         "Améliorer la qualité de ses finitions couture : bords, ourlets, surpiqûres et repassage.",
       pinterestTitle: "Réussir ses finitions couture",

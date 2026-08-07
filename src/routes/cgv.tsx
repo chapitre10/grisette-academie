@@ -39,7 +39,7 @@ export const Route = createFileRoute("/cgv")({
         <ul className="list-disc space-y-1 pl-5">
           <li>Templates et guides numériques téléchargeables.</li>
           <li>Cours de couture en présentiel.</li>
-          <li>Micro-formations en ligne.</li>
+          <li>Formations courtes en ligne.</li>
         </ul>
         <p>
           Les descriptions, niveaux et formats sont indiqués sur chaque fiche produit. Les tarifs
@@ -69,7 +69,7 @@ export const Route = createFileRoute("/cgv")({
           lorsque le client a expressément renoncé à ce droit.
         </p>
         <p>
-          Pour les cours en présentiel et les micro-formations, les conditions d'annulation et de
+          Pour les cours en présentiel et les formations courtes, les conditions d'annulation et de
           report sont les suivantes : <Pending label="conditions d'annulation" />
         </p>
       </LegalBlock>
