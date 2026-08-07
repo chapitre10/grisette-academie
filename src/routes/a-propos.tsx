@@ -7,9 +7,9 @@ import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { storyBlocks } from "@/data/about";
 import { site } from "@/data/site";
 
-const title = "À propos de Grisette Académie — la couture apprise avec méthode";
+const title = "À propos — professeure de couture | Grisette Académie";
 const description =
-  "Découvre l'histoire, la mission et la pédagogie de Grisette Académie : apprendre la couture pas à pas, avec des ressources claires et bienveillantes.";
+  "Parcours, diplômes et valeurs derrière Grisette Académie : une professeure de couture qui enseigne les bases pas à pas, en cours et en formations courtes.";
 
 export const Route = createFileRoute("/a-propos")({
   head: () => ({
