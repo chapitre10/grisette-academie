@@ -18,6 +18,7 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
     title: "Informations",
     links: [
       { label: "À propos", to: "/a-propos" },
+      { label: "FAQ", to: "/faq" },
       { label: "Contact", to: "/contact" },
       { label: "Mentions légales", to: "/mentions-legales" },
       { label: "Politique de confidentialité", to: "/politique-confidentialite" },
