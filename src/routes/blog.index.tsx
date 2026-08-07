@@ -93,9 +93,9 @@ function BlogPage() {
             </div>
           </article>
         </Section>
+      ) : null}
 
       <ZigzagDivider />
-      ) : null}
 
       <Section tone="ivory">
         <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
