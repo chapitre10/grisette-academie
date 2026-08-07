@@ -11,7 +11,7 @@ export function NewsletterFooterForm() {
       <h2 id="newsletter-footer-title" className="font-display text-xl text-ivory">
         Les nouvelles de Grisette Académie
       </h2>
-      <p className="mt-2 text-sm leading-relaxed text-ivory/85">
+      <p className="mt-2 text-sm leading-relaxed text-ivory/90">
         Reçois des conseils couture, des ressources gratuites et les actualités de Grisette
         Académie directement dans ta boîte mail.
       </p>
@@ -54,7 +54,7 @@ export function NewsletterFooterForm() {
             className={
               form.status === "error"
                 ? "text-sm font-semibold text-gold"
-                : "text-sm text-ivory/70"
+                : "text-sm text-ivory/90"
             }
           >
             {form.message ?? newsletterMessages.initial}
