@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as CgvRouteImport } from './routes/cgv'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -30,6 +31,11 @@ import { Route as MicroFormationsSlugRouteImport } from './routes/micro-formatio
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AProposRoute = AProposRouteImport.update({
@@ -116,6 +122,7 @@ const MicroFormationsSlugRoute = MicroFormationsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/a-propos': typeof AProposRoute
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/a-propos': typeof AProposRoute
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
@@ -155,6 +163,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/a-propos': typeof AProposRoute
   '/cgv': typeof CgvRoute
   '/contact': typeof ContactRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$'
     | '/a-propos'
     | '/cgv'
     | '/contact'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$'
     | '/a-propos'
     | '/cgv'
     | '/contact'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$'
     | '/a-propos'
     | '/cgv'
     | '/contact'
@@ -234,6 +246,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
   AProposRoute: typeof AProposRoute
   CgvRoute: typeof CgvRoute
   ContactRoute: typeof ContactRoute
@@ -259,6 +272,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/a-propos': {
@@ -378,6 +398,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
   AProposRoute: AProposRoute,
   CgvRoute: CgvRoute,
   ContactRoute: ContactRoute,
