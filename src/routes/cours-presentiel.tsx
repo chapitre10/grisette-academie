@@ -151,7 +151,7 @@ function CoursPage() {
         </ul>
       </Section>
 
-      <Section tone="steel">
+      <Section tone="mist">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="text-2xl text-brand">Pour qui et à quel niveau ?</h2>
