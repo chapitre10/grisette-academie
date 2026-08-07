@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { NewsletterProvider } from "@/components/newsletter/NewsletterProvider";
 
 function NotFoundComponent() {
   return (
@@ -129,7 +130,8 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col bg-background">
+      <NewsletterProvider>
+        <div className="flex min-h-screen flex-col bg-background">
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:text-ivory"
@@ -142,7 +144,8 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
-      </div>
+        </div>
+      </NewsletterProvider>
     </QueryClientProvider>
   );
 }
