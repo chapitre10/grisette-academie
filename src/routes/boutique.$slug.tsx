@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
-import { getProduct, products } from "@/data/products";
+import { getProduct, products, type Product } from "@/data/products";
 
 export const Route = createFileRoute("/boutique/$slug")({
   loader: ({ params }) => {
@@ -48,7 +48,7 @@ export const Route = createFileRoute("/boutique/$slug")({
 });
 
 function ProductPage() {
-  const { product } = Route.useLoaderData();
+  const { product } = Route.useLoaderData() as { product: Product };
   const related = product.related
     .map((slug) => products.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
