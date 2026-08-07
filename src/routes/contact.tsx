@@ -10,7 +10,7 @@ const description =
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>) => ({
-    sujet: typeof search['sujet'] === "string" ? (search['sujet'] as string) : "",
+    sujet: typeof search['sujet'] === "string" ? (search['sujet'] as string) : undefined,
   }),
   head: () => ({
     meta: [
@@ -55,7 +55,7 @@ function ContactPage() {
     firstName: "",
     lastName: "",
     email: "",
-    subject: sujet,
+    subject: sujet ?? "",
     requestType: sujet ? "Cours en présentiel" : "",
     message: "",
     consent: false,
