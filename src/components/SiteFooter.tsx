@@ -72,7 +72,7 @@ export function SiteFooter() {
         ))}
       </div>
 
-      <div className="container-page border-t border-ivory/20 py-6">
+      <div className="container-page border-t border-ivory/20 py-5">
         <NewsletterFooterForm />
       </div>
 
