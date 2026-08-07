@@ -92,6 +92,53 @@ export const Route = createFileRoute("/politique-confidentialite")({
           . Une réclamation peut être adressée à la CNIL (www.cnil.fr).
         </p>
       </LegalBlock>
+
+      <LegalBlock title="Newsletter">
+        <ul className="list-disc space-y-1 pl-5">
+          <li>
+            <strong>Responsable :</strong> {site.legalName}
+          </li>
+          <li>
+            <strong>Contact :</strong>{" "}
+            <a href={`mailto:${site.email}`} className="underline">
+              {site.email}
+            </a>
+          </li>
+          <li>
+            <strong>Objectif de la collecte :</strong> envoyer des conseils couture, des ressources
+            gratuites, les nouveautés de templates et guides, et les actualités des cours et
+            micro-formations.
+          </li>
+          <li>
+            <strong>Outil d'e-mailing utilisé :</strong> <Pending label="outil d'e-mailing" /> —
+            aucun outil n'est connecté à ce jour et aucune adresse n'est enregistrée.
+          </li>
+          <li>
+            <strong>Durée de conservation :</strong> <Pending label="durée à préciser" /> ou jusqu'au
+            retrait du consentement.
+          </li>
+          <li>
+            <strong>Tes droits :</strong> accès, rectification, effacement, limitation, opposition,
+            portabilité et retrait du consentement à tout moment.
+          </li>
+          <li>
+            <strong>Désinscription :</strong> via le lien de désinscription présent dans chaque
+            e-mail, ou sur simple demande par e-mail.
+          </li>
+          <li>
+            <strong>Exercer tes droits :</strong>{" "}
+            <a href={`mailto:${site.email}`} className="underline">
+              {site.email}
+            </a>
+          </li>
+        </ul>
+        <p>
+          L'inscription à la newsletter repose sur un consentement libre et distinct : elle n'est pas
+          incluse dans l'acceptation des CGV ni de la présente politique de confidentialité. Chaque
+          e-mail envoyé mentionne l'identité de {site.legalName}, la raison pour laquelle tu le
+          reçois, un lien de désinscription et un lien vers cette politique.
+        </p>
+      </LegalBlock>
     </LegalPage>
   ),
 });
