@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
@@ -18,6 +19,11 @@ import { Route as BoutiqueSlugRouteImport } from './routes/boutique.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursPresentielRoute = CoursPresentielRouteImport.update({
+  id: '/cours-presentiel',
+  path: '/cours-presentiel',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -43,6 +49,7 @@ const BoutiqueSlugRoute = BoutiqueSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cours-presentiel': typeof CoursPresentielRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -65,12 +74,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/blog/$slug' | '/boutique/$slug' | '/blog/' | '/boutique/'
+  fullPaths:
+    | '/'
+    | '/cours-presentiel'
+    | '/blog/$slug'
+    | '/boutique/$slug'
+    | '/blog/'
+    | '/boutique/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog/$slug' | '/boutique/$slug' | '/blog' | '/boutique'
+  to:
+    | '/'
+    | '/cours-presentiel'
+    | '/blog/$slug'
+    | '/boutique/$slug'
+    | '/blog'
+    | '/boutique'
   id:
     | '__root__'
     | '/'
+    | '/cours-presentiel'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/blog/'
@@ -79,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CoursPresentielRoute: typeof CoursPresentielRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -92,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cours-presentiel': {
+      id: '/cours-presentiel'
+      path: '/cours-presentiel'
+      fullPath: '/cours-presentiel'
+      preLoaderRoute: typeof CoursPresentielRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -127,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CoursPresentielRoute: CoursPresentielRoute,
   BlogSlugRoute: BlogSlugRoute,
   BoutiqueSlugRoute: BoutiqueSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
