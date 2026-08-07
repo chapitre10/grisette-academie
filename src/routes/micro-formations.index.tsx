@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
-import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { formationFaq, formations } from "@/data/formations";
 
 const title = "Formations courtes couture en ligne — Grisette Académie";
@@ -88,8 +87,6 @@ function FormationsPage() {
           ))}
         </ul>
       </Section>
-
-      <ZigzagDivider />
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Les formations courtes en pratique" />
