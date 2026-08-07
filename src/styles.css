@@ -277,11 +277,11 @@
 
 .fabric-roll-panel {
   transform-origin: top center;
-  animation: fabric-unroll 0.85s cubic-bezier(0.22, 1, 0.32, 1) both;
+  animation: fabric-unroll 0.85s cubic-bezier(0.22, 1, 0.32, 1) both !important;
 }
 
 .fabric-roll-panel[data-state="closed"] {
-  animation: fabric-rollup 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+  animation: fabric-rollup 0.35s cubic-bezier(0.4, 0, 1, 1) both !important;
 }
 
 .fabric-roll-bar {
