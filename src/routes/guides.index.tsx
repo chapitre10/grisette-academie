@@ -53,7 +53,7 @@ function GuidesPage() {
 
   return (
     <>
-      <Section tone="blush">
+      <Section tone="blush" className="!py-8 md:!py-10">
         <SectionHeading
           as="h1"
           eyebrow="Guides"

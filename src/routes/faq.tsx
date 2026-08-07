@@ -39,7 +39,7 @@ function FaqPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Section tone="blush">
+      <Section tone="blush" className="!py-8 md:!py-10">
         <SectionHeading
           as="h1"
           eyebrow="Questions fréquentes"

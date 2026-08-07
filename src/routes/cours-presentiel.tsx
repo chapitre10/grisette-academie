@@ -71,7 +71,7 @@ function CoursPage() {
 
   return (
     <>
-      <Section tone="blush">
+      <Section tone="blush" className="!py-8 md:!py-10">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div>
             <SectionHeading
