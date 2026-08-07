@@ -82,7 +82,7 @@ const pillarColumns = [
 ];
 
 function Index() {
-  const featuredArticles = articles.slice(0, 3);
+  const featuredArticles = articles.slice(0, 2);
   const nextFormations = formations.slice(0, 2);
 
   return (
@@ -163,65 +163,75 @@ function Index() {
           intro="Les derniers articles publiés et les prochaines micro-formations, réunis au même endroit."
         />
 
-        <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
-          <h3 className="font-display text-2xl text-brand">Derniers articles du blog</h3>
-          <ButtonLink to="/blog" variant="secondary">
-            Tous les articles
-          </ButtonLink>
-        </div>
-        <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredArticles.map((article) => (
-            <li key={article.slug}>
-              <Card>
-                <Badge tone="neutral">{article.category}</Badge>
-                <h4 className="mt-3 text-xl text-brand">
-                  <Link
-                    to="/blog/$slug"
-                    params={{ slug: article.slug }}
-                    className="hover:text-fuchsia-accent"
-                  >
-                    {article.title}
-                  </Link>
-                </h4>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">
-                  {article.excerpt}
-                </p>
-                <p className="mt-4 text-xs text-brand/65">{formatDateFr(article.date)}</p>
-              </Card>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-14 flex flex-wrap items-end justify-between gap-4">
-          <h3 className="font-display text-2xl text-brand">Micro-formations à venir</h3>
-          <ButtonLink to="/micro-formations" variant="secondary">
-            Tout voir
-          </ButtonLink>
-        </div>
-        <ul className="mt-6 grid gap-6 sm:grid-cols-2">
-              {nextFormations.map((formation) => (
-                <li key={formation.slug}>
-                  <Card className="p-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <Badge tone="gold">Bientôt disponible</Badge>
-                      <span className="text-xs text-brand/65">{formation.duration}</span>
+        <div className="mt-12 grid gap-10 md:grid-cols-2">
+          <div>
+            <h3 className="font-display text-2xl text-brand">Derniers articles du blog</h3>
+            <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+              {featuredArticles.map((article) => (
+                <li key={article.slug}>
+                  <Card className="aspect-square justify-between overflow-hidden p-5">
+                    <div>
+                      <Badge tone="neutral">{article.category}</Badge>
+                      <h4 className="mt-3 text-lg text-brand">
+                        <Link
+                          to="/blog/$slug"
+                          params={{ slug: article.slug }}
+                          className="hover:text-fuchsia-accent"
+                        >
+                          {article.title}
+                        </Link>
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-brand/80">
+                        {article.excerpt}
+                      </p>
                     </div>
-                    <h4 className="mt-3 text-lg text-brand">
-                      <Link
-                        to="/micro-formations/$slug"
-                        params={{ slug: formation.slug }}
-                        className="hover:text-fuchsia-accent"
-                      >
-                        {formation.title}
-                      </Link>
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-brand/80">
-                      {formation.objective}
-                    </p>
+                    <p className="text-xs text-brand/65">{formatDateFr(article.date)}</p>
                   </Card>
                 </li>
               ))}
-        </ul>
+            </ul>
+            <div className="mt-6">
+              <ButtonLink to="/blog" variant="secondary">
+                Tous les articles
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-display text-2xl text-brand">Micro-formations à venir</h3>
+            <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+              {nextFormations.map((formation) => (
+                <li key={formation.slug}>
+                  <Card className="aspect-square justify-between overflow-hidden p-5">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge tone="gold">Bientôt disponible</Badge>
+                        <span className="text-xs text-brand/65">{formation.duration}</span>
+                      </div>
+                      <h4 className="mt-3 text-lg text-brand">
+                        <Link
+                          to="/micro-formations/$slug"
+                          params={{ slug: formation.slug }}
+                          className="hover:text-fuchsia-accent"
+                        >
+                          {formation.title}
+                        </Link>
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-brand/80">
+                        {formation.objective}
+                      </p>
+                    </div>
+                  </Card>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <ButtonLink to="/micro-formations" variant="secondary">
+                Tout voir
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section tone="brand">
