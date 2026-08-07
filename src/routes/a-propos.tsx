@@ -129,16 +129,16 @@ function AboutPage() {
         </ul>
       </Section>
 
-      <Section tone="brand">
+      <Section tone="peach" className="bg-peach/40">
         <div className="max-w-2xl">
-          <h2 className="text-3xl text-ivory md:text-4xl">Envie d'échanger ?</h2>
-          <p className="mt-4 text-base leading-relaxed text-ivory/85">
+          <h2 className="text-3xl text-brand md:text-4xl">Envie d'échanger ?</h2>
+          <p className="mt-4 text-base leading-relaxed text-brand/85">
             Une question sur les cours, une envie de collaboration ou simplement besoin d'un conseil
             pour choisir ta prochaine étape : écris-moi.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink to="/contact">Me contacter</ButtonLink>
-            <ButtonLink to="/micro-formations" variant="soft">
+            <ButtonLink to="/micro-formations" variant="secondary">
               Voir les formations courtes
             </ButtonLink>
           </div>
