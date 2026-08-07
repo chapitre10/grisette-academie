@@ -48,7 +48,7 @@ function BlogPage() {
 
   return (
     <>
-      <Section tone="mist">
+      <Section tone="blush">
         <SectionHeading
           as="h1"
           eyebrow="Ressources gratuites"
