@@ -98,7 +98,7 @@ export function NewsletterPopup({
                 <button
                   type="submit"
                   disabled={form.status === "submitting"}
-                  className="w-full rounded-full bg-fuchsia-ink px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
+                  className="w-full rounded-full bg-fuchsia-accent px-6 py-3.5 text-base font-semibold text-ivory transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   {form.status === "submitting" ? "Envoi…" : "Je m'inscris"}
                 </button>

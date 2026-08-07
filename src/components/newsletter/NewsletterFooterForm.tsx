@@ -63,7 +63,7 @@ export function NewsletterFooterForm() {
           <button
             type="submit"
             disabled={form.status === "submitting"}
-            className="w-full rounded-full bg-fuchsia-ink px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60 sm:w-auto"
+            className="w-full rounded-full bg-fuchsia-accent px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60 sm:w-auto"
           >
             {form.status === "submitting" ? "Envoi…" : "S'inscrire"}
           </button>

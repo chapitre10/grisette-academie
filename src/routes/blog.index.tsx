@@ -147,7 +147,7 @@ function BlogPage() {
               onClick={() => setTag(tag === t ? null : t)}
               aria-pressed={tag === t}
               className={`rounded-md px-3 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-                tag === t ? "bg-fuchsia-ink text-white" : "bg-mist text-brand hover:bg-steel"
+                tag === t ? "bg-fuchsia-accent text-white" : "bg-mist text-brand hover:bg-steel"
               }`}
             >
               #{t}

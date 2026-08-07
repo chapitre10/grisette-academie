@@ -78,9 +78,9 @@ export function Badge({
 }) {
   const tones: Record<string, string> = {
     gold: "bg-gold/70 text-brand",
-    accent: "bg-fuchsia-ink text-white",
+    accent: "bg-fuchsia-accent text-white",
     neutral: "bg-mist text-brand",
-    flame: "bg-flame-ink text-white",
+    flame: "bg-flame text-white",
   };
   return (
     <span
@@ -95,10 +95,10 @@ const buttonBase =
   "inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60";
 
 export const buttonStyles = {
-  primary: `${buttonBase} bg-fuchsia-ink text-white hover:bg-brand`,
+  primary: `${buttonBase} bg-fuchsia-accent text-white hover:bg-brand`,
   secondary: `${buttonBase} border border-brand text-brand hover:bg-blush/60`,
   soft: `${buttonBase} bg-mist text-brand hover:bg-steel`,
-  flame: `${buttonBase} bg-flame-ink text-white hover:bg-brand`,
+  flame: `${buttonBase} bg-flame text-white hover:bg-brand`,
   ghost: `${buttonBase} text-brand underline underline-offset-4 hover:text-fuchsia-ink`,
 };
 
