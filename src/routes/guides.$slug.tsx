@@ -66,7 +66,7 @@ function ProductPage() {
             <li aria-hidden>/</li>
             <li>
               <Link to="/guides" className="hover:text-fuchsia-accent">
-                Boutique
+                Guides
               </Link>
             </li>
             <li aria-hidden>/</li>
