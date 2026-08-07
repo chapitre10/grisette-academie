@@ -5,6 +5,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { courseFormats } from "@/data/cours";
 import { formations } from "@/data/formations";
+import { method } from "@/data/pedagogie";
 
 const title = "Se former à la couture — Grisette Académie";
 const description =
@@ -39,6 +40,25 @@ function SeFormerPage() {
       </Section>
 
       <Section>
+        <SectionHeading
+          eyebrow="Pédagogie"
+          title="Une méthode en quatre temps"
+          intro="La même progression structure les cours en présentiel, les guides et les formations courtes."
+        />
+        <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {method.map((item) => (
+            <li key={item.step}>
+              <Card>
+                <span className="font-display text-3xl text-raspberry">{item.step}</span>
+                <h3 className="mt-3 text-lg text-brand">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand/80">{item.text}</p>
+              </Card>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section tone="ivory">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <Badge tone="gold">En ligne</Badge>
