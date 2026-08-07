@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
@@ -38,6 +39,11 @@ const ContactRoute = ContactRouteImport.update({
 const CoursPresentielRoute = CoursPresentielRouteImport.update({
   id: '/cours-presentiel',
   path: '/cours-presentiel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -76,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -88,6 +95,7 @@ export interface FileRoutesByTo {
   '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -101,6 +109,7 @@ export interface FileRoutesById {
   '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -115,6 +124,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
+    | '/mentions-legales'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
+    | '/mentions-legales'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/contact'
     | '/cours-presentiel'
+    | '/mentions-legales'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   AProposRoute: typeof AProposRoute
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
   MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
@@ -188,6 +201,13 @@ declare module '@tanstack/react-router' {
       path: '/cours-presentiel'
       fullPath: '/cours-presentiel'
       preLoaderRoute: typeof CoursPresentielRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -240,6 +260,7 @@ const rootRouteChildren: RootRouteChildren = {
   AProposRoute: AProposRoute,
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
   BlogSlugRoute: BlogSlugRoute,
   BoutiqueSlugRoute: BoutiqueSlugRoute,
   MicroFormationsSlugRoute: MicroFormationsSlugRoute,
