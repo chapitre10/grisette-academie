@@ -164,6 +164,15 @@ function AboutPage() {
       </Section>
       ) : null}
 
+      <Section tone="mist">
+        <SectionHeading
+          eyebrow="Les coulisses"
+          title="Les coulisses"
+          intro="Un aperçu de l'atelier, des matières et des projets en cours. Les emplacements ci-dessous attendent tes vraies photos."
+        />
+        <CoulissesGallery />
+      </Section>
+
       <Section tone="peach" className="bg-peach/40 !py-8 md:!py-10">
         <div className="max-w-2xl">
           <h2 className="text-2xl text-brand md:text-3xl">Envie d'échanger ?</h2>
