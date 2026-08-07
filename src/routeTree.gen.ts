@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
+import { Route as SeFormerRouteImport } from './routes/se-former'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -60,6 +61,11 @@ const PolitiqueConfidentialiteRoute =
     path: '/politique-confidentialite',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SeFormerRoute = SeFormerRouteImport.update({
+  id: '/se-former',
+  path: '/se-former',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -104,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/se-former': typeof SeFormerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
@@ -120,6 +127,7 @@ export interface FileRoutesByTo {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/se-former': typeof SeFormerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
@@ -137,6 +145,7 @@ export interface FileRoutesById {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/se-former': typeof SeFormerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
@@ -155,6 +164,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/se-former'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/guides/$slug'
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/se-former'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/guides/$slug'
@@ -187,6 +198,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/se-former'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/guides/$slug'
@@ -204,6 +216,7 @@ export interface RootRouteChildren {
   CoursPresentielRoute: typeof CoursPresentielRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
+  SeFormerRoute: typeof SeFormerRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   GuidesSlugRoute: typeof GuidesSlugRoute
@@ -262,6 +275,13 @@ declare module '@tanstack/react-router' {
       path: '/politique-confidentialite'
       fullPath: '/politique-confidentialite'
       preLoaderRoute: typeof PolitiqueConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/se-former': {
+      id: '/se-former'
+      path: '/se-former'
+      fullPath: '/se-former'
+      preLoaderRoute: typeof SeFormerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -324,6 +344,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoursPresentielRoute: CoursPresentielRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
+  SeFormerRoute: SeFormerRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   GuidesSlugRoute: GuidesSlugRoute,
