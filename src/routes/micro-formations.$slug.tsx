@@ -187,7 +187,7 @@ function FormationPage() {
 
       <Section tone="mist">
         <SectionHeading eyebrow="Questions fréquentes" title="Avant de t'inscrire" />
-        <div className="mt-8">
+        <div className="mt-5 max-w-3xl">
           <Faq items={formationFaq} />
         </div>
         <div className="mt-10 flex flex-wrap gap-3">

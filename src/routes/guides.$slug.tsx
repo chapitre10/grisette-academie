@@ -213,7 +213,7 @@ function ProductPage() {
 
       <Section tone="blush">
         <SectionHeading eyebrow="Questions fréquentes" title="Avant de télécharger" />
-        <div className="mt-8">
+        <div className="mt-5 max-w-3xl">
           <Faq items={product.faq} />
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
