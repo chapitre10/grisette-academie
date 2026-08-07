@@ -31,10 +31,10 @@ export const Route = createFileRoute("/guides/")({
     ],
     links: [{ rel: "canonical", href: "/guides" }],
   }),
-  component: BoutiquePage,
+  component: GuidesPage,
 });
 
-function BoutiquePage() {
+function GuidesPage() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Toutes");
 
@@ -56,7 +56,7 @@ function BoutiquePage() {
       <Section tone="blush">
         <SectionHeading
           as="h1"
-          eyebrow="Boutique"
+          eyebrow="Guides"
           title="Templates et guides couture à télécharger"
           intro="Retrouve des ressources numériques conçues pour t'aider à organiser tes projets, préparer tes créations et progresser plus sereinement en couture."
         />
@@ -173,7 +173,7 @@ function BoutiquePage() {
       </Section>
 
       <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="La boutique en pratique" />
+        <SectionHeading eyebrow="Questions fréquentes" title="Les guides en pratique" />
         <div className="mt-8">
           <Faq items={shopFaq} />
         </div>
