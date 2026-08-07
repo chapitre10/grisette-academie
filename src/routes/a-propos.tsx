@@ -129,14 +129,14 @@ function AboutPage() {
         </ul>
       </Section>
 
-      <Section tone="peach" className="bg-peach/40">
+      <Section tone="peach" className="bg-peach/40 !py-8 md:!py-10">
         <div className="max-w-2xl">
-          <h2 className="text-3xl text-brand md:text-4xl">Envie d'échanger ?</h2>
-          <p className="mt-4 text-base leading-relaxed text-brand/85">
+          <h2 className="text-2xl text-brand md:text-3xl">Envie d'échanger ?</h2>
+          <p className="mt-2 text-sm leading-relaxed text-brand/85">
             Une question sur les cours, une envie de collaboration ou simplement besoin d'un conseil
             pour choisir ta prochaine étape : écris-moi.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap gap-2">
             <ButtonLink to="/contact">Me contacter</ButtonLink>
             <ButtonLink to="/micro-formations" variant="secondary">
               Voir les formations courtes
