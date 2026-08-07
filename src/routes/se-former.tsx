@@ -3,7 +3,7 @@ import { GraduationCap, Sparkles } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
-import { cours } from "@/data/cours";
+import { courseFormats } from "@/data/cours";
 import { formations } from "@/data/formations";
 
 const title = "Se former à la couture — Grisette Académie";
@@ -89,7 +89,7 @@ function SeFormerPage() {
               le moment, on adapte le rythme à ton niveau et on repart avec un projet abouti.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-brand/80">
-              {cours.formats.slice(0, 3).map((format) => (
+              {courseFormats.slice(0, 3).map((format) => (
                 <li key={format.title} className="flex gap-2">
                   <GraduationCap aria-hidden className="mt-0.5 size-4 shrink-0 text-raspberry" />
                   <span>{format.title}</span>
