@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
@@ -59,6 +60,11 @@ const PolitiqueConfidentialiteRoute =
     path: '/politique-confidentialite',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -98,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByTo {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -129,6 +137,7 @@ export interface FileRoutesById {
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -161,6 +171,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -176,6 +187,7 @@ export interface FileRouteTypes {
     | '/cours-presentiel'
     | '/mentions-legales'
     | '/politique-confidentialite'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -192,6 +204,7 @@ export interface RootRouteChildren {
   CoursPresentielRoute: typeof CoursPresentielRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
   MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
@@ -251,6 +264,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolitiqueConfidentialiteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -304,6 +324,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoursPresentielRoute: CoursPresentielRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
   BoutiqueSlugRoute: BoutiqueSlugRoute,
   MicroFormationsSlugRoute: MicroFormationsSlugRoute,
