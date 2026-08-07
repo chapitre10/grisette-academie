@@ -80,8 +80,13 @@ function SeFormerPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-5">
-              <ButtonLink to="/micro-formations">Voir les formations courtes</ButtonLink>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <ButtonLink to="/micro-formations" className="px-6 py-3 text-base shadow-sm">
+                Voir les formations courtes
+              </ButtonLink>
+              <ButtonLink to="/blog" variant="secondary" className="px-6 py-3 text-base">
+                Lire les ressources
+              </ButtonLink>
             </div>
           </div>
           <ImagePlaceholder
@@ -119,8 +124,13 @@ function SeFormerPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-5">
-              <ButtonLink to="/cours-presentiel">Découvrir les cours</ButtonLink>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <ButtonLink to="/cours-presentiel" className="px-6 py-3 text-base shadow-sm">
+                Découvrir les cours
+              </ButtonLink>
+              <ButtonLink to="/contact" variant="secondary" className="px-6 py-3 text-base">
+                Réserver un créneau
+              </ButtonLink>
             </div>
           </div>
         </div>
