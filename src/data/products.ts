@@ -159,7 +159,7 @@ export const products: Product[] = [
       "Comprendre ce qui distingue une matière d'une construction textile, pour mieux choisir ses tissus.",
     category: "Tissus et matières",
     format: "PDF",
-    level: "Débutante à intermédiaire",
+    level: "Débutant à intermédiaire",
     price: null,
     status: "bientot",
     benefits: [
@@ -245,7 +245,7 @@ export const products: Product[] = [
       "Comprendre le fonctionnement de sa machine à coudre et de sa surjeteuse, du réglage au dépannage.",
     category: "Machines et outils",
     format: "PDF",
-    level: "Débutante à intermédiaire",
+    level: "Débutant à intermédiaire",
     price: null,
     status: "bientot",
     benefits: [
@@ -332,7 +332,7 @@ export const products: Product[] = [
       "Le vocabulaire du patronage et du modélisme, pour aborder la construction du vêtement.",
     category: "Vocabulaire couture",
     format: "PDF",
-    level: "Intermédiaire à avancée",
+    level: "Intermédiaire à avancé",
     price: null,
     status: "bientot",
     benefits: [
@@ -375,7 +375,7 @@ export const products: Product[] = [
       "Le guide complet pour démarrer la couture : matériel, premiers gestes, premier projet et organisation.",
     category: "Couture débutante",
     format: "PDF imprimable",
-    level: "Débutante",
+    level: "Débutant",
     price: null,
     status: "bientot",
     benefits: [
