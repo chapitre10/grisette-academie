@@ -46,15 +46,15 @@ export function SectionHeading({
   return (
     <header className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       {eyebrow ? (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-raspberry">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-raspberry">
           {eyebrow}
         </p>
       ) : null}
       <Tag className={titleClassName ?? "text-3xl leading-tight text-brand md:text-4xl"}>
         {title}
       </Tag>
-      <div className={`rule-thin mt-5 ${align === "center" ? "mx-auto" : ""}`} />
-      {intro ? <p className="mt-5 text-base leading-relaxed text-brand/80">{intro}</p> : null}
+      <div className={`rule-thin mt-3 ${align === "center" ? "mx-auto" : ""}`} />
+      {intro ? <p className="mt-3 text-base leading-relaxed text-brand/80">{intro}</p> : null}
     </header>
   );
 }
