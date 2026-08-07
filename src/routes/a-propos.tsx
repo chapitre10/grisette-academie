@@ -164,7 +164,7 @@ function AboutPage() {
         <SectionHeading
           eyebrow="Pédagogie"
           title="Une méthode en quatre temps"
-          intro="La même progression structure les cours en présentiel, les templates et les micro-formations."
+          intro="La même progression structure les cours en présentiel, les templates et les formations courtes."
         />
         <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {method.map((item) => (

@@ -107,7 +107,7 @@ export const Route = createFileRoute("/politique-confidentialite")({
           <li>
             <strong>Objectif de la collecte :</strong> envoyer des conseils couture, des ressources
             gratuites, les nouveautés de templates et guides, et les actualités des cours et
-            micro-formations.
+            formations courtes.
           </li>
           <li>
             <strong>Outil d'e-mailing utilisé :</strong> <Pending label="outil d'e-mailing" /> —
