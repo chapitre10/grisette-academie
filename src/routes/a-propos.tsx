@@ -204,9 +204,6 @@ function AboutPage() {
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <ButtonLink to="/contact">Me contacter</ButtonLink>
-            <ButtonLink to="/micro-formations" variant="secondary">
-              Voir les formations courtes
-            </ButtonLink>
           </div>
         </div>
       </Section>
