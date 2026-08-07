@@ -4,7 +4,6 @@ import { BookOpen, GraduationCap, ScissorsLineDashed, Sparkles } from "lucide-re
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { articles, formatDateFr } from "@/data/articles";
-import { products } from "@/data/products";
 import { formations } from "@/data/formations";
 import { site } from "@/data/site";
 
@@ -72,7 +71,6 @@ const pillars = [
 ];
 
 function Index() {
-  const featuredProducts = products.slice(0, 3);
   const featuredArticles = articles.slice(0, 3);
   const nextFormations = formations.slice(0, 2);
 
@@ -92,10 +90,7 @@ function Index() {
               les tutoriels.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/guides">Explorer les guides</ButtonLink>
-              <ButtonLink to="/blog" variant="secondary">
-                Ressources gratuites
-              </ButtonLink>
+              <ButtonLink to="/cours-presentiel">Se former avec moi</ButtonLink>
             </div>
           </div>
           <ImagePlaceholder
@@ -124,50 +119,6 @@ function Index() {
                 <div className="mt-5">
                   <ButtonLink to={pillar.to} variant="ghost">
                     {pillar.cta}
-                  </ButtonLink>
-                </div>
-              </Card>
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section tone="mist">
-        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <SectionHeading
-            eyebrow="Guides"
-            title="Templates et guides à découvrir"
-            intro="Contenus d'exemple à remplacer par tes vrais produits."
-          />
-          <ButtonLink to="/guides" variant="secondary">
-            Tout voir
-          </ButtonLink>
-        </div>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProducts.map((product) => (
-            <li key={product.slug}>
-              <Card>
-                <ImagePlaceholder
-                  src={product.image}
-                  alt={product.imageAlt}
-                  hint="Visuel produit"
-                  className="mb-4 aspect-[4/3]"
-                />
-                <Badge tone="neutral">{product.category}</Badge>
-                <h3 className="mt-3 text-xl text-brand">{product.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-brand/80">
-                  {product.shortDescription}
-                </p>
-                <p className="mt-3 text-sm font-semibold text-raspberry">
-                  {product.price ?? "Bientôt disponible"}
-                </p>
-                <div className="mt-4">
-                  <ButtonLink
-                    to="/guides/$slug"
-                    params={{ slug: product.slug }}
-                    variant="secondary"
-                  >
-                    Voir la fiche
                   </ButtonLink>
                 </div>
               </Card>
@@ -212,27 +163,17 @@ function Index() {
       </Section>
 
       <Section tone="peach">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <SectionHeading
-              eyebrow="Cours en présentiel"
-              title="Apprendre accompagnée, machine devant soi"
-              intro="Les cours en présentiel permettent de corriger un geste immédiatement, d'ajuster un patron à sa morphologie et de progresser plus vite qu'en autonomie."
-            />
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/cours-presentiel">Voir les formats</ButtonLink>
-              <ButtonLink
-                to="/contact"
-                search={{ sujet: "Cours en présentiel" }}
-                variant="secondary"
-              >
-                Demander des informations
-              </ButtonLink>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-2xl text-brand">Micro-formations à venir</h3>
-            <ul className="mt-5 space-y-4">
+        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+          <SectionHeading
+            eyebrow="Micro-formations"
+            title="Micro-formations à venir"
+            intro="Des modules courts et ciblés pour débloquer une technique précise, à ton rythme."
+          />
+          <ButtonLink to="/micro-formations" variant="secondary">
+            Tout voir
+          </ButtonLink>
+        </div>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2">
               {nextFormations.map((formation) => (
                 <li key={formation.slug}>
                   <Card className="p-5">
@@ -255,9 +196,7 @@ function Index() {
                   </Card>
                 </li>
               ))}
-            </ul>
-          </div>
-        </div>
+        </ul>
       </Section>
 
       <Section tone="brand">
