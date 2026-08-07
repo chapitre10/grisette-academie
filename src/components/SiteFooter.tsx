@@ -66,7 +66,7 @@ export function SiteFooter() {
           rel="noreferrer noopener"
           className="text-sm text-peach transition-colors hover:text-fuchsia-accent"
         >
-          Suivre Grisette Academy sur Pinterest
+          Suivre Grisette Académie sur Pinterest
         </a>
       </div>
     </footer>

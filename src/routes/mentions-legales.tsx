@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalBlock, LegalPage, Pending } from "@/components/LegalPage";
 import { site } from "@/data/site";
 
-const title = "Mentions légales — Grisette Academy";
+const title = "Mentions légales — Grisette Académie";
 const description =
-  "Mentions légales du site Grisette Academy : éditeur, hébergement, propriété intellectuelle et contact.";
+  "Mentions légales du site Grisette Académie : éditeur, hébergement, propriété intellectuelle et contact.";
 
 export const Route = createFileRoute("/mentions-legales")({
   head: () => ({
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/mentions-legales")({
     <LegalPage
       eyebrow="Informations légales"
       title="Mentions légales"
-      intro="Informations relatives à l'éditeur du site Grisette Academy et à son hébergement."
+      intro="Informations relatives à l'éditeur du site Grisette Académie et à son hébergement."
     >
       <LegalBlock title="Éditeur du site">
         <p>

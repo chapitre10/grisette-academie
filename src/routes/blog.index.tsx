@@ -6,7 +6,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, EmptyState, Section, SectionHeading } from "@/components/Ui";
 import { articleCategories, articles, formatDateFr } from "@/data/articles";
 
-const title = "Ressources gratuites pour apprendre la couture — Grisette Academy";
+const title = "Ressources gratuites pour apprendre la couture — Grisette Académie";
 const description =
   "Conseils, méthodes et fiches pratiques pour mieux préparer ses projets couture et progresser à son rythme.";
 

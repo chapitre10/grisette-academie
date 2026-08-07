@@ -4,9 +4,9 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { site } from "@/data/site";
 
-const title = "À propos de Grisette Academy — la couture apprise avec méthode";
+const title = "À propos de Grisette Académie — la couture apprise avec méthode";
 const description =
-  "Découvre l'histoire, la mission et la pédagogie de Grisette Academy : apprendre la couture pas à pas, avec des ressources claires et bienveillantes.";
+  "Découvre l'histoire, la mission et la pédagogie de Grisette Académie : apprendre la couture pas à pas, avec des ressources claires et bienveillantes.";
 
 export const Route = createFileRoute("/a-propos")({
   head: () => ({
@@ -88,7 +88,7 @@ function AboutPage() {
             <SectionHeading
               as="h1"
               eyebrow="À propos"
-              title="Grisette Academy, l'apprentissage de la couture rendu accessible"
+              title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
             <div className="mt-8 flex flex-wrap gap-3">
@@ -100,7 +100,7 @@ function AboutPage() {
           </div>
           <ImagePlaceholder
             src={null}
-            alt="Portrait de la fondatrice de Grisette Academy"
+            alt="Portrait de la fondatrice de Grisette Académie"
             hint="Portrait / photo d'atelier (à ajouter)"
             className="aspect-[4/5]"
           />
@@ -113,7 +113,7 @@ function AboutPage() {
             <h2 className="text-2xl text-brand">L'histoire</h2>
             <div className="mt-4 space-y-4 text-base leading-relaxed text-brand/85">
               <p>
-                Grisette Academy est née d'un constat simple : beaucoup de personnes achètent une
+                Grisette Académie est née d'un constat simple : beaucoup de personnes achètent une
                 machine à coudre, puis la laissent dormir dans un placard. Non par manque d'envie,
                 mais par manque de repères clairs pour démarrer.
               </p>
@@ -138,7 +138,7 @@ function AboutPage() {
                 finir proprement une pièce.
               </p>
               <p>
-                Grisette Academy s'adresse aux débutantes complètes comme aux couturières
+                Grisette Académie s'adresse aux débutantes complètes comme aux couturières
                 intermédiaires qui souhaitent combler des lacunes techniques précises.
               </p>
             </div>

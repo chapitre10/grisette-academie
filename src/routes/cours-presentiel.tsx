@@ -25,7 +25,7 @@ import { infoOrPending } from "@/data/site";
  * et obtention de l'autorisation de publication.
  */
 
-const title = "Cours de couture en présentiel — Grisette Academy";
+const title = "Cours de couture en présentiel — Grisette Académie";
 const description =
   "Cours de couture en présentiel : accompagnement personnalisé, cours individuels, petits groupes et suivi de projet pour progresser à son rythme.";
 

@@ -2,15 +2,15 @@
  * Informations globales du site — à remplacer par les vraies données.
  */
 export const site = {
-  name: "Grisette Academy",
+  name: "Grisette Académie",
   tagline: "Apprendre la couture avec méthode, créativité et confiance",
   description:
-    "Grisette Academy accompagne les passionnées de couture grâce à des ressources pratiques, des cours accessibles et des formations pensées pour progresser à son rythme.",
+    "Grisette Académie accompagne les passionnées de couture grâce à des ressources pratiques, des cours accessibles et des formations pensées pour progresser à son rythme.",
   // TODO : remplacer par la vraie URL Pinterest
   pinterestUrl: "https://www.pinterest.com/",
   // TODO : remplacer par la vraie adresse e-mail de contact
   email: "contact@grisette-academy.fr",
-  legalName: "Grisette Academy", // TODO : raison sociale exacte
+  legalName: "Grisette Académie", // TODO : raison sociale exacte
 };
 
 export type InfoValue = string | null;

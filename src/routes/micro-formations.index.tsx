@@ -4,7 +4,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { formationFaq, formations } from "@/data/formations";
 
-const title = "Micro-formations couture en ligne — Grisette Academy";
+const title = "Micro-formations couture en ligne — Grisette Académie";
 const description =
   "Des micro-formations couture courtes et ciblées pour apprendre une technique à la fois : droit-fil, mesures, choix du tissu, préparation et finitions.";
 

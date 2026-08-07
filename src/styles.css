@@ -77,7 +77,7 @@
 :root {
   --radius: 0.5rem;
 
-  /* Grisette Academy palette */
+  /* Grisette Académie palette */
   --brand: oklch(0.391 0.053 1.8); /* #5d3943 bordeaux profond */
   --brand-deep: oklch(0.333 0.046 2.6);
   --ivory: oklch(0.976 0.007 97.4); /* #f8f7f2 */

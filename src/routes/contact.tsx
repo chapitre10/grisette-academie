@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { site } from "@/data/site";
 
-const title = "Contacter Grisette Academy — cours, templates, formations";
+const title = "Contacter Grisette Académie — cours, templates, formations";
 const description =
-  "Une question sur les cours de couture, les templates ou les micro-formations Grisette Academy ? Écris-moi via le formulaire de contact.";
+  "Une question sur les cours de couture, les templates ou les micro-formations Grisette Académie ? Écris-moi via le formulaire de contact.";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -102,7 +102,7 @@ function ContactPage() {
         <SectionHeading
           as="h1"
           eyebrow="Contact"
-          title="Contacte Grisette Academy"
+          title="Contacte Grisette Académie"
           intro="Une question sur les cours, les templates ou les micro-formations ? Écris-moi et je te répondrai dès que possible."
         />
       </Section>
@@ -283,7 +283,7 @@ function ContactPage() {
             <div className="rounded-lg border border-border bg-blush/40 p-6">
               <h2 className="text-xl text-brand">Pinterest</h2>
               <p className="mt-2 text-sm leading-relaxed text-brand/85">
-                Tu peux également suivre Grisette Academy sur Pinterest pour découvrir les ressources
+                Tu peux également suivre Grisette Académie sur Pinterest pour découvrir les ressources
                 gratuites, les conseils couture et les nouvelles publications.
               </p>
               <a

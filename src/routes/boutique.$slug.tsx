@@ -14,7 +14,7 @@ export const Route = createFileRoute("/boutique/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Ressource indisponible — Grisette Academy" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Ressource indisponible — Grisette Académie" }, { name: "robots", content: "noindex" }],
       };
     }
     const { product } = loaderData;
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/boutique/$slug")({
             name: product.title,
             description: product.seo.description,
             category: product.category,
-            brand: { "@type": "Brand", name: "Grisette Academy" },
+            brand: { "@type": "Brand", name: "Grisette Académie" },
           }),
         },
       ],

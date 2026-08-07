@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalBlock, LegalPage, Pending } from "@/components/LegalPage";
 import { site } from "@/data/site";
 
-const title = "Politique de confidentialité — Grisette Academy";
+const title = "Politique de confidentialité — Grisette Académie";
 const description =
-  "Politique de confidentialité de Grisette Academy : données collectées, finalités, durée de conservation et droits RGPD.";
+  "Politique de confidentialité de Grisette Académie : données collectées, finalités, durée de conservation et droits RGPD.";
 
 export const Route = createFileRoute("/politique-confidentialite")({
   head: () => ({

@@ -8,9 +8,9 @@ import { products } from "@/data/products";
 import { formations } from "@/data/formations";
 import { site } from "@/data/site";
 
-const title = "Grisette Academy — apprendre la couture pas à pas";
+const title = "Grisette Académie — apprendre la couture pas à pas";
 const description =
-  "Grisette Academy : cours de couture en présentiel, templates et guides numériques, micro-formations en ligne et ressources gratuites pour progresser avec méthode.";
+  "Grisette Académie : cours de couture en présentiel, templates et guides numériques, micro-formations en ligne et ressources gratuites pour progresser avec méthode.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,7 +87,7 @@ function Index() {
             </h1>
             <div className="rule-thin mt-6" />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand/85">
-              Grisette Academy réunit des cours en présentiel, des templates imprimables, des guides
+              Grisette Académie réunit des cours en présentiel, des templates imprimables, des guides
               pratiques et des micro-formations pour progresser étape par étape — sans se perdre dans
               les tutoriels.
             </p>
@@ -100,7 +100,7 @@ function Index() {
           </div>
           <ImagePlaceholder
             src={null}
-            alt="Atelier de couture Grisette Academy"
+            alt="Atelier de couture Grisette Académie"
             hint="Visuel d'accueil : atelier, tissus, machine à coudre (à ajouter)"
             className="aspect-[4/3]"
           />
@@ -264,7 +264,7 @@ function Index() {
         <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-center">
           <div>
             <h2 className="font-display text-3xl text-ivory md:text-4xl">
-              Retrouve Grisette Academy sur Pinterest
+              Retrouve Grisette Académie sur Pinterest
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ivory/85">
               Épingles de conseils, inspirations de projets et ressources gratuites : Pinterest est

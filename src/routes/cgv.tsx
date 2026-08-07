@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalBlock, LegalPage, Pending } from "@/components/LegalPage";
 import { site } from "@/data/site";
 
-const title = "Conditions générales de vente — Grisette Academy";
+const title = "Conditions générales de vente — Grisette Académie";
 const description =
-  "CGV de Grisette Academy : produits numériques, cours en présentiel, paiement, livraison et droit de rétractation.";
+  "CGV de Grisette Académie : produits numériques, cours en présentiel, paiement, livraison et droit de rétractation.";
 
 export const Route = createFileRoute("/cgv")({
   head: () => ({
