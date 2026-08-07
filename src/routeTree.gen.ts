@@ -14,6 +14,7 @@ import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BoutiqueIndexRouteImport } from './routes/boutique.index'
@@ -46,6 +47,12 @@ const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
   path: '/mentions-legales',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PolitiqueConfidentialiteRoute =
+  PolitiqueConfidentialiteRouteImport.update({
+    id: '/politique-confidentialite',
+    path: '/politique-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -83,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -96,6 +104,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -110,6 +119,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/boutique/$slug': typeof BoutiqueSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/mentions-legales'
+    | '/politique-confidentialite'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/mentions-legales'
+    | '/politique-confidentialite'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -151,6 +163,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/mentions-legales'
+    | '/politique-confidentialite'
     | '/blog/$slug'
     | '/boutique/$slug'
     | '/micro-formations/$slug'
@@ -165,6 +178,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BoutiqueSlugRoute: typeof BoutiqueSlugRoute
   MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
@@ -208,6 +222,13 @@ declare module '@tanstack/react-router' {
       path: '/mentions-legales'
       fullPath: '/mentions-legales'
       preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-confidentialite': {
+      id: '/politique-confidentialite'
+      path: '/politique-confidentialite'
+      fullPath: '/politique-confidentialite'
+      preLoaderRoute: typeof PolitiqueConfidentialiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -261,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
+  PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   BlogSlugRoute: BlogSlugRoute,
   BoutiqueSlugRoute: BoutiqueSlugRoute,
   MicroFormationsSlugRoute: MicroFormationsSlugRoute,
