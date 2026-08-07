@@ -99,8 +99,13 @@ function Index() {
               pratiques et des micro-formations pour progresser étape par étape — sans se perdre dans
               les tutoriels.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink to="/cours-presentiel">Se former avec moi</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink
+                to="/cours-presentiel"
+                className="px-8 py-4 text-base md:text-lg"
+              >
+                Se former avec moi
+              </ButtonLink>
             </div>
           </div>
           <ImagePlaceholder
