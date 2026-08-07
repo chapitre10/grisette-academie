@@ -16,7 +16,7 @@ export const Route = createFileRoute("/micro-formations/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Micro-formation indisponible — Grisette Académie" },
+          { title: "Formation courte indisponible — Grisette Académie" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -57,7 +57,7 @@ function FormationPage() {
             <li aria-hidden>/</li>
             <li>
               <Link to="/micro-formations" className="hover:text-fuchsia-accent">
-                Micro-formations
+                Formations courtes
               </Link>
             </li>
             <li aria-hidden>/</li>
@@ -73,7 +73,7 @@ function FormationPage() {
           <ImagePlaceholder
             src={formation.image}
             alt={formation.imageAlt}
-            hint="Visuel de la micro-formation (à remplacer)"
+            hint="Visuel de la formation courte (à remplacer)"
             className="aspect-[4/3]"
           />
           <div>
@@ -152,7 +152,7 @@ function FormationPage() {
           {related.map((item) => (
             <li key={item.slug}>
               <Card>
-                <Badge tone="neutral">Micro-formation</Badge>
+                <Badge tone="neutral">Formation courte</Badge>
                 <h3 className="mt-3 text-xl text-brand">{item.title}</h3>
                 <p className="mt-2 text-sm text-brand/80">{item.objective}</p>
                 <div className="mt-5">
@@ -192,7 +192,7 @@ function FormationPage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <ButtonLink to="/contact">Poser une question</ButtonLink>
           <ButtonLink to="/micro-formations" variant="secondary">
-            Toutes les micro-formations
+            Toutes les formations courtes
           </ButtonLink>
         </div>
       </Section>

@@ -4,9 +4,9 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { formationFaq, formations } from "@/data/formations";
 
-const title = "Micro-formations couture en ligne — Grisette Académie";
+const title = "Formations courtes couture en ligne — Grisette Académie";
 const description =
-  "Des micro-formations couture courtes et ciblées pour apprendre une technique à la fois : droit-fil, mesures, choix du tissu, préparation et finitions.";
+  "Des formations courtes couture courtes et ciblées pour apprendre une technique à la fois : droit-fil, mesures, choix du tissu, préparation et finitions.";
 
 export const Route = createFileRoute("/micro-formations/")({
   head: () => ({
@@ -30,12 +30,12 @@ function FormationsPage() {
       <Section tone="blush">
         <SectionHeading
           as="h1"
-          eyebrow="Micro-formations"
-          title="Micro-formations couture"
+          eyebrow="Formations courtes"
+          title="Formations courtes couture"
           intro="Des formations courtes et ciblées pour apprendre une technique à la fois."
         />
         <p className="mt-6 inline-block rounded-md border border-brand/25 bg-background px-4 py-3 text-sm text-brand">
-          Les micro-formations sont en préparation : aucune n'est encore disponible à l'inscription.
+          Les formations courtes sont en préparation : aucune n'est encore disponible à l'inscription.
         </p>
       </Section>
 
@@ -47,7 +47,7 @@ function FormationsPage() {
                 <ImagePlaceholder
                   src={formation.image}
                   alt={formation.imageAlt}
-                  hint="Visuel de la micro-formation (à remplacer)"
+                  hint="Visuel de la formation courte (à remplacer)"
                 />
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Badge tone="neutral">{formation.difficulty}</Badge>
@@ -89,7 +89,7 @@ function FormationsPage() {
       </Section>
 
       <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="Les micro-formations en pratique" />
+        <SectionHeading eyebrow="Questions fréquentes" title="Les formations courtes en pratique" />
         <div className="mt-8">
           <Faq items={formationFaq} />
         </div>

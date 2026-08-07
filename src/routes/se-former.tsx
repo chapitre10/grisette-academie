@@ -8,7 +8,7 @@ import { formations } from "@/data/formations";
 
 const title = "Se former à la couture — Grisette Académie";
 const description =
-  "Deux façons de se former à la couture avec Grisette Académie : des micro-formations en ligne courtes et ciblées, ou des cours en présentiel accompagnés.";
+  "Deux façons de se former à la couture avec Grisette Académie : des formations courtes en ligne courtes et ciblées, ou des cours en présentiel accompagnés.";
 
 export const Route = createFileRoute("/se-former")({
   head: () => ({
@@ -34,7 +34,7 @@ function SeFormerPage() {
           as="h1"
           eyebrow="Se former"
           title="Se former à la couture avec moi"
-          intro="Deux chemins complémentaires : apprendre en ligne à ton rythme avec les micro-formations, ou être accompagnée en direct lors d'un cours en présentiel."
+          intro="Deux chemins complémentaires : apprendre en ligne à ton rythme avec les formations courtes, ou être accompagnée en direct lors d'un cours en présentiel."
         />
       </Section>
 
@@ -42,7 +42,7 @@ function SeFormerPage() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
             <Badge tone="gold">En ligne</Badge>
-            <h2 className="mt-4 font-display text-3xl text-brand md:text-4xl">Micro-formations</h2>
+            <h2 className="mt-4 font-display text-3xl text-brand md:text-4xl">Formations courtes</h2>
             <div className="rule-thin mt-5" />
             <p className="mt-5 text-base leading-relaxed text-brand/85">
               Des modules courts et ciblés pour débloquer une technique précise : droit-fil, prise de
@@ -58,13 +58,13 @@ function SeFormerPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <ButtonLink to="/micro-formations">Voir les micro-formations</ButtonLink>
+              <ButtonLink to="/micro-formations">Voir les formations courtes</ButtonLink>
             </div>
           </div>
           <ImagePlaceholder
             src={null}
-            alt="Micro-formations couture en ligne"
-            hint="Visuel micro-formations (à ajouter)"
+            alt="Formations courtes couture en ligne"
+            hint="Visuel formations courtes (à ajouter)"
             className="aspect-[4/3]"
           />
         </div>

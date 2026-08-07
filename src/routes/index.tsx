@@ -10,7 +10,7 @@ import { site } from "@/data/site";
 
 const title = "Grisette Académie — apprendre la couture pas à pas";
 const description =
-  "Grisette Académie : cours de couture en présentiel, templates et guides numériques, micro-formations en ligne et ressources gratuites pour progresser avec méthode.";
+  "Grisette Académie : cours de couture en présentiel, templates et guides numériques, formations courtes en ligne et ressources gratuites pour progresser avec méthode.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -65,7 +65,7 @@ const pillarColumns = [
     items: [
       {
         icon: Sparkles,
-        title: "Micro-formations",
+        title: "Formations courtes",
         text: "Des modules courts et ciblés pour débloquer une technique précise, à ton rythme.",
         to: "/micro-formations",
         cta: "Voir les modules",
@@ -97,7 +97,7 @@ function Index() {
             <div className="rule-thin mt-6" />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand/85">
               Grisette Académie réunit des cours en présentiel, des templates imprimables, des guides
-              pratiques et des micro-formations pour progresser étape par étape — sans se perdre dans
+              pratiques et des formations courtes pour progresser étape par étape — sans se perdre dans
               les tutoriels.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -160,7 +160,7 @@ function Index() {
           align="center"
           title="Les nouveautés"
           titleClassName="text-4xl leading-tight text-brand md:text-6xl"
-          intro="Les derniers articles publiés et les prochaines micro-formations, réunis au même endroit."
+          intro="Les derniers articles publiés et les prochaines formations courtes, réunis au même endroit."
         />
 
         <div className="mt-12 grid gap-10 md:grid-cols-2">
@@ -198,7 +198,7 @@ function Index() {
           </div>
 
           <div>
-            <h3 className="font-display text-2xl text-brand">Micro-formations à venir</h3>
+            <h3 className="font-display text-2xl text-brand">Formations courtes à venir</h3>
             <ul className="mt-6 grid gap-6 sm:grid-cols-2">
               {nextFormations.map((formation) => (
                 <li key={formation.slug}>

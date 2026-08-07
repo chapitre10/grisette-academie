@@ -120,7 +120,7 @@ function AboutPage() {
               <p>
                 L'activité s'est construite autour de l'idée qu'un apprentissage bien structuré vaut
                 mieux qu'une accumulation de tutoriels. D'abord des cours en présentiel, puis des
-                ressources écrites, des templates et des micro-formations pour prolonger
+                ressources écrites, des templates et des formations courtes pour prolonger
                 l'accompagnement au-delà de l'atelier.
               </p>
               <p className="text-sm italic text-brand/70">
@@ -189,7 +189,7 @@ function AboutPage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink to="/contact">Me contacter</ButtonLink>
             <ButtonLink to="/micro-formations" variant="soft">
-              Voir les micro-formations
+              Voir les formations courtes
             </ButtonLink>
           </div>
         </div>

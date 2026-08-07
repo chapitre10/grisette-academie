@@ -85,7 +85,7 @@ function CoursPage() {
                 Demander des informations
               </ButtonLink>
               <ButtonLink to="/micro-formations" variant="secondary">
-                Voir les micro-formations
+                Voir les formations courtes
               </ButtonLink>
             </div>
           </div>
