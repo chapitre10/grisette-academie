@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 import { site } from "@/data/site";
+import { NewsletterFooterForm } from "@/components/newsletter/NewsletterFooterForm";
+import { useNewsletter } from "@/components/newsletter/NewsletterProvider";
 
 const columns: { title: string; links: { label: string; to: string }[] }[] = [
   {
@@ -25,6 +27,8 @@ const columns: { title: string; links: { label: string; to: string }[] }[] = [
 ];
 
 export function SiteFooter() {
+  const { openNewsletter } = useNewsletter();
+
   return (
     <footer className="bg-brand text-ivory">
       <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
@@ -51,9 +55,24 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              {col.title === "Informations" ? (
+                <li>
+                  <button
+                    type="button"
+                    onClick={openNewsletter}
+                    className="text-sm text-peach underline-offset-2 transition-colors hover:text-fuchsia-accent hover:underline"
+                  >
+                    Newsletter
+                  </button>
+                </li>
+              ) : null}
             </ul>
           </nav>
         ))}
+      </div>
+
+      <div className="container-page border-t border-ivory/20 py-10">
+        <NewsletterFooterForm />
       </div>
 
       <div className="container-page flex flex-col gap-3 border-t border-ivory/20 py-6 sm:flex-row sm:items-center sm:justify-between">
