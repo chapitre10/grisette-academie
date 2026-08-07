@@ -31,7 +31,6 @@ export const navLinks: NavLink[] = [
     label: "Se former",
     to: "/se-former",
     children: [
-      { label: "Vue d'ensemble", to: "/se-former" },
       { label: "Cours en présentiel", to: "/cours-presentiel" },
       { label: "Micro-formations", to: "/micro-formations" },
     ],
