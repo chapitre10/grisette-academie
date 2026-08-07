@@ -77,6 +77,30 @@ function AboutPage() {
               title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
+          <div role="tablist" aria-label="En savoir plus" className="flex flex-wrap gap-3">
+            {tabs.map((tab) => {
+              const active = openTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  id={`tab-${tab.id}`}
+                  aria-selected={active}
+                  aria-expanded={active}
+                  aria-controls={`panel-${tab.id}`}
+                  onClick={() => setOpenTab(active ? null : tab.id)}
+                  className={`min-h-11 rounded-md border px-5 py-2.5 font-display text-lg transition-colors ${
+                    active
+                      ? "border-brand bg-brand text-background"
+                      : "border-border bg-card text-brand hover:bg-blush/40"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
           </div>
           <ImagePlaceholder
             src={null}
@@ -88,31 +112,6 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <div role="tablist" aria-label="En savoir plus" className="flex flex-wrap gap-3">
-          {tabs.map((tab) => {
-            const active = openTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                role="tab"
-                id={`tab-${tab.id}`}
-                aria-selected={active}
-                aria-expanded={active}
-                aria-controls={`panel-${tab.id}`}
-                onClick={() => setOpenTab(active ? null : tab.id)}
-                className={`min-h-11 rounded-md border px-5 py-2.5 font-display text-lg transition-colors ${
-                  active
-                    ? "border-brand bg-brand text-background"
-                    : "border-border bg-card text-brand hover:bg-blush/40"
-                }`}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-
         {openTab === "parcours" ? (
           <div role="tabpanel" id="panel-parcours" aria-labelledby="tab-parcours" className="mt-10">
             <SectionHeading
