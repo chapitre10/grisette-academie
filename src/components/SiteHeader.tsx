@@ -5,8 +5,12 @@ import { useState } from "react";
 import { navLinks, site } from "@/data/site";
 import { buttonStyles } from "./Ui";
 
+/** Les chemins sont validés à la main dans src/data/site.ts. */
+const path = (to: string) => to as unknown as "/";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
@@ -22,17 +26,50 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-5 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              activeOptions={{ exact: link.to === "/" }}
-              activeProps={{ className: "text-fuchsia-accent" }}
-              className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.children ? (
+              <div
+                key={link.label}
+                className="relative"
+                onMouseEnter={() => setOpenGroup(link.label)}
+                onMouseLeave={() => setOpenGroup(null)}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openGroup === link.label}
+                  onClick={() => setOpenGroup((v) => (v === link.label ? null : link.label))}
+                  className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
+                >
+                  {link.label}
+                </button>
+                {openGroup === link.label ? (
+                  <div className="absolute left-0 top-full z-50 min-w-56 rounded-md border border-border bg-background p-2 shadow-lg">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.to}
+                        to={path(child.to)}
+                        onClick={() => setOpenGroup(null)}
+                        activeProps={{ className: "text-fuchsia-accent" }}
+                        className="block rounded px-3 py-2 text-sm font-medium text-brand transition-colors hover:bg-muted hover:text-fuchsia-accent"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <Link
+                key={link.to}
+                to={path(link.to)}
+                activeOptions={{ exact: link.to === "/" }}
+                activeProps={{ className: "text-fuchsia-accent" }}
+                className="text-sm font-medium text-brand transition-colors hover:text-fuchsia-accent"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
           <Link to="/blog" className={buttonStyles.primary}>
             Découvrir les ressources
           </Link>
@@ -53,18 +90,37 @@ export function SiteHeader() {
       {open ? (
         <div id="menu-mobile" className="border-t border-border bg-background lg:hidden">
           <nav aria-label="Navigation mobile" className="container-page flex flex-col py-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                onClick={() => setOpen(false)}
-                activeOptions={{ exact: link.to === "/" }}
-                activeProps={{ className: "text-fuchsia-accent" }}
-                className="border-b border-border py-3 text-base font-medium text-brand last:border-0"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.children ? (
+                <div key={link.label} className="border-b border-border py-3 last:border-0">
+                  <p className="text-base font-medium text-brand">{link.label}</p>
+                  <div className="mt-1 flex flex-col">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.to}
+                        to={path(child.to)}
+                        onClick={() => setOpen(false)}
+                        activeProps={{ className: "text-fuchsia-accent" }}
+                        className="py-2 pl-4 text-sm font-medium text-raspberry transition-colors hover:text-fuchsia-accent"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.to}
+                  to={path(link.to)}
+                  onClick={() => setOpen(false)}
+                  activeOptions={{ exact: link.to === "/" }}
+                  activeProps={{ className: "text-fuchsia-accent" }}
+                  className="border-b border-border py-3 text-base font-medium text-brand last:border-0"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
             <Link
               to="/blog"
               onClick={() => setOpen(false)}
