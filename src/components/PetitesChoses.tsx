@@ -41,12 +41,12 @@ function HandLine() {
  */
 function CardTrinket({ index }: { index: number }) {
   const trinkets = [
-    <PinIcon key="pin" className="size-5 -rotate-[25deg] text-brand/70" />,
-    <SpoolIcon key="spool" className="size-5 text-gold" />,
-    <TagIcon key="tag" className="size-5 -rotate-6 text-raspberry/80" />,
-    <ButtonIcon key="button" className="size-4 text-raspberry/70" />,
-    <SpoolIcon key="spool2" className="size-5 text-blush" />,
-    <PinIcon key="pin2" className="size-5 rotate-[15deg] text-raspberry/80" />,
+    <PinIcon key="pin" className="size-7 -rotate-[25deg] text-brand" />,
+    <SpoolIcon key="spool" className="size-7 text-raspberry" />,
+    <TagIcon key="tag" className="size-7 -rotate-6 text-raspberry" />,
+    <ButtonIcon key="button" className="size-6 text-brand" />,
+    <SpoolIcon key="spool2" className="size-7 text-raspberry" />,
+    <PinIcon key="pin2" className="size-7 rotate-[15deg] text-brand" />,
   ];
   return (
     <span aria-hidden className="absolute bottom-3 right-4">
