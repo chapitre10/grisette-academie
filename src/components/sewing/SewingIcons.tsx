@@ -12,7 +12,7 @@ import type { SVGProps } from "react";
 
 export type SewingIconProps = Omit<
   SVGProps<SVGSVGElement>,
-  "children" | "title" | "className"
+  "children" | "title" | "className" | "viewBox"
 > & {
   /** Texte alternatif : à renseigner uniquement si l'illustration porte du sens. */
   title?: string | undefined;
