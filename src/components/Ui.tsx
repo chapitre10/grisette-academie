@@ -130,10 +130,16 @@ export function ButtonLink({
   );
 }
 
-export function Faq({ items }: { items: { question: string; answer: string }[] }) {
-  return (
+export function Faq({
+  items,
+  columns = 1,
+}: {
+  items: { question: string; answer: string }[];
+  columns?: 1 | 2;
+}) {
+  const list = (subset: { question: string; answer: string }[]) => (
     <div className="divide-y divide-border/60 rounded-lg border border-border bg-card">
-      {items.map((item) => (
+      {subset.map((item) => (
         <details key={item.question} className="group px-2.5 py-1.5 sm:px-3 sm:py-2">
           <summary className="flex min-h-6 cursor-pointer list-none items-center text-xs font-semibold leading-snug text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-7 sm:text-[13px]">
             <span className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
@@ -151,6 +157,16 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
           </p>
         </details>
       ))}
+    </div>
+  );
+
+  if (columns === 1) return list(items);
+
+  const half = Math.ceil(items.length / 2);
+  return (
+    <div className="grid gap-3 md:grid-cols-2">
+      {list(items.slice(0, half))}
+      {list(items.slice(half))}
     </div>
   );
 }
