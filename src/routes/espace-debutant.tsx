@@ -3,7 +3,6 @@ import { NotebookPen, Scissors, Sparkles } from "lucide-react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Section, SectionHeading, buttonStyles } from "@/components/Ui";
-import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { articles, formatDateFr } from "@/data/articles";
 import {
   articlesDebutant,
@@ -129,7 +128,6 @@ function EspaceDebutantPage() {
         </ul>
       </Section>
 
-      <ZigzagDivider />
 
       <Section tone="ivory" id="les-bases">
         <SectionHeading
