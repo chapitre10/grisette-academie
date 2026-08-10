@@ -179,7 +179,7 @@ function GuidesPage() {
       </Section>
 
       <Section tone="mist">
-        <SectionHeading title="Les guides en pratique" />
+        <SectionHeading title="Questions fréquentes" />
         <div className="mt-3 max-w-2xl">
           <Faq items={shopFaq} />
         </div>
