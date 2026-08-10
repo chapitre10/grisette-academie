@@ -3,7 +3,6 @@ import {
   ButtonIcon,
   PinIcon,
   SpoolIcon,
-  TagIcon,
   ThreadIcon,
 } from "@/components/sewing/SewingIcons";
 import {
