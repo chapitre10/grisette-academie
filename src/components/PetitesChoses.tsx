@@ -183,13 +183,6 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
 export function PetitesChoses() {
   return (
     <div className="relative">
-      {/* Fil décoratif qui relie deux cartes (desktop) */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute left-[28%] top-[46%] hidden w-[22%] -rotate-3 md:block"
-      >
-        <ThreadIcon className="h-2 w-full text-fuchsia-accent/40" />
-      </span>
       <ul className="mt-6 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-x-5 md:gap-y-8">
         {petitesChoses.map((item, index) => (
           <PaperCard key={item.question} item={item} index={index} />
