@@ -107,14 +107,18 @@ function ArticlePage() {
             ))}
           </div>
 
-          <aside className="mt-10 rounded-lg border border-raspberry/35 bg-peach/45 p-6">
-            <h2 className="text-xl text-brand">À retenir</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-brand/85">
+          <ARetenir className="mt-10">
+            <ul className="list-disc space-y-2 pl-5">
               {article.keyTakeaways.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
-          </aside>
+          </ARetenir>
+
+          <AstuceCouture className="mt-6" icon="needle">
+            Garde ton matériel préparé avant de commencer : tissu détendu, épingles à portée de
+            main et une chute pour tester ton point. Tu couds plus vite et plus juste.
+          </AstuceCouture>
 
           <div className="mt-10 rounded-lg border border-border bg-card p-6">
             <h2 className="text-xl text-brand">Pour aller plus loin</h2>
