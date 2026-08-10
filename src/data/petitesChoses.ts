@@ -14,6 +14,8 @@ export type PetiteChose = {
   tone: PetiteChoseTone;
   /** Carte mise en avant (plus grande, au premier plan) */
   featured?: boolean;
+  /** Scotch décoratif en fuchsia (comme la carte mise en avant) */
+  accentSticker?: boolean;
 };
 
 export const petitesChosesTitle = "6 petites choses sur moi";
@@ -29,7 +31,12 @@ export const petitesChoses: PetiteChose[] = [
     tone: "peach",
     featured: true,
   },
-  { label: "Patience", text: "Je crois beaucoup aux petits progrès.", tone: "rose" },
+  {
+    label: "Patience",
+    text: "Je crois beaucoup aux petits progrès.",
+    tone: "rose",
+    accentSticker: true,
+  },
   { label: "Détails", text: "J'adore les gestes précis, les tissus et les détails.", tone: "gold" },
   {
     label: "Confiance",
