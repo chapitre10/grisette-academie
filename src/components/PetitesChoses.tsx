@@ -75,12 +75,6 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
 export function PetitesChoses() {
   return (
     <div className="relative">
-      <span
-        aria-hidden
-        className="absolute -top-6 right-0 hidden rotate-6 rounded-full border border-paper-border bg-card px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-raspberry md:block"
-      >
-        Atelier · notes
-      </span>
       <ul className="mt-6 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-x-5 md:gap-y-8">
         {petitesChoses.map((item, index) => (
           <PaperCard key={item.text} item={item} index={index} />
