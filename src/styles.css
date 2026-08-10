@@ -34,6 +34,8 @@
   --color-gold: var(--gold);
   --color-peach: var(--peach);
   --color-flame: var(--flame);
+  --color-rose-pale: var(--rose-pale);
+  --color-paper-border: var(--paper-border);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -93,6 +95,8 @@
   --peach: oklch(0.886 0.066 48); /* #ffcdb4 */
   --flame: oklch(0.675 0.218 38.6); /* #ff5400 (décoratif) */
   --flame-ink: oklch(0.551 0.177 38.9); /* #c23f00 — orange lisible pour texte/boutons */
+  --rose-pale: oklch(0.937 0.0186 17.5); /* #f5e8e8 fond doux */
+  --paper-border: oklch(0.868 0.0169 5.5); /* #e3d3d7 bordures fines */
 
   --background: var(--ivory);
   --foreground: var(--brand);

@@ -5,7 +5,8 @@ import { CoulissesGallery } from "@/components/CoulissesGallery";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { storyBlocks } from "@/data/about";
-import { aProposFaqItems } from "@/data/aProposFaq";
+import { PetitesChoses } from "@/components/PetitesChoses";
+import { petitesChosesIntro, petitesChosesTitle } from "@/data/petitesChoses";
 import { site } from "@/data/site";
 
 const title = "À propos — professeure de couture | Grisette Académie";
@@ -197,29 +198,8 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading title="Qui se cache vraiment derrière Grisette Académie ?" />
-        <div className="mt-6 grid gap-x-8 gap-y-3 md:grid-cols-2">
-          {[aProposFaqItems.slice(0, 3), aProposFaqItems.slice(3, 6)].map((column, index) => (
-            <div key={index} className="space-y-3">
-              {column.map((item) => (
-                <details
-                  key={item.question}
-                  className="group rounded-lg border border-raspberry/30 bg-ivory/60 px-4 py-3"
-                >
-                  <summary className="cursor-pointer list-none text-base font-medium text-brand marker:hidden">
-                    <span className="flex items-start justify-between gap-3">
-                      {item.question}
-                      <span aria-hidden className="mt-0.5 text-raspberry transition-transform group-open:rotate-45">
-                        +
-                      </span>
-                    </span>
-                  </summary>
-                  <p className="mt-2 text-sm leading-relaxed text-brand/80">{item.answer}</p>
-                </details>
-              ))}
-            </div>
-          ))}
-        </div>
+        <SectionHeading title={petitesChosesTitle} intro={petitesChosesIntro} />
+        <PetitesChoses />
       </Section>
 
       <Section tone="peach" className="bg-peach/40 !py-8 md:!py-10">
