@@ -43,13 +43,13 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
           item.featured ? "bg-fuchsia-accent/40" : "bg-raspberry/25",
         ].join(" ")}
       />
-      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-raspberry">
+      <p className="font-hand text-sm uppercase tracking-[0.14em] text-raspberry">
         {item.label}
       </p>
       <p
         className={[
-          "mt-3 leading-relaxed text-brand",
-          item.featured ? "text-lg md:text-xl" : "text-base",
+          "font-hand mt-2 leading-snug text-brand",
+          item.featured ? "text-2xl md:text-[1.7rem]" : "text-xl",
         ].join(" ")}
       >
         {item.text}
