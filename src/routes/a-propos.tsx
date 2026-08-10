@@ -5,7 +5,8 @@ import { CoulissesGallery } from "@/components/CoulissesGallery";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
 import { storyBlocks } from "@/data/about";
-import { aProposFaqItems } from "@/data/aProposFaq";
+import { PetitesChoses } from "@/components/PetitesChoses";
+import { petitesChosesIntro, petitesChosesTitle } from "@/data/petitesChoses";
 import { site } from "@/data/site";
 
 const title = "À propos — professeure de couture | Grisette Académie";
