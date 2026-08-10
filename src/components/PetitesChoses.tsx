@@ -40,7 +40,9 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
         aria-hidden
         className={[
           "absolute -top-2 left-5 h-4 w-12 rotate-[-4deg] rounded-[2px] opacity-70",
-          item.featured ? "bg-fuchsia-accent/40" : "bg-raspberry/25",
+          item.featured || item.accentSticker
+            ? "bg-fuchsia-accent/40"
+            : "bg-raspberry/25",
         ].join(" ")}
       />
       <p className="font-hand text-sm uppercase tracking-[0.14em] text-raspberry">
