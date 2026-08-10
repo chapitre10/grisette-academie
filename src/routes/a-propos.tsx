@@ -97,12 +97,19 @@ function AboutPage() {
                   aria-expanded={active}
                   aria-controls={`panel-${tab.id}`}
                   onClick={() => setOpenTab(active ? null : tab.id)}
-                  className={`min-h-11 rounded-md border px-5 py-2.5 font-display text-lg transition-colors ${
+                  className={`group relative min-h-11 rounded-[0.7rem] border border-paper-border px-5 py-2.5 font-hand text-xl text-brand shadow-[0_10px_20px_-16px_rgba(93,57,67,0.55)] transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:rotate-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-raspberry motion-reduce:transition-none ${
                     active
-                      ? "border-brand bg-brand text-background"
-                      : "border-border bg-card text-brand hover:bg-blush/40"
+                      ? "bg-peach/70 -rotate-1"
+                      : "bg-card rotate-1 hover:bg-rose-pale"
                   }`}
                 >
+                  {/* scotch qui tient le bouton */}
+                  <span
+                    aria-hidden
+                    className={`absolute -top-2 left-4 h-4 w-12 rotate-[-6deg] rounded-[2px] opacity-70 ${
+                      active ? "bg-fuchsia-accent/40" : "bg-raspberry/25"
+                    }`}
+                  />
                   {tab.label}
                 </button>
               );
