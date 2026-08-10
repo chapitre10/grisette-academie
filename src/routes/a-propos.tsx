@@ -84,7 +84,7 @@ function AboutPage() {
               title="Grisette Académie, l'apprentissage de la couture rendu accessible"
               intro={site.description}
             />
-          <div role="tablist" aria-label="En savoir plus" className="mt-8 flex flex-wrap gap-3">
+          <div role="tablist" aria-label="En savoir plus" className="mt-8 flex flex-wrap justify-center gap-3">
             {tabs.map((tab) => {
               const active = openTab === tab.id;
               return (
