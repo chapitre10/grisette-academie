@@ -4,7 +4,8 @@ import { useMemo, useState } from "react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, EmptyState, Section, SectionHeading } from "@/components/Ui";
-import { ZigzagDivider } from "@/components/ZigzagDivider";
+import { ThreadDivider } from "@/components/sewing/ThreadDivider";
+import { PinIcon, SpoolIcon } from "@/components/sewing/SewingIcons";
 import { articleCategories, articles, formatDateFr } from "@/data/articles";
 
 const title = "Ressources gratuites pour apprendre la couture — Grisette Académie";
@@ -92,7 +93,7 @@ function BlogPage() {
         </Section>
       ) : null}
 
-      <ZigzagDivider />
+      <ThreadDivider />
 
       <Section tone="ivory">
         <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
@@ -120,7 +121,8 @@ function BlogPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrer par catégorie">
+        <div className="mt-6 flex flex-wrap items-center gap-2" role="group" aria-label="Filtrer par catégorie">
+          <PinIcon aria-hidden className="mr-1 size-5 -rotate-12 text-raspberry" />
           {["Toutes", ...articleCategories].map((cat) => (
             <button
               key={cat}
@@ -151,6 +153,7 @@ function BlogPage() {
                   <Card>
                     <ImagePlaceholder src={article.image} alt={article.imageAlt} />
                     <div className="mt-4 flex flex-wrap items-center gap-2">
+                      <SpoolIcon aria-hidden className="size-4 shrink-0 text-gold" />
                       <Badge tone="neutral">{article.category}</Badge>
                       <span className="text-xs text-brand/65">{formatDateFr(article.date)}</span>
                     </div>
