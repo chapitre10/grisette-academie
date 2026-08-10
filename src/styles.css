@@ -21,6 +21,7 @@
 @theme inline {
   --font-serif: "Bodoni Moda", "Didot", Georgia, serif;
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat", "Segoe Script", cursive;
   --color-brand: var(--brand);
   --color-brand-deep: var(--brand-deep);
   --color-ivory: var(--ivory);
