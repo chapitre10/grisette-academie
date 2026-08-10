@@ -92,10 +92,10 @@ function FormationsPage() {
         </ul>
       </Section>
 
-      <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="Les formations courtes en pratique" />
-        <div className="mt-3 max-w-2xl">
-          <Faq items={formationFaq} />
+      <Section tone="mist" className="!py-10 md:!py-12">
+        <SectionHeading title="Questions fréquentes" />
+        <div className="mt-4 max-w-4xl">
+          <Faq items={formationFaq} columns={2} />
         </div>
       </Section>
     </>

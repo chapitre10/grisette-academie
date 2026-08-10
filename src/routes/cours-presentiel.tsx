@@ -249,10 +249,10 @@ function CoursPage() {
         </div>
       </Section>
 
-      <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="Les cours en pratique" />
-        <div className="mt-3 max-w-2xl">
-          <Faq items={coursesFaq} />
+      <Section tone="mist" className="!py-10 md:!py-12">
+        <SectionHeading title="Questions fréquentes" />
+        <div className="mt-4 max-w-4xl">
+          <Faq items={coursesFaq} columns={2} />
         </div>
       </Section>
 

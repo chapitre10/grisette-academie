@@ -216,10 +216,10 @@ function ProductPage() {
         </Section>
       ) : null}
 
-      <Section tone="blush" className="!py-8">
-        <SectionHeading eyebrow="Questions fréquentes" title="Avant de télécharger" />
-        <div className="mt-2 max-w-2xl">
-          <Faq items={product.faq} />
+      <Section tone="blush" className="!py-10 md:!py-12">
+        <SectionHeading title="Questions fréquentes" />
+        <div className="mt-4 max-w-4xl">
+          <Faq items={product.faq} columns={2} />
         </div>
         <div className="mt-6">
           <RelatedSearches slug={product.slug} />
