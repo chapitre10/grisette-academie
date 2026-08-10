@@ -13,6 +13,7 @@ import {
   SectionHeading,
 } from "@/components/Ui";
 import { productCategories, products, shopFaq } from "@/data/products";
+import { PinIcon, TagIcon } from "@/components/sewing/SewingIcons";
 
 const title = "Templates et guides couture à télécharger — Grisette Académie";
 const description =
@@ -92,7 +93,8 @@ function GuidesPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrer par catégorie">
+        <div className="mt-6 flex flex-wrap items-center gap-2" role="group" aria-label="Filtrer par catégorie">
+          <PinIcon aria-hidden className="mr-1 size-5 -rotate-12 text-raspberry" />
           {["Toutes", ...productCategories].map((cat) => (
             <button
               key={cat}
@@ -127,8 +129,12 @@ function GuidesPage() {
                       hint="Aperçu du template (visuel à remplacer)"
                     />
                     <div className="mt-4 flex flex-wrap items-center gap-2">
+                      <TagIcon aria-hidden className="size-4 shrink-0 text-raspberry" />
                       <Badge tone="neutral">{product.category}</Badge>
-                      <Badge tone="gold">Exemple à remplacer</Badge>
+                      <span className="inline-flex items-center gap-1">
+                        <PinIcon aria-hidden className="size-4 shrink-0 -rotate-12 text-brand" />
+                        <Badge tone="gold">Exemple à remplacer</Badge>
+                      </span>
                     </div>
                     <h2 className="mt-3 text-xl text-brand">
                       <Link
