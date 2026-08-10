@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, EmptyState, Section, SectionHeading } from "@/components/Ui";
-import { ThreadDivider } from "@/components/sewing/ThreadDivider";
+import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { PinIcon, SpoolIcon } from "@/components/sewing/SewingIcons";
 import { articleCategories, articles, formatDateFr } from "@/data/articles";
 
@@ -93,7 +93,7 @@ function BlogPage() {
         </Section>
       ) : null}
 
-      <ThreadDivider />
+      <ZigzagDivider />
 
       <Section tone="ivory">
         <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
