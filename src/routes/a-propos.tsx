@@ -189,17 +189,17 @@ function AboutPage() {
         </div>
       </div>
 
+      <Section>
+        <SectionHeading title={petitesChosesTitle} intro={petitesChosesIntro} />
+        <PetitesChoses />
+      </Section>
+
       <Section tone="mist">
         <SectionHeading
           title="Les coulisses"
           intro="Un aperçu de l'atelier, des matières et des projets en cours. Les emplacements ci-dessous attendent tes vraies photos."
         />
         <CoulissesGallery />
-      </Section>
-
-      <Section>
-        <SectionHeading title={petitesChosesTitle} intro={petitesChosesIntro} />
-        <PetitesChoses />
       </Section>
 
       <Section tone="peach" className="bg-peach/40 !py-8 md:!py-10">
