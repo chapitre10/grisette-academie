@@ -2,6 +2,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
+import { NeedleIcon } from "@/components/sewing/SewingIcons";
+import { StitchRule } from "@/components/sewing/ThreadDivider";
 import { site } from "@/data/site";
 import { saveContactSubmission } from "@/lib/contactSubmission";
 
