@@ -163,7 +163,6 @@ function Index() {
           align="center"
           title="Les nouveautés"
           titleClassName="text-4xl leading-tight text-brand md:text-6xl"
-          intro="Les derniers articles publiés et les prochaines formations courtes, réunis au même endroit."
         />
 
         <div className="mt-12 grid gap-10 md:grid-cols-2">
