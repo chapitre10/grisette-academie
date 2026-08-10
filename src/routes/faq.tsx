@@ -76,14 +76,14 @@ function FaqPage() {
 
       <ZigzagDivider />
 
-      <Section tone="ivory">
+      <Section tone="ivory" className="!py-8 md:!py-10">
         <div className="text-center">
-          <h2 className="font-display text-3xl text-brand">Une question sans réponse ici ?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand/80">
+          <h2 className="font-display text-2xl text-brand">Une question sans réponse ici ?</h2>
+          <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-brand/80">
             Écris-moi via le formulaire de contact en précisant le type de demande : je réponds
             personnellement à chaque message.
           </p>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <ButtonLink to="/contact">Poser ma question</ButtonLink>
           </div>
         </div>
