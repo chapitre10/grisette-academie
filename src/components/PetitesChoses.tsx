@@ -26,13 +26,13 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
   return (
     <li
       className={[
-        "group relative rounded-[0.9rem] border border-paper-border px-5 py-6 text-brand",
-        "shadow-[0_10px_24px_-16px_rgba(93,57,67,0.55)]",
+        "group relative rounded-[0.9rem] border border-paper-border px-6 py-7 text-brand",
+        "shadow-[0_12px_26px_-16px_rgba(93,57,67,0.6)]",
         "transition-transform duration-300 ease-out motion-reduce:transition-none",
         "rotate-0 md:hover:rotate-0 md:hover:-translate-y-1 md:hover:z-20",
         toneClasses[item.tone],
         collage[index % collage.length],
-        item.featured ? "md:z-10 md:scale-[1.06] md:px-6 md:py-8" : "",
+        item.featured ? "md:z-10 md:scale-[1.06] md:px-7 md:py-9" : "",
       ].join(" ")}
     >
       {/* petit sticker / tampon décoratif */}
@@ -45,13 +45,13 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
             : "bg-raspberry/25",
         ].join(" ")}
       />
-      <p className="font-hand text-sm uppercase tracking-[0.14em] text-raspberry">
+      <p className="font-hand text-base uppercase tracking-[0.18em] text-raspberry">
         {item.label}
       </p>
       <p
         className={[
-          "font-hand mt-2 leading-snug text-brand",
-          item.featured ? "text-2xl md:text-[1.7rem]" : "text-xl",
+          "font-hand mt-3 leading-[1.45] text-brand [text-shadow:0_1px_0_rgba(255,250,247,0.7)]",
+          item.featured ? "text-[1.8rem] md:text-[2rem]" : "text-2xl md:text-[1.6rem]",
         ].join(" ")}
       >
         {item.text}
@@ -60,7 +60,7 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
       <svg
         aria-hidden
         viewBox="0 0 120 8"
-        className="mt-4 h-2 w-24 text-raspberry/60"
+        className="mt-5 h-2 w-24 text-raspberry/70"
         fill="none"
       >
         <path
