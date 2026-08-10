@@ -16,6 +16,7 @@ import { Route as CgvRouteImport } from './routes/cgv'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursPresentielRouteImport } from './routes/cours-presentiel'
 import { Route as DemandeEnvoyeeRouteImport } from './routes/demande-envoyee'
+import { Route as EspaceDebutantRouteImport } from './routes/espace-debutant'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
@@ -61,6 +62,11 @@ const CoursPresentielRoute = CoursPresentielRouteImport.update({
 const DemandeEnvoyeeRoute = DemandeEnvoyeeRouteImport.update({
   id: '/demande-envoyee',
   path: '/demande-envoyee',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceDebutantRoute = EspaceDebutantRouteImport.update({
+  id: '/espace-debutant',
+  path: '/espace-debutant',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -128,6 +134,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/demande-envoyee': typeof DemandeEnvoyeeRoute
+  '/espace-debutant': typeof EspaceDebutantRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/demande-envoyee': typeof DemandeEnvoyeeRoute
+  '/espace-debutant': typeof EspaceDebutantRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cours-presentiel': typeof CoursPresentielRoute
   '/demande-envoyee': typeof DemandeEnvoyeeRoute
+  '/espace-debutant': typeof EspaceDebutantRoute
   '/faq': typeof FaqRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/demande-envoyee'
+    | '/espace-debutant'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -211,6 +221,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/demande-envoyee'
+    | '/espace-debutant'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -231,6 +242,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cours-presentiel'
     | '/demande-envoyee'
+    | '/espace-debutant'
     | '/faq'
     | '/mentions-legales'
     | '/politique-confidentialite'
@@ -252,6 +264,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoursPresentielRoute: typeof CoursPresentielRoute
   DemandeEnvoyeeRoute: typeof DemandeEnvoyeeRoute
+  EspaceDebutantRoute: typeof EspaceDebutantRoute
   FaqRoute: typeof FaqRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
@@ -314,6 +327,13 @@ declare module '@tanstack/react-router' {
       path: '/demande-envoyee'
       fullPath: '/demande-envoyee'
       preLoaderRoute: typeof DemandeEnvoyeeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace-debutant': {
+      id: '/espace-debutant'
+      path: '/espace-debutant'
+      fullPath: '/espace-debutant'
+      preLoaderRoute: typeof EspaceDebutantRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -404,6 +424,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoursPresentielRoute: CoursPresentielRoute,
   DemandeEnvoyeeRoute: DemandeEnvoyeeRoute,
+  EspaceDebutantRoute: EspaceDebutantRoute,
   FaqRoute: FaqRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
