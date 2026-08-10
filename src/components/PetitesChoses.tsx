@@ -3,7 +3,6 @@ import {
   ButtonIcon,
   PinIcon,
   SpoolIcon,
-  TagIcon,
   ThreadIcon,
 } from "@/components/sewing/SewingIcons";
 import {
@@ -43,7 +42,7 @@ function CardTrinket({ index }: { index: number }) {
   const trinkets = [
     <PinIcon key="pin" className="size-7 -rotate-[25deg] text-brand" />,
     <SpoolIcon key="spool" className="size-7 text-raspberry" />,
-    <TagIcon key="tag" className="size-7 -rotate-6 text-raspberry" />,
+    <ButtonIcon key="button-tag" className="size-6 -rotate-6 text-raspberry" />,
     <ButtonIcon key="button" className="size-6 text-brand" />,
     <SpoolIcon key="spool2" className="size-7 text-raspberry" />,
     <PinIcon key="pin2" className="size-7 rotate-[15deg] text-brand" />,
