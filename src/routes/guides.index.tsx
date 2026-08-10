@@ -178,10 +178,10 @@ function GuidesPage() {
         </div>
       </Section>
 
-      <Section tone="mist">
+      <Section tone="mist" className="!py-10 md:!py-12">
         <SectionHeading title="Questions fréquentes" />
-        <div className="mt-3 max-w-2xl">
-          <Faq items={shopFaq} />
+        <div className="mt-4 max-w-4xl">
+          <Faq items={shopFaq} columns={2} />
         </div>
       </Section>
     </>
