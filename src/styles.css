@@ -34,6 +34,8 @@
   --color-gold: var(--gold);
   --color-peach: var(--peach);
   --color-flame: var(--flame);
+  --color-rose-pale: var(--rose-pale);
+  --color-paper-border: var(--paper-border);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
