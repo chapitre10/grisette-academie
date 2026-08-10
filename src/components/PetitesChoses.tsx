@@ -1,5 +1,12 @@
 import { useState } from "react";
 import {
+  ButtonIcon,
+  PinIcon,
+  SpoolIcon,
+  TagIcon,
+  ThreadIcon,
+} from "@/components/sewing/SewingIcons";
+import {
   petitesChoses,
   type PetiteChose,
   type PetiteChoseTone,
@@ -23,22 +30,28 @@ const collage = [
   "md:rotate-1 md:translate-y-3",
 ];
 
-/** Ligne dessinée à la main */
+/** Ligne dessinée à la main : un petit bout de fil */
 function HandLine() {
+  return <ThreadIcon className="mt-4 h-2 w-24 text-raspberry/60" />;
+}
+
+/**
+ * Petite illustration couture posée dans un coin de carte (décorative).
+ * Une seule par carte, en rotation avec l'index pour rester lisible.
+ */
+function CardTrinket({ index }: { index: number }) {
+  const trinkets = [
+    <PinIcon key="pin" className="size-5 -rotate-[25deg] text-brand/70" />,
+    <SpoolIcon key="spool" className="size-5 text-gold" />,
+    <TagIcon key="tag" className="size-5 -rotate-6 text-raspberry/80" />,
+    <ButtonIcon key="button" className="size-4 text-raspberry/70" />,
+    <SpoolIcon key="spool2" className="size-5 text-blush" />,
+    <PinIcon key="pin2" className="size-5 rotate-[15deg] text-raspberry/80" />,
+  ];
   return (
-    <svg
-      aria-hidden
-      viewBox="0 0 120 8"
-      className="mt-4 h-2 w-24 text-raspberry/60"
-      fill="none"
-    >
-      <path
-        d="M1 5c8-4 16 2 24-1s16-5 24-1 16 5 24 2 16-4 24-1"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
+    <span aria-hidden className="absolute bottom-3 right-4">
+      {trinkets[index % trinkets.length]}
+    </span>
   );
 }
 
@@ -138,6 +151,7 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
             <span className="mt-auto">
               <FlipHint flipped={false} />
             </span>
+            <CardTrinket index={index} />
           </span>
 
           {/* Verso : la réponse */}
