@@ -81,8 +81,8 @@ export function SiteHeader() {
               </Link>
             ),
           )}
-          <Link to="/blog" className={buttonStyles.primary}>
-            Découvrir les ressources
+          <Link to="/espace-debutant" className={buttonStyles.primary}>
+            Espace débutant
           </Link>
         </nav>
 
@@ -142,11 +142,11 @@ export function SiteHeader() {
               ),
             )}
             <Link
-              to="/blog"
+              to="/espace-debutant"
               onClick={() => setOpen(false)}
               className={`${buttonStyles.primary} my-4`}
             >
-              Découvrir les ressources
+              Espace débutant
             </Link>
           </nav>
         </div>
