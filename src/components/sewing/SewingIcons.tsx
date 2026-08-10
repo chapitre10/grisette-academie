@@ -10,9 +10,13 @@
  */
 import type { SVGProps } from "react";
 
-export type SewingIconProps = Omit<SVGProps<SVGSVGElement>, "children"> & {
+export type SewingIconProps = Omit<
+  SVGProps<SVGSVGElement>,
+  "children" | "title" | "className"
+> & {
   /** Texte alternatif : à renseigner uniquement si l'illustration porte du sens. */
-  title?: string;
+  title?: string | undefined;
+  className?: string | undefined;
 };
 
 const STROKE = 1.3;
