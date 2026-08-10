@@ -18,6 +18,7 @@ import {
   visibleTestimonials,
 } from "@/data/cours";
 import { infoOrPending } from "@/data/site";
+import { SafetyPinIcon, SpoolIcon } from "@/components/sewing/SewingIcons";
 
 /*
  * NOTE INTERNE (non affichée sur le site) :
@@ -127,10 +128,17 @@ function CoursPage() {
       <Section tone="mist">
         <SectionHeading eyebrow="Formats" title="Trois façons d'être accompagnée" />
         <ul className="mt-10 grid gap-6 lg:grid-cols-3">
-          {courseFormats.map((format) => (
+          {courseFormats.map((format, index) => (
             <li key={format.slug}>
               <Card>
-                <h3 className="text-xl text-brand">{format.title}</h3>
+                <div className="flex items-center gap-2">
+                  {index === 1 ? (
+                    <SafetyPinIcon aria-hidden className="size-5 shrink-0 text-raspberry" />
+                  ) : (
+                    <SpoolIcon aria-hidden className="size-5 shrink-0 text-gold" />
+                  )}
+                  <h3 className="text-xl text-brand">{format.title}</h3>
+                </div>
                 <p className="mt-2 text-sm leading-relaxed text-brand/85">{format.description}</p>
                 <dl className="mt-5">
                   <InfoRow label="Ville" value={infoOrPending(format.city)} />

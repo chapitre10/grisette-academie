@@ -1,5 +1,12 @@
 import { useState } from "react";
 import {
+  ButtonIcon,
+  PinIcon,
+  SpoolIcon,
+  TagIcon,
+  ThreadIcon,
+} from "@/components/sewing/SewingIcons";
+import {
   petitesChoses,
   type PetiteChose,
   type PetiteChoseTone,
@@ -23,22 +30,28 @@ const collage = [
   "md:rotate-1 md:translate-y-3",
 ];
 
-/** Ligne dessinée à la main */
+/** Ligne dessinée à la main : un petit bout de fil */
 function HandLine() {
+  return <ThreadIcon className="mt-4 h-2 w-24 text-raspberry/60" />;
+}
+
+/**
+ * Petite illustration couture posée dans un coin de carte (décorative).
+ * Une seule par carte, en rotation avec l'index pour rester lisible.
+ */
+function CardTrinket({ index }: { index: number }) {
+  const trinkets = [
+    <PinIcon key="pin" className="size-7 -rotate-[25deg] text-brand" />,
+    <SpoolIcon key="spool" className="size-7 text-raspberry" />,
+    <TagIcon key="tag" className="size-7 -rotate-6 text-raspberry" />,
+    <ButtonIcon key="button" className="size-6 text-brand" />,
+    <SpoolIcon key="spool2" className="size-7 text-raspberry" />,
+    <PinIcon key="pin2" className="size-7 rotate-[15deg] text-brand" />,
+  ];
   return (
-    <svg
-      aria-hidden
-      viewBox="0 0 120 8"
-      className="mt-4 h-2 w-24 text-raspberry/60"
-      fill="none"
-    >
-      <path
-        d="M1 5c8-4 16 2 24-1s16-5 24-1 16 5 24 2 16-4 24-1"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
+    <span aria-hidden className="absolute bottom-3 right-4">
+      {trinkets[index % trinkets.length]}
+    </span>
   );
 }
 
@@ -138,6 +151,7 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
             <span className="mt-auto">
               <FlipHint flipped={false} />
             </span>
+            <CardTrinket index={index} />
           </span>
 
           {/* Verso : la réponse */}
@@ -169,6 +183,13 @@ function PaperCard({ item, index }: { item: PetiteChose; index: number }) {
 export function PetitesChoses() {
   return (
     <div className="relative">
+      {/* Fil décoratif qui relie deux cartes (desktop) */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute left-[28%] top-[46%] hidden w-[22%] -rotate-3 md:block"
+      >
+        <ThreadIcon className="h-2 w-full text-fuchsia-accent/40" />
+      </span>
       <ul className="mt-6 grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-x-5 md:gap-y-8">
         {petitesChoses.map((item, index) => (
           <PaperCard key={item.question} item={item} index={index} />

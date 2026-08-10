@@ -12,6 +12,7 @@ import {
   pourAllerPlusLoin,
   type LienInterne,
 } from "@/data/espaceDebutant";
+import { PinIcon, SpoolIcon, ThreadIcon } from "@/components/sewing/SewingIcons";
 
 const title = "Espace débutant couture | Grisette Académie";
 const description =
@@ -202,11 +203,24 @@ function EspaceDebutantPage() {
           title="Un parcours simple pour commencer"
           intro="Rien d'obligatoire ici : c'est un chemin possible, à suivre à ton rythme."
         />
-        <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {parcours.map((etape) => (
+        {/* Ligne de progression décorative inspirée d'un fil de couture */}
+        <div aria-hidden className="mt-8 flex items-center gap-2">
+          <SpoolIcon className="size-5 shrink-0 text-gold" />
+          <ThreadIcon className="h-2 flex-1 text-fuchsia-accent/45" />
+          <PinIcon className="size-4 shrink-0 -rotate-12 text-raspberry" />
+        </div>
+        <ol className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {parcours.map((etape, index) => (
             <li key={etape.step}>
               <Card className="!p-5">
-                <span className="font-display text-2xl text-fuchsia-ink">{etape.step}</span>
+                <span className="flex items-center gap-2">
+                  {index % 2 === 0 ? (
+                    <SpoolIcon aria-hidden className="size-5 shrink-0 text-gold" />
+                  ) : (
+                    <PinIcon aria-hidden className="size-5 shrink-0 -rotate-12 text-raspberry" />
+                  )}
+                  <span className="font-display text-2xl text-fuchsia-ink">{etape.step}</span>
+                </span>
                 <h3 className="mt-2 text-lg text-brand">{etape.title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-brand/80">{etape.text}</p>
               </Card>

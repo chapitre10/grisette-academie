@@ -2,6 +2,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
+import { NeedleIcon } from "@/components/sewing/SewingIcons";
+import { StitchRule } from "@/components/sewing/ThreadDivider";
 import { site } from "@/data/site";
 import { saveContactSubmission } from "@/lib/contactSubmission";
 
@@ -124,13 +126,15 @@ function ContactPage() {
           title="Contacte Grisette Académie"
           intro="Une question sur les cours, les templates ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
         />
+        <StitchRule className="mt-5 max-w-3xl" />
       </Section>
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <form noValidate onSubmit={onSubmit} className="space-y-5">
-                <p className="text-sm text-brand/80">
+                <p className="flex items-center gap-2 text-sm text-brand/80">
+                  <NeedleIcon aria-hidden className="size-5 shrink-0 text-brand" />
                   Les champs suivis d'un astérisque (*) sont obligatoires.
                 </p>
                 <div ref={errorSummaryRef} tabIndex={-1} role="alert" aria-live="assertive">

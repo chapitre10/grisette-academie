@@ -3,6 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
 import { formationFaq, formations } from "@/data/formations";
+import { SpoolIcon } from "@/components/sewing/SewingIcons";
+import { StitchRule } from "@/components/sewing/ThreadDivider";
 
 const title = "Formations courtes couture en ligne — Grisette Académie";
 const description =
@@ -49,7 +51,8 @@ function FormationsPage() {
                   alt={formation.imageAlt}
                   hint="Visuel de la formation courte (à remplacer)"
                 />
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <SpoolIcon aria-hidden className="size-5 shrink-0 text-gold" />
                   <Badge tone="neutral">{formation.difficulty}</Badge>
                   <Badge tone="gold">Bientôt disponible</Badge>
                 </div>
@@ -63,7 +66,8 @@ function FormationsPage() {
                   </Link>
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed text-brand/80">{formation.objective}</p>
-                <dl className="mt-4 space-y-1 text-sm text-brand/75">
+                <StitchRule className="mt-4" />
+                <dl className="mt-3 space-y-1 text-sm text-brand/75">
                   <div className="flex gap-2">
                     <dt className="font-medium">Durée :</dt>
                     <dd>{formation.duration}</dd>
