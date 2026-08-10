@@ -173,10 +173,10 @@ function FormationPage() {
         </ul>
       </Section>
 
-      <Section tone="mist">
-        <SectionHeading eyebrow="Questions fréquentes" title="Avant de t'inscrire" />
-        <div className="mt-3 max-w-2xl">
-          <Faq items={formationFaq} />
+      <Section tone="mist" className="!py-10 md:!py-12">
+        <SectionHeading title="Questions fréquentes" />
+        <div className="mt-4 max-w-4xl">
+          <Faq items={formationFaq} columns={2} />
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
           <ButtonLink to="/contact">Poser une question</ButtonLink>
