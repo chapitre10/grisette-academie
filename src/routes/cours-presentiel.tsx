@@ -160,11 +160,11 @@ function CoursPage() {
         </ul>
       </Section>
 
-      <Section tone="mist">
-        <div className="grid gap-10 lg:grid-cols-2">
+      <Section tone="mist" className="!py-10 md:!py-12">
+        <div className="grid gap-8 lg:grid-cols-2">
           <div>
-            <h2 className="text-2xl text-brand">Pour qui et à quel niveau ?</h2>
-            <ul className="mt-4 space-y-2 text-sm text-brand/85">
+            <h2 className="text-xl text-brand">Pour qui et à quel niveau ?</h2>
+            <ul className="mt-3 space-y-1.5 text-sm text-brand/85">
               {[
                 "Débutantes complètes qui souhaitent acquérir de bonnes bases",
                 "Couturières intermédiaires souhaitant se perfectionner",
@@ -179,8 +179,8 @@ function CoursPage() {
             </ul>
           </div>
           <div>
-            <h2 className="text-2xl text-brand">Déroulement et projets abordés</h2>
-            <ul className="mt-4 space-y-2 text-sm text-brand/85">
+            <h2 className="text-xl text-brand">Déroulement et projets abordés</h2>
+            <ul className="mt-3 space-y-1.5 text-sm text-brand/85">
               {[
                 "Point de départ : ton niveau, ton projet et tes objectifs",
                 "Préparation : mesures, patron, tissu et plan de coupe",
@@ -194,7 +194,7 @@ function CoursPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-brand/70">
+            <p className="mt-3 text-sm text-brand/70">
               Matériel : {infoOrPending(null)}
             </p>
           </div>
