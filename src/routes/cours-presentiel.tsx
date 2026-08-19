@@ -130,7 +130,7 @@ function CoursPage() {
 
       <Section tone="mist">
         <SectionHeading eyebrow="Formats" title="Trois façons d'être accompagnée" />
-        <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-6 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
           {courseFormats.map((format, index) => (
             <li key={format.slug}>
               <Card>
