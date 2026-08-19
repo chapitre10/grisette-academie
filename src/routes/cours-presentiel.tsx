@@ -148,7 +148,6 @@ function CoursPage() {
                   <InfoRow label="Durée" value={infoOrPending(format.duration)} />
                   <InfoRow label="Tarif" value={infoOrPending(format.price)} />
                   <InfoRow label="Disponibilités" value={infoOrPending(format.availability)} />
-                  <InfoRow label="Matériel fourni" value={infoOrPending(format.providedMaterial)} />
                   <InfoRow label="Niveau requis" value={infoOrPending(format.requiredLevel)} />
                 </dl>
                 <div className="mt-5">
