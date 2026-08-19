@@ -134,13 +134,6 @@ function ArticlePage() {
             <RelatedSearches slug={article.slug} />
           </div>
 
-          <ul className="mt-8 flex flex-wrap gap-2">
-            {article.tags.map((t) => (
-              <li key={t} className="rounded-md bg-mist px-3 py-1 text-xs text-brand">
-                #{t}
-              </li>
-            ))}
-          </ul>
         </article>
       </Section>
 
