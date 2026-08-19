@@ -16,7 +16,7 @@ export const site = {
 export type InfoValue = string | null;
 
 /** Affiche « Informations à venir » tant que la donnée n'est pas renseignée. */
-export const infoOrPending = (value: InfoValue) => value ?? "Informations à venir";
+export const infoOrPending = (value: InfoValue) => value ?? "Sur demande";
 
 export type NavLink = {
   label: string;
