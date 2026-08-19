@@ -131,30 +131,6 @@ function ArticlePage() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 rounded-lg border border-border bg-mist p-6 md:grid-cols-[minmax(0,1fr)_14rem]">
-            <div>
-              <h2 className="text-xl text-brand">Épingler cet article</h2>
-              <p className="mt-2 text-sm text-brand/80">
-                Titre Pinterest : <strong>{article.seo.pinterestTitle}</strong>
-              </p>
-              <p className="mt-1 text-sm text-brand/80">{article.seo.pinterestDescription}</p>
-              <a
-                href={site.pinterestUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-4 inline-flex items-center justify-center rounded-md bg-flame px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              >
-                Partager sur Pinterest
-              </a>
-            </div>
-            <ImagePlaceholder
-              src={article.seo.pinterestImage}
-              alt={`Épingle Pinterest verticale — ${article.title}`}
-              hint="Image verticale Pinterest 1000 × 1500 px"
-              className="aspect-[2/3]"
-            />
-          </div>
-
           <div className="mt-10">
             <RelatedSearches slug={article.slug} />
           </div>
