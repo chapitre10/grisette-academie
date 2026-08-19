@@ -91,8 +91,7 @@ function Index() {
       <section className="bg-blush/40">
         <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-2">
           <div>
-            <Badge tone="gold">Apprentissage de la couture</Badge>
-            <h1 className="mt-5 font-display text-4xl leading-[1.1] text-brand md:text-[2.75rem]">
+            <h1 className="font-display text-4xl leading-[1.1] text-brand md:text-[2.75rem]">
               Apprendre la couture avec méthode et confiance
             </h1>
             <div className="rule-thin mt-6" />
