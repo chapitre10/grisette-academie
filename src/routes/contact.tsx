@@ -123,7 +123,7 @@ function ContactPage() {
           as="h1"
           eyebrow="Contact"
           title="Contacte Grisette Académie"
-          intro="Une question sur les cours, les guides ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
+          intro="Une question sur les cours, les guides ou les formations courtes ? Écris-moi et je te répondrai au plus vite."
         />
       </Section>
 
