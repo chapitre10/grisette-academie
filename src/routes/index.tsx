@@ -96,10 +96,10 @@ function Index() {
               Apprendre la couture avec méthode et confiance
             </h1>
             <div className="rule-thin mt-6" />
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand/85">
-              Grisette Académie réunit des cours en présentiel, des templates imprimables, des guides
-              pratiques et des formations courtes pour progresser étape par étape — sans se perdre dans
-              les tutoriels.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed whitespace-pre-line text-brand/85">
+              Tu y trouveras des minis-formations, des guides pratiques et de la ressource gratuite pour progresser étape par étape.
+              {"\n"}Et qui sait, tu pourrais même te laisser tenter par un cours à domicile !
+              {"\n"}Que tu aies envie de cours pratiques ou d'informations plus théoriques, il y en a pour tous les goûts !
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <ButtonLink
