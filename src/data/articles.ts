@@ -485,62 +485,6 @@ export const articles: Article[] = [
     },
   },
   {
-    slug: "vocabulaire-du-patronage-premiers-reperes",
-    title: "Vocabulaire du patronage : premiers repères",
-    excerpt: "Les termes de modélisme à comprendre avant de transformer un patron.",
-    category: "Techniques",
-    tags: ["modélisme", "patronage", "vocabulaire"],
-    date: "2026-07-14",
-    readingTime: "5 min",
-    intro: "Le patronage a son propre vocabulaire, plus proche de la construction que de la couture. En connaître les bases rend les cours de modélisme beaucoup plus lisibles.",
-    blocks: [
-      {
-        heading: "Les lignes de construction",
-        paragraphs: [
-          "Ligne de poitrine, de taille, de hanches et milieu devant : ce sont les repères sur lesquels tout le patron s'appuie.",
-          "Une ligne mal tracée se répercute sur toutes les transformations suivantes.",
-
-        ],
-      },
-      {
-        heading: "Pinces et aisance",
-        paragraphs: [
-          "La pince met le tissu plat en volume ; l'aisance est la marge de confort ajoutée aux mesures du corps.",
-          "Déplacer une pince ne change pas la taille du vêtement, seulement la répartition du volume.",
-
-        ],
-      },
-      {
-        heading: "Du patron au prototype",
-        paragraphs: [
-          "La toile ou prototype sert à vérifier le patron avant de couper le vrai tissu.",
-          "On note les corrections directement sur la toile, puis on les reporte sur le patron papier.",
-
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "Les lignes de construction précèdent toute transformation.",
-      "Aisance et mesures du corps ne se confondent pas.",
-      "La toile évite de gâcher le tissu final.",
-    ],
-    cta: {
-      label: "Voir le lexique de la modéliste",
-      to: "/guides/$slug",
-      params: { slug: "lexique-de-la-modeliste" },
-      text: "Le guide « Lexique de la modéliste » détaille les termes de patronage, de moulage et de prototypage.",
-    },
-    image: null,
-    imageAlt: "Patron de modélisme tracé sur papier avec règles et équerre",
-    seo: {
-      title: "Vocabulaire du patronage : premiers repères — Grisette Académie",
-      description: "Lignes de construction, pinces, aisance, toile : les termes de modélisme à comprendre avant de transformer un patron.",
-      pinterestTitle: "Le vocabulaire du patronage",
-      pinterestDescription: "Lignes, pinces, aisance et toile : les bases du modélisme.",
-      pinterestImage: null,
-    },
-  },
-  {
     slug: "premiers-pas-en-couture-plan-en-5-etapes",
     title: "Premiers pas en couture : un plan en 5 étapes",
     excerpt: "Un chemin clair pour passer de la machine dans son carton au premier vêtement porté.",
