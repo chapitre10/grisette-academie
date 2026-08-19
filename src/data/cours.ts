@@ -45,20 +45,8 @@ export const courseFormats: CourseFormat[] = [
     providedMaterial: null,
     requiredLevel: "Tout niveau",
   },
-  {
-    slug: "accompagnement-projet",
-    title: "Accompagnement sur projet",
-    description:
-      "Un soutien pour avancer sur une création précise, de la préparation aux finitions.",
-    city: null,
-    area: null,
-    duration: "Entre 2h et 4h",
-    price: "25€/h (voir section Tarifs)",
-    availability: "Du Lundi au Dimanche",
-    providedMaterial: null,
-    requiredLevel: "Tout niveau",
-  },
 ];
+
 
 /** Recommandations réelles uniquement. Laisser le tableau vide sans autorisation. */
 export interface Testimonial {
