@@ -148,7 +148,7 @@ function ContactPage() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-brand">
-                      Prénom *
+                      Prénom
                     </label>
                     <input
                       id="firstName"
@@ -165,7 +165,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <label htmlFor="lastName" className="mb-2 block text-sm font-medium text-brand">
-                      Nom *
+                      Nom
                     </label>
                     <input
                       id="lastName"
@@ -184,7 +184,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="email" className="mb-2 block text-sm font-medium text-brand">
-                    Adresse e-mail *
+                    Adresse e-mail
                   </label>
                   <input
                     id="email"
@@ -203,7 +203,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="subject" className="mb-2 block text-sm font-medium text-brand">
-                    Sujet *
+                    Sujet
                   </label>
                   <input
                     id="subject"
@@ -220,7 +220,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="requestType" className="mb-2 block text-sm font-medium text-brand">
-                    Type de demande *
+                    Type de demande
                   </label>
                   <select
                     id="requestType"
@@ -244,7 +244,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="message" className="mb-2 block text-sm font-medium text-brand">
-                    Message *
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -284,7 +284,7 @@ function ContactPage() {
                   />
                   <div>
                     <label htmlFor="consent" className="text-sm text-brand">
-                      J'accepte que mes données soient utilisées pour traiter ma demande. *
+                      J'accepte que mes données soient utilisées pour traiter ma demande.
                     </label>
                     {errors.consent ? (
                       <p id="consent-error" className="mt-1 text-sm font-medium text-destructive">{errors.consent}</p>
