@@ -55,7 +55,7 @@ const pillarColumns = [
       {
         icon: ScissorsLineDashed,
         title: "Les guides",
-        text: "Des fiches, plannings et guides imprimables pour organiser tes projets et gagner en précision.",
+        text: "Des templates et guides, accompagnés d'exercices pratiques, pour répondre à toutes tes interrogations.",
         to: "/guides",
         cta: "Voir les guides",
       },
