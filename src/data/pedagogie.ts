@@ -7,7 +7,7 @@ export const method = [
   {
     step: "02",
     title: "S'exercer avec les bons gestes",
-    text: "Des exercices courts et concrets pour ancrer les gestes essentiels sans se décourager.",
+    text: "Des projets courts et personnalisables selon ton envie, pour ancrer les gestes essentiels sans se décourager.",
   },
   {
     step: "03",
