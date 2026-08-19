@@ -36,7 +36,7 @@ function SeFormerPage() {
           as="h1"
           eyebrow="Se former"
           title="Se former à la couture avec moi"
-          intro="Deux chemins complémentaires : apprendre en ligne à ton rythme avec les formations courtes, ou être accompagnée en direct lors d'un cours en présentiel."
+          intro="Deux chemins complémentaires : apprentissages à ton rythme avec les formations courtes ou accompagnement personnalisé lors d'un cours en présentiel."
         />
       </Section>
 
