@@ -16,7 +16,7 @@ export const method = [
   },
   {
     step: "04",
-    title: "Créer en confiance",
+    title: "Pratiquer en confiance",
     text: "Le passage aux projets personnels, avec les repères nécessaires pour choisir et progresser seule.",
   },
 ];
