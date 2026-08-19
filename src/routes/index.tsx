@@ -48,7 +48,7 @@ const pillarColumns = [
       {
         icon: BookOpen,
         title: "Ressources gratuites",
-        text: "Des articles clairs et concis sur le matériel, les tissus et les erreurs à éviter\u00a0",
+        text: "Des articles clairs et concis sur le matériel, les tissus et les erreurs à éviter.",
         to: "/blog",
         cta: "Lire les ressources",
       },
