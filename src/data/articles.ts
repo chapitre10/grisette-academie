@@ -370,62 +370,6 @@ export const articles: Article[] = [
     },
   },
   {
-    slug: "comprendre-fibres-et-armures-de-tissage",
-    title: "Comprendre les fibres et les armures de tissage",
-    excerpt: "Ce que veulent dire toile, sergé et satin, et pourquoi cela change la façon de coudre.",
-    category: "Tissus et matières",
-    tags: ["tissage", "fibres", "armures"],
-    date: "2026-06-16",
-    readingTime: "5 min",
-    intro: "On confond souvent la matière d'un tissu et sa construction. Pourtant, deux cotons peuvent se comporter très différemment selon leur armure.",
-    blocks: [
-      {
-        heading: "La fibre : ce dont le fil est fait",
-        paragraphs: [
-          "Naturelle, artificielle ou synthétique, la fibre détermine le confort, l'entretien et la réaction au fer.",
-          "L'étiquette indique la composition : c'est la première information à relever.",
-
-        ],
-      },
-      {
-        heading: "L'armure : la façon dont les fils se croisent",
-        paragraphs: [
-          "La toile croise un fil sur un fil : stable et facile à coudre. Le sergé forme des diagonales et donne du tombé. Le satin laisse de longs fils en surface, d'où sa brillance et sa fragilité.",
-          "Une même fibre change complètement de caractère selon l'armure choisie.",
-
-        ],
-      },
-      {
-        heading: "Tissé ou tricoté : la vraie frontière",
-        paragraphs: [
-          "Un tissé ne s'étire pas dans la longueur, un tricoté oui : cela conditionne le patron, l'aiguille et le point utilisés.",
-          "Vérifie l'élasticité en tirant doucement le coupon dans les deux sens avant de couper.",
-
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "La fibre et l'armure sont deux informations distinctes.",
-      "Toile, sergé et satin ne se cousent pas de la même façon.",
-      "Teste l'élasticité du coupon avant de couper.",
-    ],
-    cta: {
-      label: "Approfondir avec le guide",
-      to: "/guides/$slug",
-      params: { slug: "difference-entre-tissus-et-tissage" },
-      text: "Le guide « La différence entre tissus et tissage » détaille les familles de tissage avec schémas et tableau récapitulatif.",
-    },
-    image: null,
-    imageAlt: "Gros plan sur l'armure d'un tissu de couture",
-    seo: {
-      title: "Fibres et armures de tissage expliquées — Grisette Académie",
-      description: "Toile, sergé, satin, tissé ou tricoté : comprendre fibres et armures pour choisir et coudre le bon tissu.",
-      pinterestTitle: "Comprendre les armures de tissage",
-      pinterestDescription: "Toile, sergé, satin : ce que l'armure change à la couture.",
-      pinterestImage: null,
-    },
-  },
-  {
     slug: "creer-sa-tissutheque-methode-simple",
     title: "Créer sa tissuthèque : une méthode simple",
     excerpt: "Classer ses échantillons de tissu pour ne plus racheter à l'aveugle.",
