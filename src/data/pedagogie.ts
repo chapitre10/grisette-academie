@@ -11,7 +11,7 @@ export const method = [
   },
   {
     step: "03",
-    title: "Adapter à sa morphologie",
+    title: "Maîtriser les techniques",
     text: "Ajustements, mesures et modifications de patron : coudre pour soi, pas pour une taille standard.",
   },
   {
