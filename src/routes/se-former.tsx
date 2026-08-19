@@ -44,7 +44,6 @@ function SeFormerPage() {
         <SectionHeading
           eyebrow="Pédagogie"
           title="Une méthode en quatre temps"
-          intro="La même progression structure les cours en présentiel, les guides et les formations courtes."
         />
         <ol className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {method.map((item) => (
