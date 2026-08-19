@@ -6,7 +6,7 @@ export const method = [
   },
   {
     step: "02",
-    title: "Pratiquer par petits projets",
+    title: "S'exercer avec les bons gestes",
     text: "Des exercices courts et concrets pour ancrer les gestes essentiels sans se décourager.",
   },
   {
