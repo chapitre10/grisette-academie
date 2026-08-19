@@ -151,59 +151,6 @@ export const articles: Article[] = [
     },
   },
   {
-    slug: "prendre-ses-mesures-avant-de-choisir-un-patron",
-    title: "Pourquoi prendre ses mesures avant de choisir un patron ?",
-    excerpt: "Les mesures, et non la taille du prêt-à-porter, déterminent la taille du patron.",
-    category: "Techniques",
-    tags: ["mesures", "patron", "ajustement"],
-    date: "2026-03-22",
-    readingTime: "4 min",
-    intro:
-      "Choisir sa taille de patron d'après sa taille habituelle en magasin conduit souvent à un vêtement mal ajusté. Les mesures restent la seule référence fiable.",
-    blocks: [
-      {
-        heading: "Chaque patron a son propre tableau de tailles",
-        paragraphs: [
-          "Les tableaux varient d'une marque à l'autre. Comparer ses mesures au tableau du patron évite les mauvaises surprises à l'essayage.",
-        ],
-      },
-      {
-        heading: "Mesurer au bon endroit",
-        paragraphs: [
-          "Tour de poitrine, de taille, de bassin, longueur de dos : le mètre doit rester horizontal et sans serrer. Se faire aider améliore nettement la précision.",
-        ],
-      },
-      {
-        heading: "Noter et conserver ses mesures",
-        paragraphs: [
-          "Garder ses mesures écrites permet de choisir plus vite ses tailles et de repérer les ajustements récurrents.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "La taille du prêt-à-porter n'est pas la taille du patron.",
-      "Chaque marque possède son propre tableau de mesures.",
-      "Des mesures écrites se réutilisent d'un projet à l'autre.",
-    ],
-    cta: {
-      label: "Découvrir la fiche de mesures",
-      to: "/guides/$slug",
-      params: { slug: "lexique-de-la-couturiere" },
-      text: "La fiche de mesures permet de tout consigner au même endroit.",
-    },
-    image: null,
-    imageAlt: "Mètre ruban et patron de couture posés sur une table",
-    seo: {
-      title: "Prendre ses mesures avant de choisir un patron — Grisette Académie",
-      description:
-        "Pourquoi et comment prendre ses mesures avant de choisir la taille de son patron de couture.",
-      pinterestTitle: "Prendre ses mesures avant de choisir un patron",
-      pinterestDescription:
-        "La taille du patron se choisit d'après les mesures, pas d'après la taille du prêt-à-porter.",
-      pinterestImage: null,
-    },
-  },
-  {
     slug: "erreurs-frequentes-quand-on-debute-la-couture",
     title: "7 erreurs fréquentes quand on débute la couture",
     excerpt: "Des maladresses très courantes, faciles à corriger dès les premiers projets.",

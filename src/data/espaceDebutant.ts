@@ -78,9 +78,10 @@ export const basesCouture: BaseCouture[] = [
     title: "La prise de mesures",
     description: "Où placer le mètre ruban et comment noter ses mesures sans se tromper.",
     level: "Débutant",
-    linkLabel: "Lire la ressource",
-    link: { to: "/blog/$slug", params: { slug: "prendre-ses-mesures-avant-de-choisir-un-patron" } },
+    linkLabel: "Voir la formation courte",
+    link: { to: "/micro-formations/$slug", params: { slug: "prendre-correctement-ses-mesures" } },
   },
+
   {
     title: "Le choix d'un patron",
     description: "Repérer un patron adapté à son niveau et à son tissu.",
@@ -130,9 +131,9 @@ export const articlesDebutant = [
   "fournitures-indispensables-debuter-couture",
   "choisir-son-tissu-premier-vetement",
   "erreurs-frequentes-quand-on-debute-la-couture",
-  "prendre-ses-mesures-avant-de-choisir-un-patron",
   "20-mots-de-couture-a-connaitre",
 ];
+
 
 
 export const parcours = [
