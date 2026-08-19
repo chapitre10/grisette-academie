@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
-import { NeedleIcon } from "@/components/sewing/SewingIcons";
+
 import { site } from "@/data/site";
 import { saveContactSubmission } from "@/lib/contactSubmission";
 
@@ -131,10 +131,6 @@ function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <form noValidate onSubmit={onSubmit} className="space-y-5">
-                <p className="flex items-center gap-2 text-sm text-brand/80">
-                  <NeedleIcon aria-hidden className="size-5 shrink-0 text-brand" />
-                  Les champs suivis d'un astérisque (*) sont obligatoires.
-                </p>
                 <div ref={errorSummaryRef} tabIndex={-1} role="alert" aria-live="assertive">
                   {errorList.length > 0 ? (
                     <div className="rounded-md border border-destructive bg-card p-4">
@@ -152,7 +148,7 @@ function ContactPage() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-brand">
-                      Prénom *
+                      Prénom
                     </label>
                     <input
                       id="firstName"
@@ -169,7 +165,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <label htmlFor="lastName" className="mb-2 block text-sm font-medium text-brand">
-                      Nom *
+                      Nom
                     </label>
                     <input
                       id="lastName"
@@ -188,7 +184,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="email" className="mb-2 block text-sm font-medium text-brand">
-                    Adresse e-mail *
+                    Adresse e-mail
                   </label>
                   <input
                     id="email"
@@ -207,7 +203,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="subject" className="mb-2 block text-sm font-medium text-brand">
-                    Sujet *
+                    Sujet
                   </label>
                   <input
                     id="subject"
@@ -224,7 +220,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="requestType" className="mb-2 block text-sm font-medium text-brand">
-                    Type de demande *
+                    Type de demande
                   </label>
                   <select
                     id="requestType"
@@ -248,7 +244,7 @@ function ContactPage() {
 
                 <div>
                   <label htmlFor="message" className="mb-2 block text-sm font-medium text-brand">
-                    Message *
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -288,7 +284,7 @@ function ContactPage() {
                   />
                   <div>
                     <label htmlFor="consent" className="text-sm text-brand">
-                      J'accepte que mes données soient utilisées pour traiter ma demande. *
+                      J'accepte que mes données soient utilisées pour traiter ma demande.
                     </label>
                     {errors.consent ? (
                       <p id="consent-error" className="mt-1 text-sm font-medium text-destructive">{errors.consent}</p>
