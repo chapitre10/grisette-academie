@@ -95,7 +95,7 @@ function CoursPage() {
               Informations pratiques
             </p>
             <dl className="mt-4">
-              <InfoRow label="Zone / adresse" value={infoOrPending(null)} />
+              <InfoRow label="Zone / adresse" value="Paris et ses alentours" />
               <InfoRow label="Durée d'une séance" value="Entre 2h et 4h" />
               <InfoRow label="Tarif" value="25€/h (voir section Tarifs)" />
               <InfoRow label="Tarif réduit*" value="18€/h (voir section Tarifs)" />
