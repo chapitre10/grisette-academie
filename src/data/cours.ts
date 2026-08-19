@@ -23,7 +23,7 @@ export const courseFormats: CourseFormat[] = [
     slug: "cours-individuel",
     title: "Cours individuel",
     description: "Un accompagnement personnalisé adapté à ton niveau et à ton projet.",
-    area: null,
+    area: "Paris et ses alentours",
     duration: "Entre 2h et 4h",
     price: "25€/h (voir section Tarifs)",
     availability: "Du Lundi au Dimanche",
@@ -33,7 +33,7 @@ export const courseFormats: CourseFormat[] = [
     slug: "cours-petit-groupe",
     title: "Cours en petit groupe",
     description: "Une progression conviviale dans un cadre propice à la pratique.",
-    area: null,
+    area: "Paris et ses alentours",
     duration: "Entre 2h et 4h",
     price: "25€/h (voir section Tarifs)",
     availability: "Du Lundi au Dimanche",
@@ -86,8 +86,7 @@ export const coursesFaq = [
   },
   {
     question: "Où se déroulent les cours ?",
-    answer: "Sur demande. La ville et la zone exactes seront indiquées ici.",
-
+    answer: "Les cours se déroulent à Paris et ses alentours. La zone exacte sera précisée lors de la prise de contact.",
   },
   {
     question: "Puis-je venir avec mon propre projet ?",
