@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { site } from "@/data/site";
 import { NewsletterFooterForm } from "@/components/newsletter/NewsletterFooterForm";
 import { useNewsletter } from "@/components/newsletter/NewsletterProvider";
-import { PinIcon, SpoolIcon, ThreadIcon } from "@/components/sewing/SewingIcons";
+import { SpoolIcon, ThreadIcon } from "@/components/sewing/SewingIcons";
 
 const columns: { title: string; links: { label: string; to: string }[] }[] = [
   {
