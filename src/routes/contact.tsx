@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 
 import { Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { NeedleIcon } from "@/components/sewing/SewingIcons";
-import { StitchRule } from "@/components/sewing/ThreadDivider";
 import { site } from "@/data/site";
 import { saveContactSubmission } from "@/lib/contactSubmission";
 
@@ -126,7 +125,6 @@ function ContactPage() {
           title="Contacte Grisette Académie"
           intro="Une question sur les cours, les templates ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
         />
-        <StitchRule className="mt-5 max-w-3xl" />
       </Section>
 
       <Section>
