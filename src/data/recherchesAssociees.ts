@@ -74,10 +74,11 @@ const map: Record<string, RelatedSearch[]> = {
     { label: "comprendre les tissages", to: "/guides/$slug", params: { slug: "difference-entre-tissus-et-tissage" } },
   ],
   "difference-entre-tissus-et-tissage": [
-    { label: "fibres et armures de tissage", to: "/blog/$slug", params: { slug: "comprendre-fibres-et-armures-de-tissage" } },
+    { label: "choisir son tissu pour un premier vêtement", to: "/blog/$slug", params: { slug: "choisir-son-tissu-premier-vetement" } },
     { label: "choisir un tissu adapté", to: "/micro-formations/$slug", params: { slug: "choisir-un-tissu-adapte" } },
     { label: "tissuthèque à imprimer", to: "/guides/$slug", params: { slug: "tissutheque" } },
   ],
+
   "tissutheque": [
     { label: "créer sa tissuthèque", to: "/blog/$slug", params: { slug: "creer-sa-tissutheque-methode-simple" } },
     { label: "liste des fournisseurs couture", to: "/guides/$slug", params: { slug: "liste-des-fournisseurs" } },
@@ -112,11 +113,6 @@ const map: Record<string, RelatedSearch[]> = {
     { label: "liste des fournisseurs", to: "/guides/$slug", params: { slug: "liste-des-fournisseurs" } },
     { label: "créer sa tissuthèque", to: "/guides/$slug", params: { slug: "tissutheque" } },
     { label: "choisir un tissu adapté", to: "/micro-formations/$slug", params: { slug: "choisir-un-tissu-adapte" } },
-  ],
-  "comprendre-fibres-et-armures-de-tissage": [
-    { label: "tissu ou tissage", to: "/guides/$slug", params: { slug: "difference-entre-tissus-et-tissage" } },
-    { label: "choisir son tissu", to: "/blog/$slug", params: { slug: "choisir-son-tissu-premier-vetement" } },
-    { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
   ],
   "creer-sa-tissutheque-methode-simple": [
     { label: "fiches de tissuthèque", to: "/guides/$slug", params: { slug: "tissutheque" } },

@@ -192,8 +192,9 @@ export const products: Product[] = [
       pinterestImage: null,
     },
     related: ["tissutheque", "lexique-de-la-couturiere"],
-    freeResource: "comprendre-fibres-et-armures-de-tissage",
+    freeResource: "choisir-son-tissu-premier-vetement",
     faq: commonFaq,
+
   },
   {
     slug: "tissutheque",

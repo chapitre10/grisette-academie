@@ -64,8 +64,9 @@ export const basesCouture: BaseCouture[] = [
     description: "Fibres, armures et tombé : comprendre ce que tu as entre les mains.",
     level: "Débutant",
     linkLabel: "Lire la ressource",
-    link: { to: "/blog/$slug", params: { slug: "comprendre-fibres-et-armures-de-tissage" } },
+    link: { to: "/blog/$slug", params: { slug: "choisir-son-tissu-premier-vetement" } },
   },
+
   {
     title: "Le droit-fil, la lisière et le biais",
     description: "Trois repères sur le tissu qui changent tout au moment de couper.",
