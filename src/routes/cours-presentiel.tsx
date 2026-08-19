@@ -101,7 +101,6 @@ function CoursPage() {
               <InfoRow label="Tarif" value="25€/h (voir section Tarifs)" />
               <InfoRow label="Tarif réduit*" value="18€/h (voir section Tarifs)" />
               <InfoRow label="Disponibilités" value="Du Lundi au Dimanche" />
-              <InfoRow label="Matériel fourni" value={infoOrPending(null)} />
               <InfoRow label="Niveau requis" value="Tout niveau" />
             </dl>
             <p className="mt-3 text-xs text-brand/65">
