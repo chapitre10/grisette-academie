@@ -100,11 +100,12 @@ export const coursesFaq = [
   },
   {
     question: "Dois-je apporter ma machine à coudre ?",
-    answer: "Informations à venir : les modalités de matériel seront précisées prochainement.",
+    answer: "Sur demande : les modalités de matériel seront précisées prochainement.",
   },
   {
     question: "Où se déroulent les cours ?",
-    answer: "Informations à venir. La ville et la zone exactes seront indiquées ici.",
+    answer: "Sur demande. La ville et la zone exactes seront indiquées ici.",
+
   },
   {
     question: "Puis-je venir avec mon propre projet ?",
