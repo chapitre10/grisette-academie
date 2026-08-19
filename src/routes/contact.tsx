@@ -121,7 +121,6 @@ function ContactPage() {
       <Section tone="blush" className="!py-8 md:!py-10">
         <SectionHeading
           as="h1"
-          align="center"
           eyebrow="Contact"
           title="Contacte Grisette Académie"
           intro="Une question sur les cours, les guides ou les formations courtes ? Écris-moi et je te répondrai au plus vite."
