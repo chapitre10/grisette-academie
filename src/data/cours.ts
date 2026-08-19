@@ -16,7 +16,6 @@ export interface CourseFormat {
   duration: InfoValue;
   price: InfoValue;
   availability: InfoValue;
-  providedMaterial: InfoValue;
   requiredLevel: InfoValue;
 }
 
