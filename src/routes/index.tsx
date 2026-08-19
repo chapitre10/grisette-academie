@@ -93,7 +93,7 @@ function Index() {
           <div>
             <Badge tone="gold">Apprentissage de la couture</Badge>
             <h1 className="mt-5 font-display text-4xl leading-[1.1] text-brand md:text-6xl">
-              Apprendre la couture avec méthode, créativité et confiance
+              Apprendre la couture avec méthode et confiance
             </h1>
             <div className="rule-thin mt-6" />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand/85">
