@@ -101,7 +101,7 @@ function CoursPage() {
               <InfoRow label="Tarif" value={infoOrPending(null)} />
               <InfoRow label="Disponibilités" value={infoOrPending(null)} />
               <InfoRow label="Matériel fourni" value={infoOrPending(null)} />
-              <InfoRow label="Niveau requis" value={infoOrPending(null)} />
+              <InfoRow label="Niveau requis" value="Tout niveau" />
             </dl>
           </div>
         </div>
