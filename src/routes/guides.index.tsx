@@ -62,8 +62,7 @@ function GuidesPage() {
           intro="Retrouve des ressources numériques conçues spécialment pour t'aider à préparer tes créations et progresser plus sereinement en couture."
         />
         <p className="mt-6 inline-block rounded-md border border-brand/25 bg-background px-4 py-3 text-sm text-brand">
-          Ressources <strong>100 % numériques</strong> : aucun envoi postal. Le paiement n'est pas
-          encore activé — les produits ci-dessous sont des exemples de structure.
+          Ressources <strong>100 % numériques</strong> : aucun envoi postal.
         </p>
       </Section>
 
