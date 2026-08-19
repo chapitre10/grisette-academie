@@ -11,7 +11,6 @@ export interface CourseFormat {
   slug: string;
   title: string;
   description: string;
-  city: InfoValue;
   area: InfoValue;
   duration: InfoValue;
   price: InfoValue;
