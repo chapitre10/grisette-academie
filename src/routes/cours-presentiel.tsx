@@ -127,30 +127,30 @@ function CoursPage() {
         </ul>
       </Section>
 
-      <Section tone="mist">
+      <Section tone="mist" className="!py-10 md:!py-12">
         <SectionHeading eyebrow="Formats" title="Trois façons d'être accompagnée" />
-        <ul className="mt-10 grid gap-6 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+        <ul className="mt-6 grid gap-4 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
           {courseFormats.map((format, index) => (
             <li key={format.slug}>
-              <Card>
+              <Card className="p-5">
                 <div className="flex items-center gap-2">
                   {index === 1 ? (
-                    <SafetyPinIcon aria-hidden className="size-5 shrink-0 text-raspberry" />
+                    <SafetyPinIcon aria-hidden className="size-4 shrink-0 text-raspberry" />
                   ) : (
-                    <SpoolIcon aria-hidden className="size-5 shrink-0 text-gold" />
+                    <SpoolIcon aria-hidden className="size-4 shrink-0 text-gold" />
                   )}
-                  <h3 className="text-xl text-brand">{format.title}</h3>
+                  <h3 className="text-lg text-brand">{format.title}</h3>
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-brand/85">{format.description}</p>
-                <dl className="mt-5">
+                <p className="mt-1.5 text-sm leading-snug text-brand/85">{format.description}</p>
+                <dl className="mt-3">
                   <InfoRow label="Zone / adresse" value={infoOrPending(format.area)} />
                   <InfoRow label="Durée" value={infoOrPending(format.duration)} />
                   <InfoRow label="Tarif" value={infoOrPending(format.price)} />
                   <InfoRow label="Disponibilités" value={infoOrPending(format.availability)} />
                   <InfoRow label="Niveau requis" value={infoOrPending(format.requiredLevel)} />
                 </dl>
-                <div className="mt-5">
-                  <ButtonLink to="/contact" search={contactSearch} variant="secondary">
+                <div className="mt-4">
+                  <ButtonLink to="/contact" search={contactSearch} variant="secondary" className="px-4 py-2 text-xs">
                     Demander des informations
                   </ButtonLink>
                 </div>
