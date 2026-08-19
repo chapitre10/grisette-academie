@@ -38,8 +38,9 @@ export const cartesDepart: CarteDepart[] = [
     title: "Organiser ton premier projet",
     description: "Prépare ton tissu, ton matériel et tes étapes pour commencer plus sereinement.",
     cta: "Organiser mon projet",
-    link: { to: "/blog/$slug", params: { slug: "organiser-projet-couture-de-a-a-z" } },
+    link: { to: "/micro-formations/$slug", params: { slug: "preparer-son-projet-avant-de-couper" } },
   },
+
 ];
 
 export type BaseCouture = {
@@ -127,11 +128,11 @@ export const basesCouture: BaseCouture[] = [
 export const articlesDebutant = [
   "fournitures-indispensables-debuter-couture",
   "choisir-son-tissu-premier-vetement",
-  "organiser-projet-couture-de-a-a-z",
   "erreurs-frequentes-quand-on-debute-la-couture",
   "prendre-ses-mesures-avant-de-choisir-un-patron",
   "20-mots-de-couture-a-connaitre",
 ];
+
 
 export const parcours = [
   {

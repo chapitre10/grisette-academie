@@ -98,66 +98,6 @@ export const articles: Article[] = [
     },
   },
   {
-    slug: "organiser-projet-couture-de-a-a-z",
-    title: "Comment organiser un projet couture de A à Z ?",
-    excerpt:
-      "Une méthode simple pour passer de l'idée au vêtement terminé, sans se disperser.",
-    category: "Organisation",
-    tags: ["organisation", "méthode", "projet"],
-    date: "2026-04-28",
-    readingTime: "6 min",
-    intro:
-      "Un projet couture réussi se joue en grande partie avant la première couture. Voici une manière d'organiser les étapes pour avancer avec clarté.",
-    blocks: [
-      {
-        heading: "1. Clarifier l'intention du projet",
-        paragraphs: [
-          "Note ce que tu veux obtenir : la pièce, la saison, l'usage. Cette étape évite de choisir un tissu qui ne correspondra pas au vêtement imaginé.",
-        ],
-      },
-      {
-        heading: "2. Préparer les mesures et le patron",
-        paragraphs: [
-          "Relève tes mesures, compare-les au tableau du patron, puis note les ajustements éventuels. Ce travail écrit se réutilise pour tous tes projets suivants.",
-        ],
-      },
-      {
-        heading: "3. Rassembler tissus et fournitures",
-        paragraphs: [
-          "Liste le métrage, la laize, les fils, les fermetures et les éventuelles doublures. Vérifie tout avant la coupe.",
-        ],
-      },
-      {
-        heading: "4. Planifier les étapes de couture",
-        paragraphs: [
-          "Découpe le projet en séances courtes : préparation, coupe, assemblage, essayage, finitions. Progresser par étapes rend le projet beaucoup moins intimidant.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "La préparation représente une grande partie de la réussite.",
-      "Écrire ses mesures et ses ajustements fait gagner du temps.",
-      "Découper le projet en séances courtes évite le découragement.",
-    ],
-    cta: {
-      label: "Voir le template d'organisation",
-      to: "/guides/$slug",
-      params: { slug: "guide-debutant" },
-      text: "Le template d'organisation reprend ces étapes sur un seul document à compléter.",
-    },
-    image: null,
-    imageAlt: "Carnet de couture ouvert avec échantillons de tissu",
-    seo: {
-      title: "Organiser un projet couture de A à Z — Grisette Académie",
-      description:
-        "Une méthode en quatre étapes pour organiser un projet couture : intention, mesures, fournitures et planification des séances.",
-      pinterestTitle: "Organiser un projet couture en 4 étapes",
-      pinterestDescription:
-        "De l'idée au vêtement terminé : la méthode pour préparer un projet couture sans se disperser.",
-      pinterestImage: null,
-    },
-  },
-  {
     slug: "choisir-son-tissu-premier-vetement",
     title: "Comment choisir son tissu pour un premier vêtement ?",
     excerpt: "Les critères qui rendent un tissu plus facile à coudre quand on apprend.",
