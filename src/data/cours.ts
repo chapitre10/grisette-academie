@@ -31,7 +31,7 @@ export const courseFormats: CourseFormat[] = [
     price: null,
     availability: null,
     providedMaterial: null,
-    requiredLevel: null,
+    requiredLevel: "Tout niveau",
   },
   {
     slug: "cours-petit-groupe",
@@ -43,7 +43,7 @@ export const courseFormats: CourseFormat[] = [
     price: null,
     availability: null,
     providedMaterial: null,
-    requiredLevel: null,
+    requiredLevel: "Tout niveau",
   },
   {
     slug: "accompagnement-projet",
@@ -56,7 +56,7 @@ export const courseFormats: CourseFormat[] = [
     price: null,
     availability: null,
     providedMaterial: null,
-    requiredLevel: null,
+    requiredLevel: "Tout niveau",
   },
 ];
 
