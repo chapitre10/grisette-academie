@@ -6,9 +6,9 @@ import { NeedleIcon } from "@/components/sewing/SewingIcons";
 import { site } from "@/data/site";
 import { saveContactSubmission } from "@/lib/contactSubmission";
 
-const title = "Contacter Grisette Académie — cours, templates, formations";
+const title = "Contacter Grisette Académie — cours, guides, formations";
 const description =
-  "Une question sur les cours de couture, les templates ou les formations courtes Grisette Académie ? Écris-moi via le formulaire de contact.";
+  "Une question sur les cours de couture, les guides ou les formations courtes Grisette Académie ? Écris-moi via le formulaire de contact.";
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -123,7 +123,7 @@ function ContactPage() {
           as="h1"
           eyebrow="Contact"
           title="Contacte Grisette Académie"
-          intro="Une question sur les cours, les templates ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
+          intro="Une question sur les cours, les guides ou les formations courtes ? Écris-moi et je te répondrai dès que possible."
         />
       </Section>
 
