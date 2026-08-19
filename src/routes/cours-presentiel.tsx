@@ -98,7 +98,7 @@ function CoursPage() {
               <InfoRow label="Ville" value={infoOrPending(null)} />
               <InfoRow label="Zone / adresse" value={infoOrPending(null)} />
               <InfoRow label="Durée d'une séance" value="Entre 2h et 4h" />
-              <InfoRow label="Tarif" value={infoOrPending(null)} />
+              <InfoRow label="Tarif" value="25€/h (voir section Tarifs)" />
               <InfoRow label="Disponibilités" value="Du Lundi au Dimanche" />
               <InfoRow label="Matériel fourni" value={infoOrPending(null)} />
               <InfoRow label="Niveau requis" value="Tout niveau" />
