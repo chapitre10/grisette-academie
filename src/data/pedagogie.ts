@@ -12,7 +12,7 @@ export const method = [
   {
     step: "03",
     title: "Maîtriser les techniques",
-    text: "Ajustements, mesures et modifications de patron : coudre pour soi, pas pour une taille standard.",
+    text: "Elaboration de projets plus complexes et exercices axés seulement sur la technique, pour développer ton niveau et ton autonomie.",
   },
   {
     step: "04",
