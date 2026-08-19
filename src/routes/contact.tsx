@@ -131,10 +131,6 @@ function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <form noValidate onSubmit={onSubmit} className="space-y-5">
-                <p className="flex items-center gap-2 text-sm text-brand/80">
-                  <NeedleIcon aria-hidden className="size-5 shrink-0 text-brand" />
-                  Les champs suivis d'un astérisque (*) sont obligatoires.
-                </p>
                 <div ref={errorSummaryRef} tabIndex={-1} role="alert" aria-live="assertive">
                   {errorList.length > 0 ? (
                     <div className="rounded-md border border-destructive bg-card p-4">
