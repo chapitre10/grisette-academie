@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-import { ButtonLink, Section, SectionHeading, buttonStyles } from "@/components/Ui";
+import { ButtonLink, Card, Section, SectionHeading, buttonStyles } from "@/components/Ui";
 import { site } from "@/data/site";
 import {
   clearContactSubmission,
@@ -30,6 +30,71 @@ export const Route = createFileRoute("/demande-envoyee")({
   component: ContactConfirmationPage,
 });
 
+const quickLinks = [
+  { label: "Voir les guides", to: "/guides" },
+  { label: "Lire les ressources gratuites", to: "/blog" },
+  { label: "Découvrir les cours", to: "/cours-presentiel" },
+];
+
+const suggestions = [
+  {
+    title: "Guides pratiques",
+    description: "Des templates et fiches pour avancer sereinement dans tes projets.",
+    to: "/guides",
+  },
+  {
+    title: "Ressources gratuites",
+    description: "Des articles et conseils pour apprendre la couture à ton rythme.",
+    to: "/blog",
+  },
+  {
+    title: "Cours de couture",
+    description: "Un accompagnement personnalisé pour progresser plus vite.",
+    to: "/cours-presentiel",
+  },
+];
+
+/** Illustration couture : fil qui forme une coche, aiguille et bouton. */
+function SuccessIllustration() {
+  return (
+    <svg
+      viewBox="0 0 320 90"
+      role="img"
+      aria-label="Illustration : un fil de couture forme une coche, avec une aiguille et un bouton"
+      className="h-20 w-full max-w-sm"
+    >
+      <path
+        d="M12 50l24 24 40-48"
+        stroke="var(--color-raspberry)"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <circle cx="168" cy="45" r="18" fill="var(--color-peach)" />
+      <circle cx="160" cy="41" r="3" fill="var(--color-brand)" />
+      <circle cx="168" cy="51" r="3" fill="var(--color-brand)" />
+      <circle cx="176" cy="41" r="3" fill="var(--color-brand)" />
+      <circle cx="176" cy="51" r="3" fill="var(--color-brand)" />
+      <path
+        d="M200 45c20-10 40-10 60 0s40 8 54-8"
+        stroke="var(--color-raspberry)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        fill="none"
+        strokeDasharray="8 6"
+      />
+      <path
+        d="M270 28l44 22"
+        stroke="var(--color-brand)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <circle cx="314" cy="50" r="4" fill="none" stroke="var(--color-brand)" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
 function ContactConfirmationPage() {
   const navigate = useNavigate();
   const [submission, setSubmission] = useState<ContactSubmission | null>(null);
@@ -52,13 +117,49 @@ function ContactConfirmationPage() {
 
   return (
     <>
-      <Section tone="blush" className="!py-8 md:!py-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="Contact"
-          title="Ta demande est enregistrée"
-          intro="Merci pour ton message. Voici le récapitulatif des informations que tu viens de saisir."
-        />
+      <Section tone="mist" className="!py-8 md:!py-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-display text-5xl leading-none text-raspberry md:text-6xl">
+            C’est envoyé !
+          </p>
+          <h1 className="mt-4 text-3xl text-brand md:text-4xl">
+            Ta demande est bien passée entre mes mains
+          </h1>
+          <p className="mt-4 text-base leading-relaxed text-brand/85">
+            Merci pour ton message. Je le lis avec attention et je te réponds personnellement dès
+            que possible.
+          </p>
+          <p className="mt-3 text-sm italic text-brand/75">
+            En attendant, pas de fil qui s’emmêle : tu peux continuer à explorer l’atelier.
+          </p>
+
+          <div className="mt-6 flex justify-center">
+            <SuccessIllustration />
+          </div>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <ButtonLink to="/">Retourner à l’accueil</ButtonLink>
+            <ButtonLink to="/guides" variant="flame">
+              Voir les guides
+            </ButtonLink>
+            <ButtonLink to="/blog" variant="secondary">
+              Lire les ressources
+            </ButtonLink>
+          </div>
+
+          <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            {quickLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to as never}
+                  className="inline-flex min-h-11 items-center text-brand underline underline-offset-4 hover:text-fuchsia-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Section>
 
       <Section>
@@ -85,7 +186,7 @@ function ContactConfirmationPage() {
                 </dl>
 
                 <p className="mt-6 rounded-md border border-raspberry/40 bg-peach/50 p-4 text-sm leading-relaxed text-brand/85">
-                  L'envoi automatique n'est pas encore activé : aucun service e-mail n'est connecté
+                  L’envoi automatique n’est pas encore activé : aucun service e-mail n’est connecté
                   pour le moment. Pour être sûre que ta demande me parvienne, écris-moi directement à{" "}
                   <a href={`mailto:${site.email}`} className="font-semibold underline">
                     {site.email}
@@ -111,7 +212,7 @@ function ContactConfirmationPage() {
               <div className="rounded-lg border border-border bg-card p-6">
                 <h2 className="text-xl text-brand">Aucun récapitulatif à afficher</h2>
                 <p className="mt-2 text-sm leading-relaxed text-brand/85">
-                  Cette page affiche le récapitulatif juste après l'envoi du formulaire. Il n'est plus
+                  Cette page affiche le récapitulatif juste après l’envoi du formulaire. Il n’est plus
                   disponible (page rouverte ou session terminée).
                 </p>
                 <div className="mt-5">
@@ -138,6 +239,27 @@ function ContactConfirmationPage() {
             </div>
           </aside>
         </div>
+      </Section>
+
+      <Section tone="ivory">
+        <SectionHeading title="Tu peux peut-être trouver ton bonheur ici" align="center" />
+        <ul className="mt-6 grid gap-4 md:grid-cols-3">
+          {suggestions.map((item) => (
+            <li key={item.to}>
+              <Card className="h-full">
+                <h3 className="text-xl text-brand">
+                  <Link
+                    to={item.to as never}
+                    className="underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    {item.title}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-brand/80">{item.description}</p>
+              </Card>
+            </li>
+          ))}
+        </ul>
       </Section>
     </>
   );
