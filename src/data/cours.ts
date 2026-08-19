@@ -29,7 +29,6 @@ export const courseFormats: CourseFormat[] = [
     duration: "Entre 2h et 4h",
     price: "25€/h (voir section Tarifs)",
     availability: "Du Lundi au Dimanche",
-    providedMaterial: null,
     requiredLevel: "Tout niveau",
   },
   {
@@ -41,7 +40,6 @@ export const courseFormats: CourseFormat[] = [
     duration: "Entre 2h et 4h",
     price: "25€/h (voir section Tarifs)",
     availability: "Du Lundi au Dimanche",
-    providedMaterial: null,
     requiredLevel: "Tout niveau",
   },
 ];
