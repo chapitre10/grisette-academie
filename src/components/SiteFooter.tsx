@@ -36,7 +36,6 @@ export function SiteFooter() {
       <div aria-hidden className="container-page flex items-center gap-2 pt-4">
         <SpoolIcon className="size-5 shrink-0 text-gold" />
         <ThreadIcon className="h-2 flex-1 text-peach" />
-        <PinIcon className="size-4 shrink-0 -rotate-12 text-ivory" />
       </div>
       <div className="container-page grid gap-4 py-5 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
