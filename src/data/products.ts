@@ -366,7 +366,7 @@ export const products: Product[] = [
       pinterestImage: null,
     },
     related: ["lexique-de-la-couturiere", "les-livres-essentiels"],
-    freeResource: "vocabulaire-du-patronage-premiers-reperes",
+    freeResource: "20-mots-de-couture-a-connaitre",
     faq: commonFaq,
   },
   {

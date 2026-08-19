@@ -92,10 +92,11 @@ const map: Record<string, RelatedSearch[]> = {
     { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
   ],
   "lexique-de-la-modeliste": [
-    { label: "vocabulaire du patronage", to: "/blog/$slug", params: { slug: "vocabulaire-du-patronage-premiers-reperes" } },
     { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
     { label: "livres de modélisme", to: "/guides/$slug", params: { slug: "les-livres-essentiels" } },
+    { label: "20 mots de couture", to: "/blog/$slug", params: { slug: "20-mots-de-couture-a-connaitre" } },
   ],
+
   "guide-debutant": [
     { label: "débuter la couture en 5 étapes", to: "/blog/$slug", params: { slug: "premiers-pas-en-couture-plan-en-5-etapes" } },
     { label: "fournitures indispensables", to: "/blog/$slug", params: { slug: "fournitures-indispensables-debuter-couture" } },
@@ -127,11 +128,6 @@ const map: Record<string, RelatedSearch[]> = {
     { label: "lexique de la couturière", to: "/guides/$slug", params: { slug: "lexique-de-la-couturiere" } },
     { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
     { label: "comprendre le droit-fil", to: "/micro-formations/$slug", params: { slug: "comprendre-le-droit-fil" } },
-  ],
-  "vocabulaire-du-patronage-premiers-reperes": [
-    { label: "lexique de la modéliste", to: "/guides/$slug", params: { slug: "lexique-de-la-modeliste" } },
-    { label: "prendre ses mesures", to: "/micro-formations/$slug", params: { slug: "prendre-correctement-ses-mesures" } },
-    { label: "livres essentiels de couture", to: "/guides/$slug", params: { slug: "les-livres-essentiels" } },
   ],
   "premiers-pas-en-couture-plan-en-5-etapes": [
     { label: "guide débutant couture", to: "/guides/$slug", params: { slug: "guide-debutant" } },
