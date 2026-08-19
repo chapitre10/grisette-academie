@@ -86,8 +86,7 @@ export const coursesFaq = [
   },
   {
     question: "Où se déroulent les cours ?",
-    answer: "Sur demande. La ville et la zone exactes seront indiquées ici.",
-
+    answer: "Les cours se déroulent à Paris et ses alentours. La zone exacte sera précisée lors de la prise de contact.",
   },
   {
     question: "Puis-je venir avec mon propre projet ?",
