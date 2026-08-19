@@ -97,7 +97,7 @@ function CoursPage() {
             <dl className="mt-4">
               <InfoRow label="Ville" value={infoOrPending(null)} />
               <InfoRow label="Zone / adresse" value={infoOrPending(null)} />
-              <InfoRow label="Durée d'une séance" value={infoOrPending(null)} />
+              <InfoRow label="Durée d'une séance" value="Entre 2h et 4h" />
               <InfoRow label="Tarif" value={infoOrPending(null)} />
               <InfoRow label="Disponibilités" value={infoOrPending(null)} />
               <InfoRow label="Matériel fourni" value={infoOrPending(null)} />
