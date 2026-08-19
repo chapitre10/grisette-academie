@@ -121,7 +121,6 @@ function Index() {
       <Section className="!py-10 md:!py-12">
         <SectionHeading
           align="center"
-          eyebrow="Quatre façons d'apprendre"
           title="Choisis le format qui te correspond"
         />
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-6 md:divide-x md:divide-border">
