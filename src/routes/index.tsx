@@ -74,7 +74,7 @@ const pillarColumns = [
       {
         icon: GraduationCap,
         title: "Cours en présentiel",
-        text: "Un accompagnement direct, en petit groupe ou en individuel, adapté à ton niveau.",
+        text: "Un accompagnement en direct et à domicile pour une progression plus rapide et efficace.",
         to: "/cours-presentiel",
         cta: "Découvrir les cours",
       },
