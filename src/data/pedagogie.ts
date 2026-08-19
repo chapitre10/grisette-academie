@@ -2,7 +2,7 @@ export const method = [
   {
     step: "01",
     title: "Comprendre avant de coudre",
-    text: "On commence par le tissu, le matériel et le vocabulaire, pour que chaque geste ait un sens.",
+    text: "Découverte et prise en main de la machine, du matériel et du vocabulaire, pour que chaque geste ait un sens.",
   },
   {
     step: "02",
