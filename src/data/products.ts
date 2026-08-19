@@ -424,9 +424,9 @@ export const shopFaq = [
       "Les ressources sont proposées en PDF, prévues pour une impression A4 ou un usage à l'écran.",
   },
   {
-    question: "Les guides sont-ils adaptés aux débutantes ?",
+    question: "Les guides sont-ils adaptés aux débutants ?",
     answer:
-      "Oui. Chaque guide indique le niveau conseillé, et plusieurs sont pensés spécifiquement pour les débutantes.",
+      "Oui. Chaque guide indique le niveau conseillé, et plusieurs sont pensés spécifiquement pour les débutants.",
   },
   {
     question: "Existe-t-il une version gratuite ?",
