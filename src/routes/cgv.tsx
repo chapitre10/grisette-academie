@@ -83,8 +83,8 @@ export const Route = createFileRoute("/cgv")({
 
       <LegalBlock title="Réclamations et litiges">
         <p>
-          Toute réclamation peut être adressée par e-mail. À défaut d'accord, le droit applicable :
-          droit français.
+          Toute réclamation peut être adressée par e-mail. À défaut d'accord, le droit applicable est
+          le droit français.
         </p>
       </LegalBlock>
     </LegalPage>
