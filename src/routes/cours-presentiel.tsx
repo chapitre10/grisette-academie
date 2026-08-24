@@ -6,14 +6,13 @@ import {
   ButtonLink,
   Card,
   EmptyState,
-  Faq,
   InfoRow,
   Section,
   SectionHeading,
 } from "@/components/Ui";
 import {
   courseFormats,
-  coursesFaq,
+
   visibleStudentProjects,
   visibleTestimonials,
 } from "@/data/cours";

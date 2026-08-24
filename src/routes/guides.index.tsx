@@ -8,11 +8,10 @@ import {
   ButtonLink,
   Card,
   EmptyState,
-  Faq,
   Section,
   SectionHeading,
 } from "@/components/Ui";
-import { productCategories, products, shopFaq } from "@/data/products";
+import { productCategories, products } from "@/data/products";
 import { PinIcon, TagIcon } from "@/components/sewing/SewingIcons";
 
 const title = "Templates et guides couture à télécharger — Grisette Académie";

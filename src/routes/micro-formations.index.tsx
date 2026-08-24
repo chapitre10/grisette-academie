@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
-import { formationFaq, formations } from "@/data/formations";
+import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
+import { formations } from "@/data/formations";
 import { SpoolIcon } from "@/components/sewing/SewingIcons";
 import { StitchRule } from "@/components/sewing/ThreadDivider";
 
