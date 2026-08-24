@@ -128,10 +128,10 @@ function Index() {
             <div key={column.label} className="md:px-6 md:first:pl-0 md:last:pr-0">
               <h3 className="text-center font-display text-xl text-brand">{column.label}</h3>
               <div className="rule-thin mx-auto mt-3" />
-              <ul className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+              <ul className="mt-5 grid auto-rows-fr gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {column.items.map((pillar) => (
-                  <li key={pillar.title}>
-                    <Card className="p-4">
+                  <li key={pillar.title} className="h-full">
+                    <Card className="h-full min-h-[15rem] p-4">
                       <pillar.icon aria-hidden className="size-6 text-raspberry" />
                       <h4 className="mt-2 text-lg text-brand">{pillar.title}</h4>
                       <p className="mt-1.5 flex-1 text-sm leading-snug text-brand/80">
