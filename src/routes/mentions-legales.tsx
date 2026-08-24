@@ -37,9 +37,6 @@ export const Route = createFileRoute("/mentions-legales")({
           SIREN / SIRET : <Pending label="numéro d'immatriculation" />
         </p>
         <p>
-          TVA intracommunautaire : <Pending label="numéro de TVA le cas échéant" />
-        </p>
-        <p>
           Responsable de la publication : <Pending label="nom du responsable" />
         </p>
         <p>
