@@ -17,8 +17,8 @@ export const faqGroups: FaqGroup[] = [
   {
     id: "templates-et-guides",
     title: "Templates et guides",
-    intro:
-      "Formats, usages et modalités des templates et guides couture à télécharger.",
+    items: shopFaq,
+  },
     items: shopFaq,
   },
   {
