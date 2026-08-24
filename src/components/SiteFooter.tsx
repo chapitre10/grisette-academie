@@ -85,14 +85,6 @@ export function SiteFooter() {
         <p className="text-sm text-ivory/90">
           © {new Date().getFullYear()} {site.name}. Tous droits réservés.
         </p>
-        <a
-          href={site.pinterestUrl}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="inline-flex items-center text-sm text-peach underline underline-offset-2 transition-colors hover:text-gold"
-        >
-          Suivre Grisette Académie sur Pinterest
-        </a>
       </div>
     </footer>
   );
