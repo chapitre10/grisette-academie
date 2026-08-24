@@ -28,7 +28,7 @@ export const Route = createFileRoute("/cgv")({
     >
       <LegalBlock title="Vendeur">
         <p>
-          {site.legalName} — <Pending label="statut juridique et adresse" /> — contact :{" "}
+          Blanc Charlotte (auto entreprise)   — contact :{" "}
           <a href={`mailto:${site.email}`} className="underline">
             {site.email}
           </a>
