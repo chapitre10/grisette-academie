@@ -16,7 +16,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
 
   return (
     <div className="border-b border-border bg-mist">
-      <nav aria-label="Fil d'Ariane" className="container-page py-3 text-xs text-brand/75">
+      <nav aria-label="Fil d'Ariane" className="container-page py-3 text-sm text-brand/75">
         <ol className="flex flex-wrap items-center gap-2">
           {items.map((item, index) => (
             <li key={`${item.label}-${index}`} className="flex items-center gap-2">
