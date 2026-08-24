@@ -47,20 +47,6 @@ function FaqPage() {
           intro="Les réponses aux questions les plus posées sur les templates et guides, les formations courtes et les cours en présentiel."
           titleClassName="text-2xl leading-tight text-brand md:text-3xl"
         />
-        <nav aria-label="Sommaire de la FAQ" className="mt-4">
-          <ul className="flex flex-wrap gap-2">
-            {faqGroups.map((group) => (
-              <li key={group.id}>
-                <a
-                  href={`#${group.id}`}
-                  className="inline-block rounded-md border border-brand/25 bg-background px-3 py-1.5 text-[13px] text-brand transition hover:text-fuchsia-ink"
-                >
-                  {group.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </Section>
 
       {faqGroups.map((group, index) => (
