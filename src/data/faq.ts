@@ -27,7 +27,7 @@ export const faqGroups: FaqGroup[] = [
   {
     id: "cours-en-presentiel",
     title: "Cours en présentiel",
-    intro: "Niveau requis, matériel, lieu et réservation des cours en présentiel.",
+    
     items: coursesFaq,
   },
 ];
