@@ -69,9 +69,15 @@ export const Route = createFileRoute("/cgv")({
           lorsque le client a expressément renoncé à ce droit.
         </p>
         <p>
-          Pour les cours en présentiel et les formations courtes, les conditions d'annulation et de
-          report sont les suivantes : <Pending label="conditions d'annulation" />
+          Pour les cours en présentiel les conditions d'annulation et de report sont les suivantes :
+          -&nbsp;
         </p>
+        <div>
+          - annulation ou report jusqu'à 48h avant le cours (à part justification particulière)
+          <br />
+          - une fois un forfait (pack ou stage) payé, c'est de votre responsabilité d'assurer votre
+          disponibilité dans les délais indiqués, aucun remboursement possible.
+        </div>
       </LegalBlock>
 
       <LegalBlock title="Licence d'utilisation">
