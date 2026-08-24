@@ -429,11 +429,6 @@ export const shopFaq = [
       "Oui. Chaque guide indique le niveau conseillé, et plusieurs sont pensés spécifiquement pour les débutants.",
   },
   {
-    question: "Existe-t-il une version gratuite ?",
-    answer:
-      "Chaque guide est accompagné d'une ressource gratuite sur le blog, qui en reprend les bases.",
-  },
-  {
     question: "Comment contacter Grisette Académie en cas de question ?",
     answer:
       "Via la page Contact : le formulaire permet de choisir le type de demande pour une réponse plus rapide.",
