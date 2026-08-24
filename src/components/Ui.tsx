@@ -164,7 +164,7 @@ export function Faq({
 
   const half = Math.ceil(items.length / 2);
   return (
-    <div className="grid gap-3 md:grid-cols-2">
+    <div className="grid items-stretch gap-3 md:auto-rows-fr md:grid-cols-2">
       {list(items.slice(0, half))}
       {list(items.slice(half))}
     </div>
