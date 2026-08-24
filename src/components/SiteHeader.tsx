@@ -17,7 +17,7 @@ export function SiteHeader() {
       <div className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4">
         <Link
           to="/"
-          className="flex min-w-0 items-center gap-3 font-display text-xl leading-none text-brand transition-colors hover:text-fuchsia-ink md:text-2xl"
+          className="flex min-w-0 items-center gap-5 font-display text-xl leading-none text-brand transition-colors hover:text-fuchsia-ink md:gap-6 md:text-2xl"
         >
           {/* Emplacement réservé au logo — remplacer par <img src={...} alt="Grisette Académie" /> */}
           <span
