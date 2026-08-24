@@ -39,20 +39,21 @@ function FaqPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Section tone="blush" className="!py-8 md:!py-10">
+      <Section tone="blush" className="!py-6 md:!py-8">
         <SectionHeading
           as="h1"
           eyebrow="Questions fréquentes"
           title="FAQ"
           intro="Les réponses aux questions les plus posées sur les templates et guides, les formations courtes et les cours en présentiel."
+          titleClassName="text-2xl leading-tight text-brand md:text-3xl"
         />
-        <nav aria-label="Sommaire de la FAQ" className="mt-8">
-          <ul className="flex flex-wrap gap-3">
+        <nav aria-label="Sommaire de la FAQ" className="mt-4">
+          <ul className="flex flex-wrap gap-2">
             {faqGroups.map((group) => (
               <li key={group.id}>
                 <a
                   href={`#${group.id}`}
-                  className="inline-block rounded-md border border-brand/25 bg-background px-4 py-2 text-sm text-brand transition hover:text-fuchsia-ink"
+                  className="inline-block rounded-md border border-brand/25 bg-background px-3 py-1.5 text-[13px] text-brand transition hover:text-fuchsia-ink"
                 >
                   {group.title}
                 </a>
@@ -63,9 +64,18 @@ function FaqPage() {
       </Section>
 
       {faqGroups.map((group, index) => (
-        <Section key={group.id} id={group.id} tone={index % 2 === 0 ? "ivory" : "mist"}>
-          <SectionHeading title={group.title} {...(group.intro ? { intro: group.intro } : {})} />
-          <div className="mt-3 grid gap-x-8 md:grid-cols-2">
+        <Section
+          key={group.id}
+          id={group.id}
+          tone={index % 2 === 0 ? "ivory" : "mist"}
+          className="!py-6 md:!py-8"
+        >
+          <SectionHeading
+            title={group.title}
+            titleClassName="text-xl leading-tight text-brand md:text-2xl"
+            {...(group.intro ? { intro: group.intro } : {})}
+          />
+          <div className="mt-3 grid gap-x-6 gap-y-3 md:grid-cols-2">
             <Faq items={group.items.slice(0, Math.ceil(group.items.length / 2))} />
             {group.items.length > 1 ? (
               <Faq items={group.items.slice(Math.ceil(group.items.length / 2))} />
@@ -76,18 +86,19 @@ function FaqPage() {
 
       <ZigzagDivider />
 
-      <Section tone="ivory" className="!py-8 md:!py-10">
+      <Section tone="ivory" className="!py-6 md:!py-8">
         <div className="text-center">
-          <h2 className="font-display text-2xl text-brand">Une question sans réponse ici ?</h2>
-          <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-brand/80">
+          <h2 className="font-display text-xl text-brand">Une question sans réponse ici ?</h2>
+          <p className="mx-auto mt-1.5 max-w-xl text-[13px] leading-snug text-brand/80">
             Écris-moi via le formulaire de contact en précisant le type de demande : je réponds
             personnellement à chaque message.
           </p>
-          <div className="mt-4 flex justify-center">
+          <div className="mt-3 flex justify-center">
             <ButtonLink to="/contact">Poser ma question</ButtonLink>
           </div>
         </div>
       </Section>
+
     </>
   );
 }
