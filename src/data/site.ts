@@ -9,7 +9,7 @@ export const site = {
   // TODO : remplacer par la vraie URL Pinterest
   pinterestUrl: "https://www.pinterest.com/",
   // TODO : remplacer par la vraie adresse e-mail de contact
-  email: "contact@grisette-academy.fr",
+  email: "charlotte.blanc10@gmail.com",
   legalName: "Grisette Académie", // TODO : raison sociale exacte
 };
 
