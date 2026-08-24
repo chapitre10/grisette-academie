@@ -168,7 +168,7 @@ function EspaceDebutantPage() {
                 <ImagePlaceholder src={article.image} alt={article.imageAlt} />
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <Badge tone="neutral">{article.category}</Badge>
-                  <span className="text-xs text-brand/65">{formatDateFr(article.date)}</span>
+                  <span className="text-sm text-brand/65">{formatDateFr(article.date)}</span>
                 </div>
                 <h3 className="mt-3 text-xl text-brand">
                   <Link

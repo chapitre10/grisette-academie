@@ -75,7 +75,7 @@ function FaqPage() {
       <Section tone="ivory" className="!py-6 md:!py-8">
         <div className="text-center">
           <h2 className="font-display text-xl text-brand">Une question sans réponse ici ?</h2>
-          <p className="mx-auto mt-1.5 max-w-xl text-[13px] leading-snug text-brand/80">
+          <p className="mx-auto mt-1.5 max-w-xl text-sm leading-snug text-brand/80">
             Écris-moi via le formulaire de contact en précisant le type de demande : je réponds
             personnellement à chaque message.
           </p>

@@ -41,7 +41,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-xl text-ivory">{site.name}</p>
           <span aria-hidden className="mt-1.5 block h-px w-12 bg-gold" />
-          <p className="mt-2 max-w-sm text-[13px] leading-snug text-ivory/85">
+          <p className="mt-2 max-w-sm text-sm leading-snug text-ivory/85">
             Ressources, cours et formations pour apprendre la couture avec méthode, créativité et
             confiance.
           </p>
@@ -55,7 +55,7 @@ export function SiteFooter() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="inline-flex min-h-8 items-center py-0.5 text-[13px] text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
+                    className="inline-flex min-h-8 items-center py-0.5 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -66,7 +66,7 @@ export function SiteFooter() {
                   <button
                     type="button"
                     onClick={openNewsletter}
-                    className="inline-flex min-h-8 items-center py-0.5 text-[13px] text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
+                    className="inline-flex min-h-8 items-center py-0.5 text-sm text-peach underline-offset-2 transition-colors hover:text-gold hover:underline"
                   >
                     Newsletter
                   </button>
@@ -82,14 +82,14 @@ export function SiteFooter() {
       </div>
 
       <div className="container-page flex flex-col gap-1 border-t border-ivory/20 py-2.5 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-[11px] text-ivory/90">
+        <p className="text-sm text-ivory/90">
           © {new Date().getFullYear()} {site.name}. Tous droits réservés.
         </p>
         <a
           href={site.pinterestUrl}
           target="_blank"
           rel="noreferrer noopener"
-          className="inline-flex items-center text-[11px] text-peach underline underline-offset-2 transition-colors hover:text-gold"
+          className="inline-flex items-center text-sm text-peach underline underline-offset-2 transition-colors hover:text-gold"
         >
           Suivre Grisette Académie sur Pinterest
         </a>
