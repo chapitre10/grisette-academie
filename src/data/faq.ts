@@ -5,7 +5,7 @@ import { shopFaq } from "./products";
 export type FaqGroup = {
   id: string;
   title: string;
-  intro: string;
+  intro?: string;
   items: { question: string; answer: string }[];
 };
 
