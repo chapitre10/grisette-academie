@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { Badge, ButtonLink, Card, Faq, Section, SectionHeading } from "@/components/Ui";
-import { formationFaq, formations } from "@/data/formations";
+import { Badge, ButtonLink, Card, Section, SectionHeading } from "@/components/Ui";
+import { formations } from "@/data/formations";
 import { SpoolIcon } from "@/components/sewing/SewingIcons";
 import { StitchRule } from "@/components/sewing/ThreadDivider";
 
@@ -93,11 +93,19 @@ function FormationsPage() {
       </Section>
 
       <Section tone="mist" className="!py-10 md:!py-12">
-        <SectionHeading title="Questions fréquentes" />
-        <div className="mt-4 max-w-4xl">
-          <Faq items={formationFaq} columns={2} />
+        <div className="text-center">
+          <h2 className="font-display text-2xl text-brand md:text-3xl">Une question ?</h2>
+          <div className="rule-thin mx-auto mt-3" />
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand/80">
+            Retrouve toutes les réponses sur les formations courtes, les guides et les cours dans la
+            FAQ.
+          </p>
+          <div className="mt-5 flex justify-center">
+            <ButtonLink to="/faq">Consulter la FAQ</ButtonLink>
+          </div>
         </div>
       </Section>
+
     </>
   );
 }

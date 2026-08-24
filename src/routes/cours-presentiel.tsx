@@ -6,14 +6,12 @@ import {
   ButtonLink,
   Card,
   EmptyState,
-  Faq,
   InfoRow,
   Section,
   SectionHeading,
 } from "@/components/Ui";
 import {
   courseFormats,
-  coursesFaq,
   visibleStudentProjects,
   visibleTestimonials,
 } from "@/data/cours";
@@ -251,11 +249,18 @@ function CoursPage() {
       </Section>
 
       <Section tone="mist" className="!py-10 md:!py-12">
-        <SectionHeading title="Questions fréquentes" />
-        <div className="mt-4 max-w-4xl">
-          <Faq items={coursesFaq} columns={2} />
+        <div className="text-center">
+          <h2 className="font-display text-2xl text-brand md:text-3xl">Une question ?</h2>
+          <div className="rule-thin mx-auto mt-3" />
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand/80">
+            Niveau, matériel, lieu et réservation : toutes les réponses sont dans la FAQ.
+          </p>
+          <div className="mt-5 flex justify-center">
+            <ButtonLink to="/faq">Consulter la FAQ</ButtonLink>
+          </div>
         </div>
       </Section>
+
 
       <Section tone="brand">
         <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
