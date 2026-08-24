@@ -12,7 +12,6 @@ import {
 } from "@/components/Ui";
 import {
   courseFormats,
-
   visibleStudentProjects,
   visibleTestimonials,
 } from "@/data/cours";
