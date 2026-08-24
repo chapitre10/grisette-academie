@@ -43,7 +43,7 @@ export const Route = createFileRoute("/cgv")({
         </ul>
         <p>
           Les descriptions, niveaux et formats sont indiqués sur chaque fiche produit. Les tarifs
-          définitifs sont à préciser : <Pending label="grille tarifaire" />
+          définitifs sont à consulter sur chaque fiche produit.
         </p>
       </LegalBlock>
 
