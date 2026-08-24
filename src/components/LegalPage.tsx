@@ -20,9 +20,6 @@ export function LegalPage({
       </Section>
       <Section>
         <div className="max-w-3xl space-y-8">
-          <p className="rounded-md border border-dashed border-raspberry/50 bg-blush/30 px-4 py-3 text-sm text-brand/85">
-            Document à compléter avec tes informations légales définitives.
-          </p>
           {children}
         </div>
       </Section>
