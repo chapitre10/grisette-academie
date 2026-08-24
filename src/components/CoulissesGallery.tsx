@@ -36,7 +36,7 @@ export function CoulissesGallery() {
                   {item.description}
                 </span>
                 {item.src === null ? (
-                  <span className="mt-2 block rounded-md border border-dashed border-raspberry/40 bg-blush/20 px-2 py-1 text-xs text-brand/80">
+                  <span className="mt-2 block rounded-md border border-dashed border-raspberry/40 bg-blush/20 px-2 py-1 text-sm text-brand/80">
                     Texte alternatif prévu : « {item.alt} »
                   </span>
                 ) : null}

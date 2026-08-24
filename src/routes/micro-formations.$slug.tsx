@@ -89,7 +89,7 @@ function FormationPage() {
             >
               Bientôt disponible
             </button>
-            <p className="mt-2 text-xs text-brand/65">
+            <p className="mt-2 text-sm text-brand/65">
               Les inscriptions ne sont pas encore ouvertes.
             </p>
           </div>

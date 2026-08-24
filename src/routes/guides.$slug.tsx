@@ -133,7 +133,7 @@ function ProductPage() {
             >
               Bientôt disponible
             </button>
-            <p className="mt-2 text-xs text-brand/65">
+            <p className="mt-2 text-sm text-brand/65">
               Le paiement n'est pas encore connecté. Pour être informée de l'ouverture, utilise la
               page contact.
             </p>

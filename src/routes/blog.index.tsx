@@ -71,7 +71,7 @@ function BlogPage() {
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <Badge tone="neutral">{featured.category}</Badge>
-                <span className="text-xs text-brand/65">{formatDateFr(featured.date)}</span>
+                <span className="text-sm text-brand/65">{formatDateFr(featured.date)}</span>
               </div>
               <h2 className="mt-3 text-2xl text-brand md:text-3xl">
                 <Link
@@ -155,7 +155,7 @@ function BlogPage() {
                     <div className="mt-4 flex flex-wrap items-center gap-2">
                       <SpoolIcon aria-hidden className="size-4 shrink-0 text-gold" />
                       <Badge tone="neutral">{article.category}</Badge>
-                      <span className="text-xs text-brand/65">{formatDateFr(article.date)}</span>
+                      <span className="text-sm text-brand/65">{formatDateFr(article.date)}</span>
                     </div>
                     <h2 className="mt-3 text-xl text-brand">
                       <Link

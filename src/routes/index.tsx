@@ -185,7 +185,7 @@ function Index() {
                         {article.excerpt}
                       </p>
                     </div>
-                    <p className="text-xs text-brand/65">{formatDateFr(article.date)}</p>
+                    <p className="text-sm text-brand/65">{formatDateFr(article.date)}</p>
                   </Card>
                 </li>
               ))}
@@ -206,7 +206,7 @@ function Index() {
                     <div>
                       <div className="flex flex-wrap items-center gap-2">
                         <Badge tone="gold">Bientôt disponible</Badge>
-                        <span className="text-xs text-brand/65">{formation.duration}</span>
+                        <span className="text-sm text-brand/65">{formation.duration}</span>
                       </div>
                       <h4 className="mt-3 text-lg text-brand">
                         <Link

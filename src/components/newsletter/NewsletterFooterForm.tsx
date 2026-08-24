@@ -52,7 +52,7 @@ export function NewsletterFooterForm() {
             </button>
           </div>
 
-          <label className="mt-2 flex items-start gap-2 text-xs leading-snug text-ivory/90">
+          <label className="mt-2 flex items-start gap-2 text-sm leading-snug text-ivory/90">
             <input
               type="checkbox"
               name="consent"

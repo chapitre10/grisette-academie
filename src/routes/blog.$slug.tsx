@@ -72,10 +72,10 @@ function ArticlePage() {
         <article className="mx-auto max-w-3xl">
           <div className="flex flex-wrap items-center gap-3">
             <Badge tone="neutral">{article.category}</Badge>
-            <time dateTime={article.date} className="text-xs text-brand/65">
+            <time dateTime={article.date} className="text-sm text-brand/65">
               {formatDateFr(article.date)}
             </time>
-            <span className="text-xs text-brand/65">· {article.readingTime} de lecture</span>
+            <span className="text-sm text-brand/65">· {article.readingTime} de lecture</span>
           </div>
 
           <h1 className="mt-4 text-3xl leading-tight text-brand md:text-4xl">{article.title}</h1>

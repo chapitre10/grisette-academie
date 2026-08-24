@@ -51,7 +51,7 @@ function SeFormerPage() {
               <Card className="p-4">
                 <span className="font-display text-2xl text-raspberry">{item.step}</span>
                 <h3 className="mt-1.5 text-base text-brand">{item.title}</h3>
-                <p className="mt-1.5 text-[13px] leading-snug text-brand/80">{item.text}</p>
+                <p className="mt-1.5 text-sm leading-snug text-brand/80">{item.text}</p>
               </Card>
             </li>
           ))}

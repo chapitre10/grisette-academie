@@ -101,7 +101,7 @@ function CoursPage() {
               <InfoRow label="Disponibilités" value="Du Lundi au Dimanche" />
               <InfoRow label="Niveau requis" value="Tout niveau" />
             </dl>
-            <p className="mt-3 text-xs text-brand/65">
+            <p className="mt-3 text-sm text-brand/65">
               * Tarif réduit applicable aux étudiants, personnes en situation de handicap et demandeurs d'emploi.
             </p>
           </div>
@@ -149,7 +149,7 @@ function CoursPage() {
                   <InfoRow label="Niveau requis" value={infoOrPending(format.requiredLevel)} />
                 </dl>
                 <div className="mt-4">
-                  <ButtonLink to="/contact" search={contactSearch} variant="secondary" className="px-4 py-2 text-xs">
+                  <ButtonLink to="/contact" search={contactSearch} variant="secondary" className="px-4 py-2 text-sm">
                     Demander des informations
                   </ButtonLink>
                 </div>
@@ -212,7 +212,7 @@ function CoursPage() {
                   <Card>
                     <p className="text-sm leading-relaxed text-brand/85">{t.text}</p>
                     <p className="mt-4 text-sm font-semibold text-brand">{t.displayName}</p>
-                    <p className="text-xs text-brand/65">{t.courseType}</p>
+                    <p className="text-sm text-brand/65">{t.courseType}</p>
                   </Card>
                 </li>
               ))}
@@ -240,7 +240,7 @@ function CoursPage() {
                     {project.description ? (
                       <p className="mt-3 text-sm text-brand/85">{project.description}</p>
                     ) : null}
-                    <p className="mt-2 text-xs text-brand/65">{project.courseType}</p>
+                    <p className="mt-2 text-sm text-brand/65">{project.courseType}</p>
                   </Card>
                 </li>
               ))}
