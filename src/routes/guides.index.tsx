@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 
+import { FaqCta } from "@/components/FaqCta";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import {
   Badge,
