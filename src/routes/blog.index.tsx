@@ -52,7 +52,7 @@ function BlogPage() {
           as="h1"
           eyebrow="Ressources gratuites"
           title="Ressources gratuites pour apprendre la couture"
-          intro="Conseils, méthodes et fiches pratiques pour mieux préparer ses projets et progresser en couture."
+          intro="Conseils, méthodes et astuces pour mieux appréhender ses projets et progresser en couture."
         />
       </Section>
 
