@@ -22,7 +22,7 @@ export const faqGroups: FaqGroup[] = [
   {
     id: "formations-courtes",
     title: "Formations courtes",
-    intro: "Durée, niveau et disponibilité des formations courtes en ligne.",
+    items: formationFaq,
     items: formationFaq,
   },
   {
