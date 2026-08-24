@@ -67,9 +67,6 @@ export const Route = createFileRoute("/mentions-legales")({
       </LegalBlock>
 
       <LegalBlock title="Médiation et litiges">
-        <p>
-          Médiateur de la consommation : <Pending label="organisme de médiation" />
-        </p>
         <p>Droit applicable : droit français.</p>
       </LegalBlock>
     </LegalPage>
