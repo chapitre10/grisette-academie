@@ -5,7 +5,7 @@ import { shopFaq } from "./products";
 export type FaqGroup = {
   id: string;
   title: string;
-  intro: string;
+  intro?: string;
   items: { question: string; answer: string }[];
 };
 
@@ -17,8 +17,6 @@ export const faqGroups: FaqGroup[] = [
   {
     id: "templates-et-guides",
     title: "Templates et guides",
-    intro:
-      "Formats, usages et modalités des templates et guides couture à télécharger.",
     items: shopFaq,
   },
   {
