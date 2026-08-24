@@ -83,9 +83,8 @@ export const Route = createFileRoute("/cgv")({
 
       <LegalBlock title="Réclamations et litiges">
         <p>
-          Toute réclamation peut être adressée par e-mail. À défaut d'accord, le médiateur de la
-          consommation compétent est : <Pending label="médiateur" />. Droit applicable : droit
-          français.
+          Toute réclamation peut être adressée par e-mail. À défaut d'accord, le droit applicable :
+          droit français.
         </p>
       </LegalBlock>
     </LegalPage>
