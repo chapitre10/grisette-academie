@@ -94,8 +94,7 @@ function FormationsPage() {
       </Section>
 
       <FaqCta text="Durée, niveau et modalités des formations courtes : tout est dans la FAQ." />
-      </Section>
-
     </>
+
   );
 }
