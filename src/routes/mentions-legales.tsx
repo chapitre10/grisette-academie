@@ -33,9 +33,6 @@ export const Route = createFileRoute("/mentions-legales")({
           SIREN / SIRET : <Pending label="numéro d'immatriculation" />
         </p>
         <p>
-          Responsable de la publication : <Pending label="nom du responsable" />
-        </p>
-        <p>
           Contact :{" "}
           <a href={`mailto:${site.email}`} className="underline">
             {site.email}
