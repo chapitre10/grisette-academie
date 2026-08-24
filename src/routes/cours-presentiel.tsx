@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 
+import { FaqCta } from "@/components/FaqCta";
 import {
   Badge,
   ButtonLink,
@@ -248,18 +249,7 @@ function CoursPage() {
         </div>
       </Section>
 
-      <Section tone="mist" className="!py-10 md:!py-12">
-        <div className="text-center">
-          <h2 className="font-display text-2xl text-brand md:text-3xl">Une question ?</h2>
-          <div className="rule-thin mx-auto mt-3" />
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-brand/80">
-            Niveau, matériel, lieu et réservation : toutes les réponses sont dans la FAQ.
-          </p>
-          <div className="mt-5 flex justify-center">
-            <ButtonLink to="/faq">Consulter la FAQ</ButtonLink>
-          </div>
-        </div>
-      </Section>
+      <FaqCta text="Niveau, matériel, lieu et réservation : toutes les réponses sont dans la FAQ." />
 
 
       <Section tone="brand">
