@@ -20,9 +20,7 @@ export function SiteHeader() {
           className="min-w-0 font-display text-xl leading-none text-brand transition-colors hover:text-fuchsia-ink md:text-2xl"
         >
           <span className="block truncate">{site.name}</span>
-          <span className="mt-1 block text-[0.6rem] font-sans uppercase tracking-[0.28em] text-raspberry">
-            Atelier &amp; apprentissage de la couture
-          </span>
+
         </Link>
 
         <nav
