@@ -153,7 +153,7 @@ function Index() {
 
       <ZigzagDivider />
 
-      <Section>
+      <Section className="!pt-6 md:!pt-8">
         <div className="flex justify-center">
           <SpoolIcon aria-hidden className="size-7 text-gold" />
         </div>
