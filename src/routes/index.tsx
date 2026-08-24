@@ -234,13 +234,13 @@ function Index() {
         </div>
       </Section>
 
-      <Section tone="brand">
-        <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-center">
+      <Section tone="brand" className="!py-8 md:!py-10">
+        <div className="grid gap-4 md:grid-cols-[1.4fr_1fr] md:items-center md:gap-6">
           <div>
-            <h2 className="font-display text-3xl text-ivory md:text-4xl">
+            <h2 className="font-display text-2xl text-ivory md:text-3xl">
               Retrouve Grisette Académie sur Pinterest
             </h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-ivory/85">
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-ivory/85 md:text-base">
               Épingles de conseils, inspirations de projets et ressources gratuites : Pinterest est
               le meilleur endroit pour suivre les nouveautés.
             </p>
