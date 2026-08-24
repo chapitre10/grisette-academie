@@ -27,11 +27,9 @@ export const Route = createFileRoute("/mentions-legales")({
       intro="Informations relatives à l'éditeur du site Grisette Académie et à son hébergement."
     >
       <LegalBlock title="Éditeur du site">
-        <p>Nom, Prénom / Raison sociale : Blanc Charlotte</p>
+        <p>Nom, Prénom / Raison sociale : Blanc Charlotte - Auto entreprise</p>
         <p>Adresse : 8 allée du miradou 34980 Combaillaux</p>
-        <p>
-          SIREN / SIRET : <Pending label="numéro d'immatriculation" />
-        </p>
+        <p>SIREN / SIRET : 91159701100012</p>
         <p>
           Contact :{" "}
           <a href={`mailto:${site.email}`} className="underline">
