@@ -62,7 +62,7 @@ export const Route = createFileRoute("/mentions-legales")({
       <LegalBlock title="Liens externes">
         <p>
           Ce site peut contenir des liens vers des sites tiers, notamment Pinterest. Grisette
-          Academy n'est pas responsable du contenu ni des pratiques de confidentialité de ces sites.
+          Academie n'est pas responsable du contenu ni des pratiques de confidentialité de ces sites.
         </p>
       </LegalBlock>
 
