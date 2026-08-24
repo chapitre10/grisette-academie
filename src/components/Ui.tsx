@@ -141,7 +141,7 @@ export function Faq({
     <div className="h-full divide-y divide-border/60 rounded-lg border border-border bg-card">
       {subset.map((item) => (
         <details key={item.question} className="group px-2.5 py-1.5 sm:px-3 sm:py-2">
-          <summary className="flex min-h-6 cursor-pointer list-none items-center text-sm font-semibold leading-snug text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-7 sm:text-sm">
+          <summary className="flex min-h-6 cursor-pointer list-none items-center text-sm font-semibold leading-snug text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-7">
             <span className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
               <span className="min-w-0">{item.question}</span>
               <span
@@ -152,7 +152,7 @@ export function Faq({
               </span>
             </span>
           </summary>
-          <p className="mt-1 text-sm leading-snug text-brand/80 sm:mt-1.5 sm:text-sm">
+          <p className="mt-1 text-sm leading-snug text-brand/80 sm:mt-1.5">
             {item.answer}
           </p>
         </details>
