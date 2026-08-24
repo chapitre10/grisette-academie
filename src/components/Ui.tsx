@@ -138,7 +138,7 @@ export function Faq({
   columns?: 1 | 2;
 }) {
   const list = (subset: { question: string; answer: string }[]) => (
-    <div className="divide-y divide-border/60 rounded-lg border border-border bg-card">
+    <div className="h-full divide-y divide-border/60 rounded-lg border border-border bg-card">
       {subset.map((item) => (
         <details key={item.question} className="group px-2.5 py-1.5 sm:px-3 sm:py-2">
           <summary className="flex min-h-6 cursor-pointer list-none items-center text-xs font-semibold leading-snug text-brand marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-7 sm:text-[13px]">
