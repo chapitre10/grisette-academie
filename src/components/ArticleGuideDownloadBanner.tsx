@@ -53,7 +53,7 @@ export function ArticleGuideDownloadBanner({
           <p className="mt-3 text-sm leading-relaxed text-brand/85">{guideBannerCopy.text}</p>
           {articleTitle ? (
             <p className="mt-2 text-sm text-raspberry">
-              Guide lié à cet article : <span className="font-semibold">{guide.title}</span>
+              Fiche liée à cet article : <span className="font-semibold">{guide.title}</span>
             </p>
           ) : null}
 
