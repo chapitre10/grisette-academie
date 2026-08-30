@@ -68,35 +68,40 @@ function ArticlePage() {
         ]}
       />
 
-      <Section>
+      <Section className="!py-10 md:!py-14">
         <article className="mx-auto max-w-3xl">
-          <div className="flex flex-wrap items-center gap-3">
-            <Badge tone="neutral">{article.category}</Badge>
-            <time dateTime={article.date} className="text-sm text-brand/65">
-              {formatDateFr(article.date)}
-            </time>
-            <span className="text-sm text-brand/65">· {article.readingTime} de lecture</span>
-          </div>
+          <header>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-paper-border pb-2">
+              <Badge tone="neutral">{article.category}</Badge>
+              <span className="text-sm text-brand/65">·</span>
+              <time dateTime={article.date} className="text-sm text-brand/65">
+                {formatDateFr(article.date)}
+              </time>
+              <span className="text-sm text-brand/65">· {article.readingTime} de lecture</span>
+            </div>
 
-          <h1 className="mt-4 text-3xl leading-tight text-brand md:text-4xl">{article.title}</h1>
-          <p className="mt-5 text-lg leading-relaxed text-brand/85">{article.intro}</p>
+            <h1 className="mt-4 font-display text-2xl leading-[1.1] text-brand italic md:text-4xl">
+              {article.title}
+            </h1>
+            <p className="mt-3 text-base leading-relaxed text-brand/85">{article.intro}</p>
+          </header>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <ImagePlaceholder
               src={article.image}
               alt={article.imageAlt}
               hint="Image principale de l'article (à remplacer)"
-              className="aspect-[16/9]"
+              className="aspect-[21/9]"
             />
           </div>
 
-          <div className="mt-10 space-y-8">
+          <div className="mt-8 space-y-6">
             {article.blocks.map((block) => (
               <section key={block.heading ?? block.paragraphs[0]}>
                 {block.heading ? (
-                  <h2 className="text-2xl text-brand">{block.heading}</h2>
+                  <h2 className="text-xl text-brand">{block.heading}</h2>
                 ) : null}
-                <div className="mt-3 space-y-4">
+                <div className="mt-2 space-y-3">
                   {block.paragraphs.map((p) => (
                     <p key={p} className="text-base leading-relaxed text-brand/85">
                       {p}
@@ -107,35 +112,33 @@ function ArticlePage() {
             ))}
           </div>
 
-          <ARetenir className="mt-10">
-            <ul className="list-disc space-y-2 pl-5">
+          <ARetenir className="mt-8 !p-5">
+            <ul className="list-disc space-y-1.5 pl-5">
               {article.keyTakeaways.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
           </ARetenir>
 
-
-          <div className="mt-10 rounded-lg border border-border bg-card p-6">
-            <h2 className="text-xl text-brand">Pour aller plus loin</h2>
-            <p className="mt-2 text-sm leading-relaxed text-brand/80">{article.cta.text}</p>
-            <div className="mt-4">
+          <div className="mt-8 rounded-lg border border-border bg-card p-5">
+            <h2 className="text-lg text-brand">Pour aller plus loin</h2>
+            <p className="mt-1.5 text-sm leading-relaxed text-brand/80">{article.cta.text}</p>
+            <div className="mt-3">
               <ButtonLink to={article.cta.to} params={article.cta.params}>
                 {article.cta.label}
               </ButtonLink>
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8">
             <RelatedSearches slug={article.slug} />
           </div>
-
         </article>
       </Section>
 
-      <Section tone="blush">
+      <Section tone="blush" className="!py-10 md:!py-12">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="font-display text-2xl text-brand">Continuer à apprendre</p>
+          <p className="font-display text-xl text-brand">Continuer à apprendre</p>
           <div className="flex flex-wrap gap-3">
             <ButtonLink to="/blog" variant="secondary">
               Toutes les ressources
