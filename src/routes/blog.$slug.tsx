@@ -9,6 +9,8 @@ import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Section } from "@/components/Ui";
 import { ARetenir } from "@/components/sewing/Callouts";
 import { formatDateFr, getArticle, type Article } from "@/data/articles";
+import { getGuideForArticle } from "@/data/guides";
+
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
