@@ -115,10 +115,6 @@ function ArticlePage() {
             </ul>
           </ARetenir>
 
-          <AstuceCouture className="mt-6" icon="needle">
-            Garde ton matériel préparé avant de commencer : tissu détendu, épingles à portée de
-            main et une chute pour tester ton point. Tu couds plus vite et plus juste.
-          </AstuceCouture>
 
           <div className="mt-10 rounded-lg border border-border bg-card p-6">
             <h2 className="text-xl text-brand">Pour aller plus loin</h2>
