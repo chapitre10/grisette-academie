@@ -137,7 +137,7 @@ function TelechargerPage() {
                   className="aspect-[3/4] w-full rounded-md object-cover"
                 />
               ) : (
-                <div className="flex aspect-[3/4] w-full flex-col justify-between rounded-md border border-dashed border-paper-border bg-background p-5">
+                <div className="flex aspect-[5/3] w-full flex-col justify-between rounded-md border border-dashed border-paper-border bg-background p-5">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-raspberry">
                       Grisette Académie
@@ -149,6 +149,7 @@ function TelechargerPage() {
                   </div>
                   <ScissorsIcon aria-hidden className="size-8 self-end text-peach" />
                 </div>
+
               )}
 
               <div className="mt-4 flex flex-wrap items-center gap-2">
