@@ -152,39 +152,57 @@ export const articles: Article[] = [
   },
   {
     slug: "erreurs-frequentes-quand-on-debute-la-couture",
-    title: "7 erreurs fréquentes quand on débute la couture",
-    excerpt: "Des maladresses très courantes, faciles à corriger dès les premiers projets.",
+    title: "5 erreurs fréquentes quand on débute la couture",
+    excerpt: "Cinq habitudes à éviter dès les premiers projets pour progresser sereinement.",
     category: "Conseils de professeure de couture",
     tags: ["débutante", "conseils", "erreurs"],
     date: "2026-03-05",
     readingTime: "6 min",
     intro:
-      "Ces erreurs reviennent régulièrement en cours. Les connaître à l'avance permet de progresser plus vite et avec moins de frustration.",
+      "Certaines maladresses reviennent presque à chaque début. Les repérer permet d'éviter bien des déconvenues et de gagner du temps sur ses projets.",
     blocks: [
       {
-        heading: "Sauter la préparation",
+        heading: "Utiliser ses ciseaux de couture pour autre chose",
         paragraphs: [
-          "Commencer sans avoir vérifié ses mesures, son métrage et ses fournitures allonge finalement le projet.",
-          "Un tissu non prélavé peut aussi rétrécir après la première lessive.",
+          "Utiliser tes ciseaux de couture pour couper autre chose que du tissu est une grossière erreur ! En effet tes ciseaux sont très spécialisés et seulement affutés pour couper de la matière textile. Les utiliser pour couper autre chose va les endommager immédiatement et ils ne seront plus autant précis lors de la coupe de ton prochain projet !",
+          "L'astuce clé c'est d'avoir toujours avec soi sa paire de ciseau de couture ainsi qu'une paire de ciseau papier.",
         ],
       },
       {
-        heading: "Négliger le droit-fil et le repassage",
+        heading: "Épingler trop peu pour aller plus vite",
         paragraphs: [
-          "Couper sans respecter le droit-fil déforme le vêtement. Et repasser seulement à la fin fige les défauts d'assemblage.",
+          "Penser aller plus vite en épinglant que très peu. Cela va sûrement te paraître long de prendre le temps d'épingler chaque pièce de tissu assidûment, surtout au début de ta pratique, mais ne te méprends pas c'est une étape plus que essentielle ! Plus tu prendras le temps de préparer ton travail en amont de la couture, plus cette étape sera facilitée.",
+          "Petite astuce : mettre une épingle au début et à la fin de la ligne d'assemblage, puis faire correspondre chaque crans ensemble. Quand ces 3 points spécifiques sont maintenus tu peux ensuite épingler tout le reste !",
         ],
       },
       {
-        heading: "Viser un projet trop ambitieux",
+        heading: "Oublier de vérifier les marges de couture",
         paragraphs: [
-          "Choisir un premier projet simple permet de terminer, donc de progresser. Les finitions soignées viennent avec la pratique, pas avec la précipitation.",
+          "Ne pas vérifier les informations sur les marges de couture sur tes patrons avant de passer à la coupe ! En effet sur certains patrons, comme les Burdas, ils prévoient 1,5 cm de marge de couture tandis que sur d'autres ce n'est que 1 cm qui est inclue. Cette différence de 0,5 cm peut paraître minime et négligeable mais bien au contraire cela peut tout changer.",
+          "En effet, si tu couds à 1,5 cm du bord du tissu sur tout ton projet alors qu'ils avaient prévu seulement 1 cm de marge, tu ne rentreras sûrement pas dans ton vêtement à la fin ! Il est donc très important d'aller vérifier les indications sur les marges de couture avant de procéder à la découpe.",
+        ],
+      },
+      {
+        heading: "Négliger le positionnement des pièces sur le tissu",
+        paragraphs: [
+          "Ne pas faire attention au positionnement des pièces sur le tissu. En effet tu as dû déjà en entendre parler : il faut positionner ses pièces parallèles au DROIT FIL. Mais qu'est ce que c'est que ce droit fil ? Techniquement il correspond au sens du fil de chaîne lors du tissage de l'étoffe. Pour faire simple, il est parfaitement parallèle à la lisière (bord du tissu qui ne s'effiloche jamais = largeur du rouleau de tissu) et égal à la longueur du rouleau de tissu.",
+          "Ainsi le positionnement de tes pièces sur ton tissu aura un impact considérable sur la tenue de ton vêtement fini ainsi que sa capacité à se déformer donc sa durée de vie. Pour être clair si tu coupes toutes tes pièces dans le sens opposé ton vêtement va se détendre et se déformer à vitesse grand V… un bien mauvais destin pour un projet qui t'aura pris tellement de temps à réaliser !",
+        ],
+      },
+      {
+        heading: "Sauter l'étape du repassage",
+        paragraphs: [
+          "Ne pas prendre le temps de repasser après chaque couture effectuée ! En effet chaque couture doit être repassée, suivant les indications donnés (ouverte ou rabattue), juste après être sortie de sous la machine. C'est une étape précieuse qu'il ne faut pas négliger car cela permet de mettre le vêtement en forme.",
+          "Est ce que ça t'est déjà arrivé d'avoir passé beaucoup de temps sur ton projet en faisant toutes les coutures parfaitement et pourtant au moment de l'essayage le vêtement ne tombe pas bien du tout ? Avais tu bien repassé tes pièces après assemblage ?",
         ],
       },
     ],
     keyTakeaways: [
-      "La préparation évite la majorité des difficultés.",
-      "Droit-fil et repassage conditionnent le rendu final.",
-      "Un projet terminé apprend plus qu'un projet abandonné.",
+      "Réserve tes ciseaux de couture au tissu et garde une paire de ciseaux papier à côté.",
+      "Épingle méthodiquement : début, fin et crans d'abord.",
+      "Vérifie toujours les marges de couture indiquées sur le patron.",
+      "Positionne tes pièces parallèlement au droit-fil.",
+      "Repasser après chaque couture donne la forme au vêtement.",
     ],
     cta: {
       label: "Voir la formation courte droit-fil",
@@ -195,10 +213,10 @@ export const articles: Article[] = [
     image: null,
     imageAlt: "Détail d'une couture en cours sur une machine à coudre",
     seo: {
-      title: "7 erreurs fréquentes quand on débute la couture — Grisette Académie",
+      title: "5 erreurs fréquentes quand on débute la couture — Grisette Académie",
       description:
-        "Préparation, droit-fil, repassage, choix du projet : les erreurs les plus courantes des débutantes en couture et comment les éviter.",
-      pinterestTitle: "7 erreurs fréquentes quand on débute la couture",
+        "Ciseaux, épinglage, marges de couture, droit-fil et repassage : les erreurs les plus courantes des débutantes en couture et comment les éviter.",
+      pinterestTitle: "5 erreurs fréquentes quand on débute la couture",
       pinterestDescription:
         "Les maladresses classiques des débutantes en couture, et les réflexes simples pour les éviter.",
       pinterestImage: null,
