@@ -1,6 +1,8 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
+import { ArticleGuideDownloadBanner } from "@/components/ArticleGuideDownloadBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedSearches } from "@/components/RelatedSearches";
