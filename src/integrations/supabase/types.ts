@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      guide_download_requests: {
+        Row: {
+          article_slug: string | null
+          article_title: string | null
+          consent_text_version: string | null
+          created_at: string
+          download_completed_at: string | null
+          email: string
+          guide_slug: string
+          guide_title: string
+          id: string
+          ip_hash: string | null
+          newsletter_opt_in: boolean
+          source: string
+          status: string
+        }
+        Insert: {
+          article_slug?: string | null
+          article_title?: string | null
+          consent_text_version?: string | null
+          created_at?: string
+          download_completed_at?: string | null
+          email: string
+          guide_slug: string
+          guide_title: string
+          id?: string
+          ip_hash?: string | null
+          newsletter_opt_in?: boolean
+          source?: string
+          status?: string
+        }
+        Update: {
+          article_slug?: string | null
+          article_title?: string | null
+          consent_text_version?: string | null
+          created_at?: string
+          download_completed_at?: string | null
+          email?: string
+          guide_slug?: string
+          guide_title?: string
+          id?: string
+          ip_hash?: string | null
+          newsletter_opt_in?: boolean
+          source?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

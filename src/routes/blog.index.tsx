@@ -2,11 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 
+import { ArticleGuideDownloadBanner } from "@/components/ArticleGuideDownloadBanner";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Badge, ButtonLink, Card, EmptyState, Section, SectionHeading } from "@/components/Ui";
 import { ZigzagDivider } from "@/components/ZigzagDivider";
 import { PinIcon, SpoolIcon } from "@/components/sewing/SewingIcons";
 import { articleCategories, articles, formatDateFr } from "@/data/articles";
+import { getGuideForArticle } from "@/data/guides";
+
 
 const title = "Ressources gratuites pour apprendre la couture — Grisette Académie";
 const description =
@@ -215,6 +218,16 @@ function BlogPage() {
           </form>
         </div>
       </Section>
+
+      {featured ? (
+        <Section className="!py-8 md:!py-10">
+          <ArticleGuideDownloadBanner
+            guide={getGuideForArticle(featured.slug)}
+            articleTitle={featured.title}
+          />
+        </Section>
+      ) : null}
     </>
+
   );
 }

@@ -28,6 +28,7 @@ import { Route as GuidesIndexRouteImport } from './routes/guides.index'
 import { Route as GuidesSlugRouteImport } from './routes/guides.$slug'
 import { Route as MicroFormationsIndexRouteImport } from './routes/micro-formations.index'
 import { Route as MicroFormationsSlugRouteImport } from './routes/micro-formations.$slug'
+import { Route as TelechargerSlugRouteImport } from './routes/telecharger.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -125,6 +126,11 @@ const MicroFormationsSlugRoute = MicroFormationsSlugRouteImport.update({
   path: '/micro-formations/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TelechargerSlugRoute = TelechargerSlugRouteImport.update({
+  id: '/telecharger/$slug',
+  path: '/telecharger/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -143,6 +149,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/telecharger/$slug': typeof TelechargerSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/guides/': typeof GuidesIndexRoute
   '/micro-formations/': typeof MicroFormationsIndexRoute
@@ -164,6 +171,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/telecharger/$slug': typeof TelechargerSlugRoute
   '/blog': typeof BlogIndexRoute
   '/guides': typeof GuidesIndexRoute
   '/micro-formations': typeof MicroFormationsIndexRoute
@@ -186,6 +194,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/guides/$slug': typeof GuidesSlugRoute
   '/micro-formations/$slug': typeof MicroFormationsSlugRoute
+  '/telecharger/$slug': typeof TelechargerSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/guides/': typeof GuidesIndexRoute
   '/micro-formations/': typeof MicroFormationsIndexRoute
@@ -209,6 +218,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/guides/$slug'
     | '/micro-formations/$slug'
+    | '/telecharger/$slug'
     | '/blog/'
     | '/guides/'
     | '/micro-formations/'
@@ -230,6 +240,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/guides/$slug'
     | '/micro-formations/$slug'
+    | '/telecharger/$slug'
     | '/blog'
     | '/guides'
     | '/micro-formations'
@@ -251,6 +262,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/guides/$slug'
     | '/micro-formations/$slug'
+    | '/telecharger/$slug'
     | '/blog/'
     | '/guides/'
     | '/micro-formations/'
@@ -273,6 +285,7 @@ export interface RootRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
   GuidesSlugRoute: typeof GuidesSlugRoute
   MicroFormationsSlugRoute: typeof MicroFormationsSlugRoute
+  TelechargerSlugRoute: typeof TelechargerSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   GuidesIndexRoute: typeof GuidesIndexRoute
   MicroFormationsIndexRoute: typeof MicroFormationsIndexRoute
@@ -413,6 +426,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MicroFormationsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/telecharger/$slug': {
+      id: '/telecharger/$slug'
+      path: '/telecharger/$slug'
+      fullPath: '/telecharger/$slug'
+      preLoaderRoute: typeof TelechargerSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -433,6 +453,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
   GuidesSlugRoute: GuidesSlugRoute,
   MicroFormationsSlugRoute: MicroFormationsSlugRoute,
+  TelechargerSlugRoute: TelechargerSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   GuidesIndexRoute: GuidesIndexRoute,
   MicroFormationsIndexRoute: MicroFormationsIndexRoute,

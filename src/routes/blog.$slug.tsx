@@ -1,12 +1,16 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
+import { ArticleGuideDownloadBanner } from "@/components/ArticleGuideDownloadBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedSearches } from "@/components/RelatedSearches";
 import { Badge, ButtonLink, Section } from "@/components/Ui";
 import { ARetenir } from "@/components/sewing/Callouts";
 import { formatDateFr, getArticle, type Article } from "@/data/articles";
+import { getGuideForArticle } from "@/data/guides";
+
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -130,9 +134,16 @@ function ArticlePage() {
             </div>
           </div>
 
+          <ArticleGuideDownloadBanner
+            guide={getGuideForArticle(article.slug)}
+            articleTitle={article.title}
+            className="mt-8"
+          />
+
           <div className="mt-8">
             <RelatedSearches slug={article.slug} />
           </div>
+
         </article>
       </Section>
 
