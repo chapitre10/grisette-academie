@@ -219,14 +219,6 @@ function BlogPage() {
         </div>
       </Section>
 
-      {featured ? (
-        <Section className="!py-8 md:!py-10">
-          <ArticleGuideDownloadBanner
-            guide={getGuideForArticle(featured.slug)}
-            articleTitle={featured.title}
-          />
-        </Section>
-      ) : null}
     </>
 
   );
