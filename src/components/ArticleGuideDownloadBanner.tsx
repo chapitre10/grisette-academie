@@ -37,7 +37,7 @@ export function ArticleGuideDownloadBanner({
         className="pointer-events-none absolute bottom-2 left-2 size-10 text-gold"
       />
 
-      <div className="relative grid gap-6 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-center">
+      <div className="relative grid gap-6 md:grid-cols-[minmax(0,1.7fr)_minmax(0,0.75fr)] md:items-center">
         <div>
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-raspberry">
             <PinIcon aria-hidden className="size-4 -rotate-12" />
@@ -50,9 +50,9 @@ export function ArticleGuideDownloadBanner({
             {guideBannerCopy.title}
           </h2>
           <StitchIcon aria-hidden className="mt-2 h-1 w-24 text-raspberry/60" />
-          <p className="mt-3 text-sm leading-relaxed text-brand/85">{guideBannerCopy.text}</p>
+          <p className="mt-3 text-base leading-relaxed text-brand/85">{guideBannerCopy.text}</p>
           {articleTitle ? (
-            <p className="mt-2 text-sm text-raspberry">
+            <p className="mt-2 text-base text-raspberry">
               Fiche liée à cet article : <span className="font-semibold">{guide.title}</span>
             </p>
           ) : null}

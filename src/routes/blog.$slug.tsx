@@ -136,12 +136,16 @@ function ArticlePage() {
               aria-hidden
               className="absolute -top-2 left-6 h-4 w-14 -rotate-3 rounded-[2px] bg-fuchsia-accent/40 opacity-70"
             />
-            <h2 className="font-hand text-2xl text-brand">Pour aller plus loin</h2>
-            <p className="mt-1.5 text-sm leading-relaxed text-brand/80">{article.cta.text}</p>
-            <div className="mt-3">
-              <ButtonLink to={article.cta.to} params={article.cta.params}>
-                {article.cta.label}
-              </ButtonLink>
+            <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+              <div>
+                <h2 className="font-hand text-2xl text-brand md:text-3xl">Pour aller plus loin</h2>
+                <p className="mt-1.5 text-base leading-relaxed text-brand/85">{article.cta.text}</p>
+              </div>
+              <div className="md:shrink-0">
+                <ButtonLink to={article.cta.to} params={article.cta.params}>
+                  {article.cta.label}
+                </ButtonLink>
+              </div>
             </div>
           </div>
 
