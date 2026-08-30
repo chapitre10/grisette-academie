@@ -130,9 +130,16 @@ function ArticlePage() {
             </div>
           </div>
 
+          <ArticleGuideDownloadBanner
+            guide={getGuideForArticle(article.slug)}
+            articleTitle={article.title}
+            className="mt-8"
+          />
+
           <div className="mt-8">
             <RelatedSearches slug={article.slug} />
           </div>
+
         </article>
       </Section>
 
