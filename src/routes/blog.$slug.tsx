@@ -130,8 +130,13 @@ function ArticlePage() {
             className="mt-8"
           />
 
-          <div className="mt-8 rounded-lg border border-border bg-card p-5">
-            <h2 className="text-lg text-brand">Pour aller plus loin</h2>
+          <div className="relative mt-8 rotate-[-1deg] rounded-[0.9rem] border border-paper-border bg-card p-5 shadow-[0_10px_24px_-16px_rgba(93,57,67,0.55)] md:rotate-[-1deg]">
+            {/* effet scotch inspiré des cartes À propos */}
+            <span
+              aria-hidden
+              className="absolute -top-2 left-6 h-4 w-14 -rotate-3 rounded-[2px] bg-fuchsia-accent/40 opacity-70"
+            />
+            <h2 className="font-hand text-2xl text-brand">Pour aller plus loin</h2>
             <p className="mt-1.5 text-sm leading-relaxed text-brand/80">{article.cta.text}</p>
             <div className="mt-3">
               <ButtonLink to={article.cta.to} params={article.cta.params}>
