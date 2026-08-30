@@ -431,56 +431,152 @@ export const articles: Article[] = [
   {
     slug: "20-mots-de-couture-a-connaitre",
     title: "20 mots de couture à connaître",
-    excerpt: "Un mini-lexique pour lire un patron sans buter sur le vocabulaire.",
+    excerpt: "Un mini-lexique pour décrypter le vocabulaire de la couture et lire un patron sereinement.",
     category: "Débuter la couture",
     tags: ["lexique", "vocabulaire", "patron"],
     date: "2026-07-07",
-    readingTime: "4 min",
-    intro: "Beaucoup de blocages en couture ne viennent pas du geste mais du mot employé pour le décrire. Voici les termes qui reviennent le plus souvent.",
+    readingTime: "8 min",
+    intro: "Beaucoup de blocages en couture ne viennent pas du geste mais du mot employé pour le décrire. Voici vingt termes essentiels pour comprendre ses patrons, son matériel et ses finitions.",
     blocks: [
       {
-        heading: "Le vocabulaire du patron",
+        heading: "Droit fil",
         paragraphs: [
-          "Droit-fil, laize, marge de couture, cran de montage, pli d'aisance : ces cinq mots suffisent à lire la plupart des planches.",
-          "Le droit-fil est la référence : mal placé, il déforme le vêtement dès le premier lavage.",
-
+          "Sens du fil parallèle à la lisière du tissu. Un tissu n'aura pas la même résistance ni la même élasticité dans un sens ou dans un autre. En effet, c'est dans le sens du droit-fil que le tissu est le plus résistant. Dans la réalité, le droit fil suit le sens de la gravité en étant parfaitement parallèle à notre corps quand nous sommes debout. Il est annoté par DF et une flèche sur vos patrons.",
         ],
       },
       {
-        heading: "Le vocabulaire des coutures",
+        heading: "Lisière",
         paragraphs: [
-          "Surfiler, bâtir, cranter, dégarnir, rabattre : autant de gestes distincts souvent confondus.",
-          "Bâtir n'est pas une perte de temps : c'est ce qui rend l'assemblage définitif plus précis.",
-
+          "Bord de la pièce de tissu qui délimite la largeur du tissu. Ces bords ne s'effilochent pas. Simplement cela correspond à longueur du rouleau de tissu (donc aux fils de chaîne) et par conséquent au sens du droit-fil.",
         ],
       },
       {
-        heading: "Le vocabulaire des finitions",
+        heading: "Laize",
         paragraphs: [
-          "Ourlet, parementure, biais, sous-piqûre, thermocollant : le vocabulaire des finitions est celui qui change le rendu final.",
-          "La sous-piqûre, souvent ignorée, empêche une parementure de rouler vers l'extérieur.",
-
+          "C'est la largeur du rouleau de tissu, qui correspond aux fils de trame et donc au sens du contrefil. Lors de vos achats vous trouverez des tissus de laize 140cm ou 150cm le plus fréquemment.",
+        ],
+      },
+      {
+        heading: "Pied de biche / pied presseur",
+        paragraphs: [
+          "Petit ustensile de machine à coudre amovible. Le pied de biche s'adapte à une couture bien précise selon son modèle et sa fonction.",
+        ],
+      },
+      {
+        heading: "Aiguille",
+        paragraphs: [
+          "Petite tige fine d'acier dont l'une des extrémités, pointue, sert à traverser le matériau à coudre et dont l'autre, percée d'un trou (chas ou œil), reçoit le fil. Sur la tige se trouve une rainure qui permet de diriger le fil. On distingue les aiguilles à main des aiguilles de machines. Aussi il est important de les adapter à notre type de tissu : cuir, jean, maille,…",
+        ],
+      },
+      {
+        heading: "Aiguille double",
+        paragraphs: [
+          "Elle possède 2 tiges qui sont solidairement fixées au même talon (haut de l'aiguille que l'on fixe à la machine). Elle permet une double piqûre parfaitement parallèle, et il faut donc enfiler deux fils distincts. Elle peut être très utile pour réaliser une couture d'ourlet.",
+        ],
+      },
+      {
+        heading: "Épingle",
+        paragraphs: [
+          "Petite tige métallique garnie d'une tête à une de ses extrémités et terminée à l'autre par une pointe. Elle sert à fixer un patron sur du tissu ou bien des pièces de tissus entre elles.",
+        ],
+      },
+      {
+        heading: "Bobine",
+        paragraphs: [
+          "Objet cylindrique, généralement muni de rebord, destiné à recevoir un fil que l'on enroule autour de son axe. On en trouve de différents type de fil (polyester, coton,…) et de différents métrage (100m, 500m,…). À différencier des cônes de fil qui sont utilisés avec les surjeteuses.",
+        ],
+      },
+      {
+        heading: "Canette",
+        paragraphs: [
+          "C'est une sorte de petite bobine ronde en plastique ou en métal. Elle se place sous le boîtier de l'aiguille de la machine à coudre pour fournir le fil du dessous. Son fil s'entrelace avec celui du dessus pour former le point. À retenir que tu achètes les canettes vides et c'est à toi de les remplir à l'aide de la bobine.",
+        ],
+      },
+      {
+        heading: "Longueur de point",
+        paragraphs: [
+          "Distance entre chaque piqûre de l'aiguille et se mesure en millimètre. Elle peut être comprise le plus couramment entre 1mm et 5mm et elle est à régler manuellement. La longueur la plus utilisée est 2,5mm.",
+        ],
+      },
+      {
+        heading: "Largeur de point",
+        paragraphs: [
+          "C'est tout simplement la largeur du point de couture. Elle est souvent comprise entre 0mm et 7mm. Attention elle n'aura aucune influence sur le point droit.",
+        ],
+      },
+      {
+        heading: "Point d'arrêt",
+        paragraphs: [
+          "Il sert à bloquer et à sécuriser le fil au début et à la fin d'une piqûre. Il remplace le nœud traditionnel, fait à la main, pour empêcher la couture de se défaire lors de l'utilisation ou du lavage du vêtement. On utilise alors la fonction marche arrière de la machine.",
+        ],
+      },
+      {
+        heading: "Piqûre de maintien ou d'assemblage",
+        paragraphs: [
+          "Couture qui permet d'associer les pièces les unes aux autres à l'aide d'une machine à coudre pour constituer un vêtement. Cette piqûre se réalise la plupart du temps à 1cm du bord du tissu.",
+        ],
+      },
+      {
+        heading: "Surpiqûre",
+        paragraphs: [
+          "Rang simple ou double de points droits réalisés sur l'endroit du tissu le long d'une couture pour la contraindre à une orientation ou pour un effet décoratif.",
+        ],
+      },
+      {
+        heading: "Boutonnière",
+        paragraphs: [
+          "Petite fente dans un tissu pour laisser passer un bouton. Elle peut avoir plusieurs formes possibles, un peu arrondie ou complètement rectangulaire. On la fait manuellement à l'aide du point zigzag ou à l'aide du mode automatique de la machine.",
+        ],
+      },
+      {
+        heading: "Bouton",
+        paragraphs: [
+          "Petite pièce en matière dure, généralement circulaire, qui, cousue sur un vêtement, sert à le fermer ou à l'orner. Il peut être en plastique, bois ou bien métal.",
+        ],
+      },
+      {
+        heading: "Zip invisible",
+        paragraphs: [
+          "Fermeture à glissière dont les dents sont cachées sous le tissu du ruban. Une fois cousu sur un vêtement, il se fond dans la couture et on ne voit plus que la tirette. Il est trouvable seulement en matière plastique et peut se coudre avec un pied pour fermeture éclair classique ou un pied spécial fermeture éclair invisible.",
+        ],
+      },
+      {
+        heading: "Zip séparable",
+        paragraphs: [
+          "Fermeture à glissière dont les deux côtés se détachent complètement l'un de l'autre en position ouverte. Contrairement aux zips continus, elle permet d'ouvrir un vêtement en deux parties distinctes. Il peut se trouver en plastique comme en métal.",
+        ],
+      },
+      {
+        heading: "Thermocollant",
+        paragraphs: [
+          "Textile tissé ou non, qui peut être extensible, additionné d'une enduction de colle à poser sur le tissu par fusion au fer à repasser. Il sert à structurer ou stabiliser celui-ci. Il s'achète au mètre et se trouve principalement en noir ou blanc et dans pleins de grammages différents.",
+        ],
+      },
+      {
+        heading: "Doublure",
+        paragraphs: [
+          "Cela revient à faire un deuxième vêtement de même dimension ou à peine plus large pour le coudre à l'intérieur. C'est donc considéré comme une des méthodes de finition d'un vêtement. On peut aussi doubler un vêtement que l'on souhaite rendre réversible ou pour éviter une transparence. La doublure est généralement faite dans un tissu assez léger et souple.",
         ],
       },
     ],
     keyTakeaways: [
-      "Le droit-fil conditionne la tenue du vêtement.",
-      "Bâtir améliore la précision de l'assemblage.",
-      "Les finitions ont leur vocabulaire propre.",
+      "Le droit-fil, la lisière et la laize déterminent comment couper et assembler un tissu.",
+      "Chaque outil — aiguille, pied de biche, épingle — a une fonction précise à connaître.",
+      "Longueur et largeur de point, point d'arrêt et surpiqûre structurent la couture machine.",
+      "Finitions, fermetures et renforts (zip, bouton, thermocollant, doublure) donnent le rendu final.",
     ],
     cta: {
-      label: "Voir le lexique complet",
-      to: "/guides/$slug",
-      params: { slug: "lexique-de-la-couturiere" },
-      text: "Le guide « Lexique de la couturière » réunit l'ensemble des termes avec définitions et index alphabétique.",
+      label: "Découvrir les ressources gratuites",
+      to: "/blog",
+      text: "Pour aller plus loin, retrouve les autres articles du blog autour de la couture débutante.",
     },
     image: null,
     imageAlt: "Patron de couture annoté sur une table de coupe",
     seo: {
       title: "20 mots de couture à connaître — Grisette Académie",
-      description: "Droit-fil, cran, surfilage, sous-piqûre : un mini-lexique des termes de couture pour lire un patron sans hésiter.",
+      description: "Droit-fil, lisière, laize, pied de biche, surpiqûre, zip invisible : un lexique des 20 mots essentiels pour débuter la couture sereinement.",
       pinterestTitle: "20 mots de couture à connaître",
-      pinterestDescription: "Le vocabulaire de base pour lire un patron sereinement.",
+      pinterestDescription: "Le vocabulaire de base pour lire un patron et comprendre ses outils de couture.",
       pinterestImage: null,
     },
   },
