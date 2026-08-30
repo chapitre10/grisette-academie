@@ -124,6 +124,12 @@ function ArticlePage() {
             </ul>
           </ARetenir>
 
+          <ArticleGuideDownloadBanner
+            guide={getGuideForArticle(article.slug)}
+            articleTitle={article.title}
+            className="mt-8"
+          />
+
           <div className="mt-8 rounded-lg border border-border bg-card p-5">
             <h2 className="text-lg text-brand">Pour aller plus loin</h2>
             <p className="mt-1.5 text-sm leading-relaxed text-brand/80">{article.cta.text}</p>
@@ -133,12 +139,6 @@ function ArticlePage() {
               </ButtonLink>
             </div>
           </div>
-
-          <ArticleGuideDownloadBanner
-            guide={getGuideForArticle(article.slug)}
-            articleTitle={article.title}
-            className="mt-8"
-          />
 
           <div className="mt-8">
             <RelatedSearches slug={article.slug} />
